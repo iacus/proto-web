@@ -3,12 +3,64 @@
 @import 'reset';
 @import 'mediaqueries';
 
-$rojo: #FC0000;
-$azul: #0203DF;
-$blanco: #FFFFFF;
-$negro: #000000;
 
+@font-face {font-family: "NHU";
+  src: url("../fonts/145bf6f8eebf1ad036f74d821af7d94b.eot"); /* IE9*/
+  src: url("../fonts/145bf6f8eebf1ad036f74d821af7d94b.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/145bf6f8eebf1ad036f74d821af7d94b.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/145bf6f8eebf1ad036f74d821af7d94b.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/145bf6f8eebf1ad036f74d821af7d94b.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/145bf6f8eebf1ad036f74d821af7d94b.svg#Neue Haas Unica W06 Light") format("svg"); /* iOS 4.1- */
+}
 
 body{
   font-family: "NHU";
+  font-size: 1.5em !important;
+  line-height: 1.2;
+}
+
+//Links
+
+a{
+  text-decoration: none;
+  color: black;
+
+  :visited{
+    
+  }
+}
+
+.the-black{
+  background-image: url(../images/default.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.the-content{
+
+}
+
+
+
+.wrapper.home{
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  footer{
+    margin-top: auto;
+  }
+}
+
+
+.referencia-titulo{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top:0px;
+  display: block;
+  background-color: red;
 }

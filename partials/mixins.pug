@@ -1,5 +1,5 @@
-//--projects.pug
+//--mixins.pug
 mixin project-list(project)
 	
 	li
-		a.project--link.noload.f3(class=project.title)= project.title
+		a.project--link.dark-gray.noload(class=project.title, href=project.url, data-cover= project.cover)= project.title
