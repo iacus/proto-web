@@ -1,0 +1,24 @@
+include partials/projects
+include partials/variables
+include partials/mixins
+
+doctype html5
+html
+	
+	include partials/head+scripts/head.pug
+
+	body
+		//a.referencia-titulo= title
+	
+	div.wrapper
+		
+		header
+			include partials/nav/top-nav-fullwidth.pug 
+		
+		main
+			include partials/detail-project.pug
+
+		footer
+			include partials/nav/bottom-nav-fullwidth.pug			
+		
+	include partials/head+scripts/scripts.pug

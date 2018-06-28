@@ -4,31 +4,27 @@ include partials/mixins
 
 doctype html5
 html
-	head
-		meta(charset="UTF-8")
-		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-		title #{title} - #{description}
-		link(rel='stylesheet', href='assets/css/style.css')
-		link(rel='stylesheet', href='assets/css/tachyons.css')
+	
+	include partials/head+scripts/head.pug
 
 	body
+		
 		//a.referencia-titulo= title
-		div.dim.the-black.fl.w-45.bg-black-90.h-100
-			div.image-containter
-			div.bg-black-90
+		div.dim.the-black.fl.w-45.h-100
+			div.image-containter.h-100.hide-cover
+			div.bg-black-90.h-100.the-black-bg
 			
 		div.the-content.fl.w-55
 			div.wrapper.home 
 				
 				header
-					include partials/top-nav.pug 
+					include partials/nav/top-nav.pug 
 				
 				main
-					include partials/projects-list.pug 
+					include partials/projects-list.pug  
 
 				footer
-					include partials/bottom-nav.pug			
-		
-	script(src="https://code.jquery.com/jquery-3.3.1.min.js",integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=",crossorigin="anonymous")
-	script(src="assets/js/scripts.js",async="async")
+					include partials/nav/bottom-nav.pug			
+
+	include partials/head+scripts/scripts.pug
     
