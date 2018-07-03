@@ -20,6 +20,10 @@ body{
   line-height: 1.2;
 }
 
+body.projects-page .wrapper {
+    overflow-y: hidden;
+}
+
 //Layout
 .wrapper{
   min-height: 100%;
@@ -43,12 +47,21 @@ body{
     //background-color: yellow;
   }
 
+  .home{
+    //justify-content: flex-end;
+    //flex-direction: row
+  }
+
   footer{
     flex: 1;
     //background-color: pink;
     margin-top: auto;
     flex-grow: 1;
   }
+}
+
+.home .the-content{
+  margin-left: auto;
 }
 
 .bottom-nav{
@@ -82,7 +95,7 @@ a.project--link{
 }
 
 .hide-cover{
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
 .hide-info-panel{

@@ -1,8 +1,42 @@
 //scripts.js
 
+
+
+
 var urlImages = "/content/" ;
 var theBlack = $('.the-black');
+var theProjects = $(".projects")
 var defaultTheBlack = theBlack.css('background-image');
+
+
+//Preloader
+
+$(document).ready(function() {
+
+    setTimeout(function(){
+        theBlack
+        .animate({width: '46%'}, 'easing', loadHomeContent())
+
+    }, 1500 );
+
+});
+
+
+//
+function loadHomeContent() {
+    console.log("Loading projects home");
+
+    setTimeout(function () {
+      theBlack.addClass('dim');
+
+      theProjects.each(function(i) {
+        $(this)
+        .delay(100 * i)
+        .fadeIn(500)});
+
+    }, 3000)
+
+}
 
 /**********************************/
 /********* projects hover *********/
@@ -10,7 +44,16 @@ var defaultTheBlack = theBlack.css('background-image');
 
 $(".project--link").on({
     click: function(event) {
-      //event.preventDefault();
+      event.preventDefault();
+      const elem = $(this);
+      const thisLink = $(this).attr('href');
+
+      theBlack
+      .animate({width: '0%'}, 'easing', function () {
+        location.href = thisLink;
+      });
+
+      console.log(thisLink);
 
     },
     mouseenter: function() {
@@ -18,15 +61,14 @@ $(".project--link").on({
       const coverImage = $(this).attr('data-cover');
       const coverImageRoute = 'url("' + urlImages + coverImage + '")';
 
-      theBlack.find('.image-containter').css('background-image', coverImageRoute);
-      //theBlack.animate({param1: value1, param2: value2}, speed)
+      theBlack.find('.image-containter').delay(1000).css('background-image', coverImageRoute);
       $(".projects").find('.project--link').not($(this)).clearQueue().animate({opacity: 0.5}, "fast")
 
 
     },
     mouseleave: function() {
       theBlack.find('.image-containter').css('background-image', defaultTheBlack);
-      $(".projects").find('.project--link').clearQueue().stop(true,true).animate({opacity: 1}, "fast")
+      $(".projects").find('.project--link').clearQueue().stop(true,true).delay(300).animate({opacity: 1}, "fast")
 
     },
     touchstart: function() {
@@ -115,17 +157,19 @@ jQuery(document).ready(function($) {
     arrowsNav: false,
     controlNavigation: 'none',
     autoScaleSlider: true,
-    autoScaleSliderWidth: 960,
-    autoScaleSliderHeight: 340,
+    autoScaleSliderWidth: true,
+    autoScaleSliderHeight: true,
     loop: true,
     fadeinLoadedSlide: false,
-    globalCaption: true,
+    globalCaption: false,
     keyboardNavEnabled: true,
     globalCaptionInside: false,
+    autoHeight: false,
+    usePreloader: true,
 
     visibleNearby: {
       enabled: true,
-      centerArea: 0.5,
+      centerArea: 0.6,
       center: true,
       breakpoint: 650,
       breakpointCenterArea: 0.64,

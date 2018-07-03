@@ -1,0 +1,33 @@
+include partials/projects
+include partials/variables
+include partials/mixins
+
+- var project = "";
+- var infolink = "";
+
+
+doctype html5
+html
+	
+	include partials/head+scripts/head.pug
+
+	body
+		
+		//a.referencia-titulo= title
+		div.the-black.fl.w-100.h-100.bg-black.absolute.z-999
+			div.image-containter.h-100.hide-cover
+			div.bg-black.h-100.the-black-bg
+        
+		div.wrapper
+				
+				header
+					include partials/nav/top-nav-fullwidth.pug  
+				
+				main.home
+					include partials/projects-list.pug 
+
+				footer
+					include partials/nav/bottom-nav-fullwidth.pug			
+
+	include partials/head+scripts/scripts.pug
+    

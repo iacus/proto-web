@@ -1,5 +1,7 @@
+.royalSlider{
+  width: 100% !important;
+}
 
-//Royal Slider Nearby images
 .visibleNearby {
   width: 100%;
   background: #141414;
@@ -29,16 +31,16 @@
 
 /* Scaling transforms */
 .visibleNearby .rsSlide img {
-  opacity: 0.45;
+  opacity: 0.8;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
 }
 .visibleNearby .rsActiveSlide img {
   opacity: 1;
@@ -49,10 +51,6 @@
   transform: scale(1);
 }
 
-.rsGCaption{
-  display: none;
-}
-
 /* Non-linear resizing on smaller screens */
 @media screen and (min-width: 0px) and (max-width: 900px) {
   #gallery-1 {
@@ -60,12 +58,12 @@
   }
   #gallery-1 .rsOverflow,
   .royalSlider#gallery-1 {
-    height: 100% !important;
+    height: 400px !important;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 500px) {
   #gallery-1 .rsOverflow,
   .royalSlider#gallery-1 {
-    height: 100% !important;
+    height: 300px !important;
   }
 }

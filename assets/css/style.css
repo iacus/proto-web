@@ -41,6 +41,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.royalSlider {
+  width: 100% !important; }
+
 .visibleNearby {
   width: 100%;
   background: #141414;
@@ -68,16 +71,16 @@ table {
 
 /* Scaling transforms */
 .visibleNearby .rsSlide img {
-  opacity: 0.45;
+  opacity: 0.8;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9); }
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95); }
 
 .visibleNearby .rsActiveSlide img {
   opacity: 1;
@@ -87,21 +90,18 @@ table {
   -o-transform: scale(1);
   transform: scale(1); }
 
-.rsGCaption {
-  display: none; }
-
 /* Non-linear resizing on smaller screens */
 @media screen and (min-width: 0px) and (max-width: 900px) {
   #gallery-1 {
     padding: 12px 0 12px; }
   #gallery-1 .rsOverflow,
   .royalSlider#gallery-1 {
-    height: 100% !important; } }
+    height: 400px !important; } }
 
 @media screen and (min-width: 0px) and (max-width: 500px) {
   #gallery-1 .rsOverflow,
   .royalSlider#gallery-1 {
-    height: 100% !important; } }
+    height: 300px !important; } }
 
 @font-face {
   font-family: "NHU";
@@ -114,6 +114,9 @@ body {
   font-family: "NHU";
   font-size: 1.5em !important;
   line-height: 1.2; }
+
+body.projects-page .wrapper {
+  overflow-y: hidden; }
 
 .wrapper {
   min-height: 100%;
@@ -152,6 +155,9 @@ body {
     -ms-flex-positive: 1;
     flex-grow: 1; }
 
+.home .the-content {
+  margin-left: auto; }
+
 .bottom-nav {
   margin-top: auto; }
 
@@ -172,7 +178,7 @@ a.project--link {
   background-size: cover; }
 
 .hide-cover {
-  opacity: 0.5; }
+  opacity: 0.9; }
 
 .hide-info-panel {
   display: none; }
