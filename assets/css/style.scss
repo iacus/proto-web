@@ -87,6 +87,15 @@ a.project--link{
   display: inline-block;
 }
 
+.the-black{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,222222+100 */
+background: #000000; /* Old browsers */
+background: -moz-linear-gradient(45deg, #000000 0%, #222222 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #000000 0%,#222222 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #000000 0%,#222222 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#222222',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 .the-black .image-containter{
   background-image: url(../images/default.gif);
   background-position: center center;

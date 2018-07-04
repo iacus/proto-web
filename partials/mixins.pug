@@ -1,5 +1,20 @@
 //--mixins.pug
+//List of projects for home page
 mixin project-list(project)
 	
 	li
 		a.project--link.dark-gray.noload(class=project.title, href=project.url, data-cover= project.cover)= project.title
+
+//Professionals list mixin for professionals page
+mixin professionals-list(professional)
+	
+	li
+		a.professional__item.dark-gray(class=professional.name, data-cover= professional.image)= professional.name
+ 
+
+//Professionals list mixin for professionals page
+mixin bios-blocks(professional)
+	
+	div.bio__block__item
+		p.bio__block__p.dark-gray(title=professional.name, data-cover= professional.image)= professional.bio
+ 

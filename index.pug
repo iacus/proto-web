@@ -1,6 +1,10 @@
-include partials/projects
+include data/projects
 include partials/variables
 include partials/mixins
+
+- var project = "";
+- var infolink = "";
+
 
 doctype html5
 html
@@ -10,21 +14,25 @@ html
 	body
 		
 		//a.referencia-titulo= title
-		div.dim.the-black.fl.w-45.h-100
+		div.the-black.fl.w-100.h-100.bg-black.absolute.z-999
+			//div.preloader__title.vh-100.dt.w-100.absolute.top-0.z-9999
+				.dtc.v-mid.tc.white.ph3.ph4-l
+					h2.tc= title
 			div.image-containter.h-100.hide-cover
-			div.bg-black-90.h-100.the-black-bg
-			
-		div.the-content.fl.w-55
-			div.wrapper.home 
+			div.bg-black.h-100.the-black-bg
+        
+		div.wrapper
 				
 				header
-					include partials/nav/top-nav.pug 
+					include partials/nav/top-nav-fullwidth.pug  
 				
-				main
-					include partials/projects-list.pug  
+				main.home
+					include partials/projects-list.pug 
 
 				footer
-					include partials/nav/bottom-nav.pug			
+					include partials/nav/bottom-nav-fullwidth.pug			
+
+
 
 	include partials/head+scripts/scripts.pug
     

@@ -1,4 +1,7 @@
-<!DOCTYPE html5>
+
+<!--List of projects for home page-->
+<!--Professionals list mixin for professionals page-->
+<!--Professionals list mixin for professionals page--><!DOCTYPE html5>
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -11,45 +14,65 @@
   </head>
   <body>
     <!--a.referencia-titulo= title-->
-    <div class="dim the-black fl w-45 h-100">
+    <div class="the-black fl w-100 h-100 bg-black absolute z-999">
+      <!--div.preloader__title.vh-100.dt.w-100.absolute.top-0.z-9999
+      .dtc.v-mid.tc.white.ph3.ph4-l
+      	h2.tc= title
+      -->
       <div class="image-containter h-100 hide-cover"></div>
-      <div class="bg-black-90 h-100 the-black-bg"></div>
+      <div class="bg-black h-100 the-black-bg"></div>
     </div>
-    <div class="the-content fl w-55">
-      <div class="wrapper home"> 
-        <header>
-          <nav class="flex w-100 border-box pa3 ph4-ns dib v-top top-nav"><a class="dtc v-mid dark-gray link dim w-25" href="index.html" title="Home">Proto</a>
-            <div class="dtc v-mid w-75 tr"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
-          </nav>
-        </header>
-        <main>
-          <div class="the-content fl w-52">
-            <ul class="projects flex flex-column">
-              <li><a class="project--link dark-gray noload Vibia" href="project.html" data-cover="vibia.png">Vibia</a></li>
-              <li><a class="project--link dark-gray noload Troll" href="project.html" data-cover="accent.png">Troll</a></li>
-              <li><a class="project--link dark-gray noload Sageloux" href="project.html" data-cover="vibia.png">Sageloux</a></li>
-              <li><a class="project--link dark-gray noload Ledmotive" href="project.html" data-cover="accent.png">Ledmotive</a></li>
-              <li><a class="project--link dark-gray noload Escofet" href="project.html" data-cover="vibia.png">Escofet</a></li>
-              <li><a class="project--link dark-gray noload Accent" href="project.html" data-cover="accent.png">Accent</a></li>
-              <li><a class="project--link dark-gray noload Flint" href="project.html" data-cover="vibia.png">Flint</a></li>
-              <li><a class="project--link dark-gray noload Aismalibar" href="project.html" data-cover="accent.png">Aismalibar</a></li>
-              <li><a class="project--link dark-gray noload Metalarte" href="project.html" data-cover="vibia.png">Metalarte</a></li>
-              <li><a class="project--link dark-gray noload Simón" href="project.html" data-cover="accent.png">Simón</a></li>
-              <li><a class="project--link dark-gray noload Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
-              <li><a class="project--link dark-gray noload Marset" href="project.html" data-cover="accent.png">Marset</a></li>
-              <li><a class="project--link dark-gray noload Roca" href="project.html" data-cover="vibia.png">Roca</a></li>
-              <li><a class="project--link dark-gray noload Vibia" href="project.html" data-cover="accent.png">Vibia</a></li>
-              <li><a class="project--link dark-gray noload Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
-              <li><a class="project--link dark-gray noload Simón" href="project.html" data-cover="accent.png">Simón</a></li>
-            </ul>
+    <div class="wrapper">
+      <header>
+        <nav class="z-3 ph4 pv2 top-nav">
+          <div class="fl w-48">
+            <div class="tl pv1">
+              <h2 class="project--title link dark-gray dib mr3 mr0-ns" title="description"></h2>
+            </div>
           </div>
-        </main>
-        <footer>
-          <nav class="bottom-nav dt w-100 border-box pa3 ph4-ns"><a class="dtc v-mid dark-gray link dim w-25" href="#" title="Home">Protocol</a>
-            <div class="dtc v-mid w-75 tr"><a class="link dim dark-gray dib mr3 mr4-ns" href="#" title="Store">Procedure</a><a class="link dim dark-gray dib mr3 mr4-ns" href="professionals.html" title="Professionals">Professionals</a><a class="link dim dark-gray dib mr3 mr0-ns" href="#" title="Store">Contact</a></div>
-          </nav>
-        </footer>
-      </div>
+          <div class="fl w-12">
+            <div class="tl pv1"><a class="dark-gray link dim" href="index.html" title="Home">Proto</a></div>
+          </div>
+          <div class="fl w-40">
+            <div class="tr pv1"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+          </div>
+        </nav>
+      </header>
+      <main class="home">
+        <div class="the-content fl w-52">
+          <ul class="projects flex flex-column">
+            <li><a class="project--link dark-gray noload Vibia" href="project.html" data-cover="vibia.png">Vibia</a></li>
+            <li><a class="project--link dark-gray noload Troll" href="project.html" data-cover="accent.png">Troll</a></li>
+            <li><a class="project--link dark-gray noload Sageloux" href="project.html" data-cover="vibia.png">Sageloux</a></li>
+            <li><a class="project--link dark-gray noload Ledmotive" href="project.html" data-cover="accent.png">Ledmotive</a></li>
+            <li><a class="project--link dark-gray noload Escofet" href="project.html" data-cover="vibia.png">Escofet</a></li>
+            <li><a class="project--link dark-gray noload Accent" href="project.html" data-cover="accent.png">Accent</a></li>
+            <li><a class="project--link dark-gray noload Flint" href="project.html" data-cover="vibia.png">Flint</a></li>
+            <li><a class="project--link dark-gray noload Aismalibar" href="project.html" data-cover="accent.png">Aismalibar</a></li>
+            <li><a class="project--link dark-gray noload Metalarte" href="project.html" data-cover="vibia.png">Metalarte</a></li>
+            <li><a class="project--link dark-gray noload Simón" href="project.html" data-cover="accent.png">Simón</a></li>
+            <li><a class="project--link dark-gray noload Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
+            <li><a class="project--link dark-gray noload Marset" href="project.html" data-cover="accent.png">Marset</a></li>
+            <li><a class="project--link dark-gray noload Roca" href="project.html" data-cover="vibia.png">Roca</a></li>
+            <li><a class="project--link dark-gray noload Vibia" href="project.html" data-cover="accent.png">Vibia</a></li>
+            <li><a class="project--link dark-gray noload Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
+            <li><a class="project--link dark-gray noload Simón" href="project.html" data-cover="accent.png">Simón</a></li>
+          </ul>
+        </div>
+      </main>
+      <footer>
+        <nav class="z-3 ph4 pv2 bottom-nav">
+          <div class="fl w-48">
+            <div class="tl pv1"><a class="dark-gray link dim info--panel" href="#" title="Home"></a></div>
+          </div>
+          <div class="fl w-12">
+            <div class="tl pv1 secondary-nav"><a class="dark-gray link dim" href="#" title="Home">Protocol</a></div>
+          </div>
+          <div class="fl w-40">
+            <div class="tr pv1 secondary-nav"><a class="link dim dark-gray dib mr3 mr4-ns" href="#" title="Procedure">Procedure</a><a class="link dim dark-gray dib mr3 mr4-ns" href="professionals.html" title="Professionals">Professionals</a><a class="link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
+          </div>
+        </nav>
+      </footer>
     </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

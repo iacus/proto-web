@@ -5,7 +5,7 @@
 
 var urlImages = "/content/" ;
 var theBlack = $('.the-black');
-var theProjects = $(".projects")
+var theProjects = $(".projects");
 var defaultTheBlack = theBlack.css('background-image');
 
 
@@ -13,11 +13,16 @@ var defaultTheBlack = theBlack.css('background-image');
 
 $(document).ready(function() {
 
+
+
     setTimeout(function(){
+
         theBlack
         .animate({width: '46%'}, 'easing', loadHomeContent())
 
     }, 1500 );
+
+
 
 });
 
@@ -25,6 +30,10 @@ $(document).ready(function() {
 //
 function loadHomeContent() {
     console.log("Loading projects home");
+
+    $('.preloader__title').fadeOut('slow', function() {
+
+    });
 
     setTimeout(function () {
       theBlack.addClass('dim');

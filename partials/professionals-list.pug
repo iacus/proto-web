@@ -1,12 +1,9 @@
-//- detail professionals-list.pug
-.local-nav.fl.w-30
-  .wrapper--info.pa4.pt5
-    ul
-      li Riki Hugas
-      li Xavi Grau
-      li Xiqui Mateu
-      li Regina Hugas
-.content.fl.w-60
-    .wrapper--info.pa4.pt5
-      p.black-90.pt4 Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.
-      p.black-90.pt4 Puditia ndanditinum et eos voluptas dollantem que estibus atem is in ni omnias explatur simusandis maxim que dolorruntem voluptia volorporibus pellatibus,
+//- professionals-list.pug
+
+ul.professionals__list
+  for professional in professionalsList
+    +professionals-list(professional)
+
+div.bios__blocks
+  for bio in professionalsList
+    +bios-blocks(bio)
