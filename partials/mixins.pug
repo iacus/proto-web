@@ -12,9 +12,10 @@ mixin professionals-list(professional)
 		a.professional__item.dark-gray(class=professional.name, data-cover= professional.image)= professional.name
  
 
-//Professionals list mixin for professionals page
+//Professionals bocks mixin for professionals page
 mixin bios-blocks(professional)
 	
-	div.bio__block__item
-		p.bio__block__p.dark-gray(title=professional.name, data-cover= professional.image)= professional.bio
- 
+	div.bio__block__item.mb4(title=professional.name, data-cover= professional.image)
+		p.bio__block__text-wrapper.dark-gray
+			span.bio__block_name= professional.name + '. '
+			span.bio__block_name= professional.bio

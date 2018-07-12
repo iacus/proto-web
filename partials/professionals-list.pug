@@ -1,9 +1,7 @@
 //- professionals-list.pug
+.the-content.fl.w-52.pr4
+  .projects.flex.flex-column.pt7
 
-ul.professionals__list
-  for professional in professionalsList
-    +professionals-list(professional)
-
-div.bios__blocks
-  for bio in professionalsList
-    +bios-blocks(bio)
+    div.bios__blocks
+      for bio in professionalsList
+        +bios-blocks(bio)

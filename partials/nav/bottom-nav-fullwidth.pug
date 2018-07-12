@@ -1,12 +1,16 @@
-nav.z-3.ph4.pv2.bottom-nav
-  .fl.w-48
-    .tl.pv1
-        a.dark-gray.link.dim.info--panel(href='#', title='Home')= infolink
+nav.z-3.ph4.pv3.bg-white.bottom-nav
+  .fl.w-48.pv1
+    .tl
+        if infolink
+          a.dark-gray.link.dim.info--panel(href='#', title='Home')= infolink
+        if backlink
+          span.bl.bw1.ml3.pl3
+          a.dark-gray.link.dim(href='#', title='Back')= backlink
   .fl.w-12
-    .tl.pv1.secondary-nav
+    .tl.secondary-nav
       a.dark-gray.link.dim(href='#', title='Home') Protocol
   .fl.w-40
-    .tr.pv1.secondary-nav
+    .tr.secondary-nav
       a.link.dim.dark-gray.dib.mr3.mr4-ns(href='#', title='Procedure') Procedure
       a.link.dim.dark-gray.dib.mr3.mr4-ns(href='professionals.html', title='Professionals') Professionals
       a.link.dim.dark-gray.dib.mr3.mr0-ns(href='#', title='Contact') Contact

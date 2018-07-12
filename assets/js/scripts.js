@@ -36,7 +36,7 @@ function loadHomeContent() {
     });
 
     setTimeout(function () {
-      theBlack.addClass('dim');
+      //theBlack.addClass('dim');
 
       theProjects.each(function(i) {
         $(this)
@@ -70,14 +70,14 @@ $(".project--link").on({
       const coverImage = $(this).attr('data-cover');
       const coverImageRoute = 'url("' + urlImages + coverImage + '")';
 
-      theBlack.find('.image-containter').delay(1000).css('background-image', coverImageRoute);
+      theBlack.find('.image-containter').stop(true, true).delay(1000).fadeIn().css('background-image', coverImageRoute);
       $(".projects").find('.project--link').not($(this)).clearQueue().animate({opacity: 0.5}, "fast")
 
 
     },
     mouseleave: function() {
-      theBlack.find('.image-containter').css('background-image', defaultTheBlack);
-      $(".projects").find('.project--link').clearQueue().stop(true,true).delay(300).animate({opacity: 1}, "fast")
+      theBlack.find('.image-containter').stop(true,true).delay(5000).clearQueue().fadeOut().css('background-image', defaultTheBlack);
+      $(".projects").find('.project--link').clearQueue().delay(300).animate({opacity: 1}, "fast")
 
     },
     touchstart: function() {
@@ -86,6 +86,34 @@ $(".project--link").on({
     },
     touchEnd: function() {
 
+
+    }
+});
+
+//Professionals illustrations
+$(".bio__block__item").on({
+    click: function(event) {
+      event.preventDefault();
+
+    },
+    mouseenter: function() {
+      const elem = $(this);
+      const elemFirstClass = "." + $(this).attr('class').split(' ')[0];
+      const coverImage = $(this).attr('data-cover');
+      const coverImageRoute = 'url("' + urlImages + coverImage + '")';
+
+      console.log(elemFirstClass);
+
+
+      theBlack.find('.image-containter').delay(100).stop(true, true).fadeIn().css('background-image', coverImageRoute);
+      $(elemFirstClass).not($(this)).clearQueue().animate({opacity: 0.5}, "fast")
+
+    },
+    mouseleave: function() {
+      const elemFirstClass = "." + $(this).attr('class').split(' ')[0];
+
+      theBlack.find('.image-containter').fadeOut().css('background-image', defaultTheBlack);
+      $(elemFirstClass).clearQueue().stop(true,true).delay(100).animate({opacity: 1}, "fast")
 
     }
 });
@@ -127,35 +155,81 @@ $(".info--panel").on({
 
       infoPanel.toggle( "slide", function () {
         if (infoPanel.is(":visible")){
-          elem.removeClass('dark-gray').addClass('white-90').text('Close');
-          projectTitle.removeClass('dark-gray').addClass('white-90');
+          //elem.removeClass('dark-gray').addClass('white-90');
+          //projectTitle.removeClass('dark-gray').addClass('white-90');
         } else {
-          elem.removeClass('white-90').addClass('dark-gray').text('+ Info');
-          projectTitle.removeClass('white-90').addClass('dark-gray');
+          //elem.removeClass('white-90').addClass('dark-gray');
+          //projectTitle.removeClass('white-90').addClass('dark-gray');
         }
 
       } );
 
-
     },
-    mouseenter: function() {
 
-
-    },
-    mouseleave: function() {
-
-
-    },
-    touchstart: function() {
-
-
-    },
-    touchEnd: function() {
-
-
-    }
 });
 
+
+
+
+//flash
+
+$(document).ready(function(){
+
+	var winWidth = $(window).width();
+	var winHeight = $(window).height();
+	var divider = 1/$(document).height();
+
+	if(winWidth < 600){
+		var size = winHeight < winWidth ? winWidth : winHeight;
+		$('.flash').css({
+			width:size*2,
+			height:size*2,
+			marginTop:-size,
+			marginLeft:-size
+		});
+	}
+
+	// $(document).scroll(function(){
+	// 	scrollTop = $(document).scrollTop();
+	// 	scale = 1 - (scrollTop * divider);
+	// 	$('.flash').css({'transform':'scale(' + scale + ')'});
+	// });
+
+	$(document).mousemove(function(e){
+		$('.flash').css({
+			top:e.pageY - $(document).scrollTop(),
+			left:e.pageX - 800
+		});
+	});
+
+	document.addEventListener('touchmove', function(e){
+		$('.flash, .flash-white').css({
+			top:e.pageY,
+			left:e.pageX
+		});
+		e.preventDefault();
+	}, false);
+
+	document.addEventListener('touchstart', function(e){
+		if(!$(e.target).hasClass('link')){
+			$('.flash, .flash-white').css({
+				top:e.pageY,
+				left:e.pageX
+			});
+			e.preventDefault();
+		}
+	}, false);
+
+	document.addEventListener('touchend', function(e){
+		if(!$(e.target).hasClass('link')){
+			colourIndex = colourIndex === 5 ? colourIndex = 0 : colourIndex + 1;
+			$('.flash').addClass(colours[colourIndex]).removeClass('flashing flash-black');
+			$('.flash').show();
+			e.preventDefault();
+		}
+	}, false);
+
+});
 
 //RoyalSlider
 

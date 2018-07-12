@@ -1,7 +1,7 @@
 
 <!--List of projects for home page-->
 <!--Professionals list mixin for professionals page-->
-<!--Professionals list mixin for professionals page--><!DOCTYPE html5>
+<!--Professionals bocks mixin for professionals page--><!DOCTYPE html5>
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -12,29 +12,32 @@
     <link rel="stylesheet" href="assets/css/royalslider/royalslider.css"/>
     <link rel="stylesheet" href="assets/css/royalslider/skins/minimal-white/rs-minimal-white.css"/>
   </head>
-  <body>
+  <body> 
     <!--a.referencia-titulo= title-->
-    <div class="the-black fl w-100 h-100 bg-black absolute z-999">
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden">
       <!--div.preloader__title.vh-100.dt.w-100.absolute.top-0.z-9999
       .dtc.v-mid.tc.white.ph3.ph4-l
       	h2.tc= title
       -->
-      <div class="image-containter h-100 hide-cover"></div>
+      <div class="image-containter h-100 hide-cover" style="display:none"></div>
+      <div class="flash">
+        <div class="flash-black"></div>
+      </div>
       <div class="bg-black h-100 the-black-bg"></div>
     </div>
     <div class="wrapper">
       <header>
-        <nav class="z-3 ph4 pv2 top-nav">
-          <div class="fl w-48">
-            <div class="tl pv1">
+        <nav class="z-2 ph4 pv3 bg-white top-nav">
+          <div class="fl w-48 pv1">
+            <div class="tl">
               <h2 class="project--title link dark-gray dib mr3 mr0-ns" title="description"></h2>
             </div>
           </div>
           <div class="fl w-12">
-            <div class="tl pv1"><a class="dark-gray link dim" href="index.html" title="Home">Proto</a></div>
+            <div class="tl"><a class="dark-gray link dim" href="index.html" title="Home">Proto</a></div>
           </div>
           <div class="fl w-40">
-            <div class="tr pv1"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+            <div class="tr"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
           </div>
         </nav>
       </header>
@@ -61,15 +64,16 @@
         </div>
       </main>
       <footer>
-        <nav class="z-3 ph4 pv2 bottom-nav">
-          <div class="fl w-48">
-            <div class="tl pv1"><a class="dark-gray link dim info--panel" href="#" title="Home"></a></div>
+        <nav class="z-3 ph4 pv3 bg-white bottom-nav">
+          <div class="fl w-48 pv1">
+            <div class="tl">
+            </div>
           </div>
           <div class="fl w-12">
-            <div class="tl pv1 secondary-nav"><a class="dark-gray link dim" href="#" title="Home">Protocol</a></div>
+            <div class="tl secondary-nav"><a class="dark-gray link dim" href="#" title="Home">Protocol</a></div>
           </div>
           <div class="fl w-40">
-            <div class="tr pv1 secondary-nav"><a class="link dim dark-gray dib mr3 mr4-ns" href="#" title="Procedure">Procedure</a><a class="link dim dark-gray dib mr3 mr4-ns" href="professionals.html" title="Professionals">Professionals</a><a class="link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
+            <div class="tr secondary-nav"><a class="link dim dark-gray dib mr3 mr4-ns" href="#" title="Procedure">Procedure</a><a class="link dim dark-gray dib mr3 mr4-ns" href="professionals.html" title="Professionals">Professionals</a><a class="link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
           </div>
         </nav>
       </footer>

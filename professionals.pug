@@ -10,18 +10,30 @@ html
 	
 	include partials/head+scripts/head.pug
 
-	body
+	body 
+		
 		//a.referencia-titulo= title
-	
-	div.wrapper
-		
-		header
-			include partials/nav/top-nav-fullwidth.pug 
-		
-		main
-			include partials/professionals-list.pug
+		div.the-black.fl.w-100.h-100.z-999.fixed.relative.overflow-hidden
+			//div.preloader__title.vh-100.dt.w-100.absolute.top-0.z-9999
+				.dtc.v-mid.tc.white.ph3.ph4-l
+					h2.tc= title
+			div.image-containter.h-100.bg-blend.hide-cover(style="display:none")
+			div.flash
+				div.flash-black
+			div.bg-black.h-100.the-black-bg
+        
+		div.wrapper
+				
+				header
+					include partials/nav/top-nav-fullwidth.pug  
+				
+				main.home
+					include partials/professionals-list.pug 
 
-		footer
-			include partials/nav/bottom-nav-fullwidth.pug			
-		
+				footer
+					include partials/nav/bottom-nav-fullwidth.pug			
+
+
+
 	include partials/head+scripts/scripts.pug
+    

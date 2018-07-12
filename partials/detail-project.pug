@@ -1,8 +1,11 @@
 //- detail project.pug
-.project--info.fl.w-40.h-100.bg-black.absolute.z-1(style="display:none")
-  .wrapper--info.pa4.pt5
+.project--info.fl.w-40.h-100.bg-black.absolute.z-5(style="display:none")
+  .wrapper--info.pa4.pv3.h-100.flex.flex-column
+    h2.project--title.link.white.dib.mr3.mr0-ns(title= 'description' )= project
     p.white-90.pt4 Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.
     p.white-90.pt4 Puditia ndanditinum et eos voluptas dollantem que estibus atem is in ni omnias explatur simusandis maxim que dolorruntem voluptia volorporibus pellatibus,
+    p.items-end.mta
+      a.info--panel.white.bg-black.link.dim(href='#', title='Home') Close
 .project__gallery.w-100
   #gallery-1.royalSlider.rsMinW.visibleNearby
     a.rsImg(href='content/vibia.png', data-rsw='470', data-rsh='600')

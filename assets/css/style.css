@@ -172,30 +172,17 @@ a.project--link {
   display: inline-block; }
 
 .the-black {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,222222+100 */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#555555+0,000000+98 */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#555555+22,000000+94 */
-  background: #555555;
-  /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #555555 22%, #000000 94%);
-  /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, #555555 22%, #000000 94%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-radial-gradient(center, ellipse, #555555 22%, #000000 94%);
-  background: -o-radial-gradient(center, ellipse, #555555 22%, #000000 94%);
-  background: radial-gradient(ellipse at center, #555555 22%, #000000 94%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#000000',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */ }
+  background-color: #222; }
 
 .the-black .image-containter {
   background-image: url(../images/default.gif);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-color: #222; }
 
-.hide-cover {
-  opacity: 0.9; }
+.bg-blend {
+  background-blend-mode: multiply; }
 
 .hide-info-panel {
   display: none; }
@@ -203,7 +190,7 @@ a.project--link {
 .the-black-bg {
   top: 0px;
   position: absolute;
-  background-color: red; }
+  background-color: #222; }
 
 ul.projects {
   white-space: nowrap; }
@@ -218,3 +205,59 @@ ul.projects {
   top: 0px;
   display: block;
   background-color: red; }
+
+.flash {
+  position: absolute;
+  margin-top: -100vh;
+  margin-left: -100vh;
+  width: 200vh;
+  height: 200vh;
+  background: -webkit-gradient(ellipse at center, radial, 0% 0%, 0% 100%, from(white), to(black));
+  background: -webkit-radial-gradient(ellipse at center, white, black);
+  background: -moz-radial-gradient(ellipse at center, white, black);
+  background: -ms-radial-gradient(ellipse at center, white, black);
+  background: -o-radial-gradient(ellipse at center, white, black);
+  background: -webkit-radial-gradient(center, ellipse, white, black);
+  background: -o-radial-gradient(center, ellipse, white, black);
+  background: radial-gradient(ellipse at center, white, black);
+  top: 50%;
+  left: 0;
+  opacity: 0.1;
+  z-index: 10;
+  -webkit-filter: blur(1000px);
+  filter: blur(1000px); }
+
+.flash-white {
+  opacity: 0;
+  position: fixed;
+  margin-top: -100vw;
+  margin-left: -100vw;
+  width: 200vw;
+  height: 200vw;
+  background: #fff; }
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1; }
+  30% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes flash {
+  0% {
+    opacity: 1; }
+  30% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.flashing .flash-white {
+  opacity: 0;
+  z-index: 100; }
+
+.flash-black {
+  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0) 0%, white 300%);
+  background: -o-radial-gradient(center, ellipse, rgba(255, 255, 255, 0) 0%, white 300%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, white 300%);
+  opacity: 1; }
