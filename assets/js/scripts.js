@@ -1,8 +1,6 @@
 //scripts.js
 
-
-
-
+//Global variables
 var urlImages = "/content/" ;
 var theBlack = $('.the-black');
 var theProjects = $(".projects");
@@ -13,21 +11,53 @@ var defaultTheBlack = theBlack.css('background-image');
 
 $(document).ready(function() {
 
-
-
+  if (theBlack.parents('.visible-the-black').length) {
     setTimeout(function(){
 
-        theBlack
-        .animate({width: '46%'}, 'easing', loadHomeContent())
+        theBlack.animate({width: '46%'}, 'easing', loadHomeContent())
 
     }, 1500 );
-
+  }
 
 
 });
 
+//Animate The-black transition
 
-//
+$(".theBlackToBlack").on({
+    click: function(event) {
+      event.preventDefault();
+      const thisLink = $(this).attr('href');
+
+      theBlack
+      .animate({width: '100%'}, 'easing', function () {
+        location.href = thisLink;
+      });
+
+      console.log("Animate to Black");
+      console.log(thisLink);
+
+    }
+});
+
+$(".theBlackToWhite").on({
+    click: function(event) {
+      event.preventDefault();
+      const thisLink = $(this).attr('href');
+
+      theBlack
+      .animate({width: '0%'}, 'easing', function () {
+        location.href = thisLink;
+      });
+
+      console.log("Animate to White");
+      console.log(thisLink);
+
+    }
+});
+
+
+//Animate home projects
 function loadHomeContent() {
     console.log("Loading projects home");
 
@@ -51,18 +81,11 @@ function loadHomeContent() {
 /********* projects hover *********/
 /**********************************/
 
+
+
 $(".project--link").on({
     click: function(event) {
       event.preventDefault();
-      const elem = $(this);
-      const thisLink = $(this).attr('href');
-
-      theBlack
-      .animate({width: '0%'}, 'easing', function () {
-        location.href = thisLink;
-      });
-
-      console.log(thisLink);
 
     },
     mouseenter: function() {

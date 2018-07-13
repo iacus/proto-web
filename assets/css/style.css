@@ -206,6 +206,9 @@ ul.projects {
   display: block;
   background-color: red; }
 
+.hidden-the-black .the-black {
+  width: 0%; }
+
 .flash {
   position: absolute;
   margin-top: -100vh;
