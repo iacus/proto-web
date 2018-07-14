@@ -180,9 +180,8 @@ a.project--link {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #222; }
-
-.bg-blend {
-  background-blend-mode: multiply; }
+  .bg-blend .the-black .image-containter {
+    background-blend-mode: multiply; }
 
 .hide-info-panel {
   display: none; }
@@ -196,7 +195,8 @@ ul.projects {
   white-space: nowrap; }
   ul.projects li {
     overflow: hidden;
-    margin-bottom: 1.2; }
+    margin-bottom: 1.2;
+    opacity: 0; }
 
 .referencia-titulo {
   position: fixed;

@@ -3,7 +3,7 @@
 //Global variables
 var urlImages = "/content/" ;
 var theBlack = $('.the-black');
-var theProjects = $(".projects");
+var theBlackJs = document.querySelector('.the-black');
 var defaultTheBlack = theBlack.css('background-image');
 
 
@@ -13,12 +13,9 @@ $(document).ready(function() {
 
   if (theBlack.parents('.visible-the-black').length) {
     setTimeout(function(){
-
-        theBlack.animate({width: '46%'}, 'easing', loadHomeContent())
-
-    }, 1500 );
+        animateTheBlack('46%');
+      }, 1500);
   }
-
 
 });
 
@@ -28,11 +25,9 @@ $(".theBlackToBlack").on({
     click: function(event) {
       event.preventDefault();
       const thisLink = $(this).attr('href');
+      var fullWidth = window.innerWidth;
 
-      theBlack
-      .animate({width: '100%'}, 'easing', function () {
-        location.href = thisLink;
-      });
+      animateTheBlack(fullWidth,thisLink);
 
       console.log("Animate to Black");
       console.log(thisLink);
@@ -45,10 +40,7 @@ $(".theBlackToWhite").on({
       event.preventDefault();
       const thisLink = $(this).attr('href');
 
-      theBlack
-      .animate({width: '0%'}, 'easing', function () {
-        location.href = thisLink;
-      });
+      animateTheBlack(0,thisLink);
 
       console.log("Animate to White");
       console.log(thisLink);
@@ -57,25 +49,67 @@ $(".theBlackToWhite").on({
 });
 
 
-//Animate home projects
-function loadHomeContent() {
-    console.log("Loading projects home");
+function animateTheBlack(bgPosition,thisLink) {
+  //Funcion para borrar el target
+  //anime.remove(theBlackJs);
 
-    $('.preloader__title').fadeOut('slow', function() {
+  if (thisLink === undefined) thisLink = "noLink";
 
-    });
+  anime({
+    targets: theBlackJs,
+    width: bgPosition,
+    easing: 'easeInOutSine',
+    complete: function(anim) {
+      console.log("Animacion completa");
+      console.log(thisLink);
 
-    setTimeout(function () {
-      //theBlack.addClass('dim');
+      if (thisLink != "noLink") {
+        location.href = thisLink;
 
-      theProjects.each(function(i) {
-        $(this)
-        .delay(100 * i)
-        .fadeIn(500)});
+      }
 
-    }, 3000)
+      loadHomeContent();
 
+    }
+  });
 }
+
+  //Animate home projects
+  function loadHomeContent() {
+      console.log("Loading projects home");
+
+
+      animateTheProjects.play();
+
+
+  }
+
+
+  
+  var theProjects = document.querySelectorAll('.projects li');
+
+  var animateTheProjects = anime({
+    targets: theProjects,
+    opacity: {
+      value: 1,
+      delay: function(el, i, l) {
+        return i * 80;
+        console.log("ojete");
+      },
+    },
+    translateY: {
+      value: 40,
+      //easing: 'linear',
+      delay: function(el, i, l) {
+        return i * 50;
+      }
+    },
+    autoplay: false
+  });
+
+
+
+
 
 /**********************************/
 /********* projects hover *********/
@@ -85,7 +119,17 @@ function loadHomeContent() {
 
 $(".project--link").on({
     click: function(event) {
+
+      //Por alguna extraña razón no puedo lanzar el método
+      //de la animación. Así que lo lanzo a través de la
+      //función de carga de los proyectos
+      loadHomeContent();
+      animateTheProjects.reverse();
+
       event.preventDefault();
+
+
+
 
     },
     mouseenter: function() {
@@ -151,23 +195,15 @@ $("footer").find('.secondary-nav a').on({
 
       elem.css('opacity', '1');
       $("footer").find('.secondary-nav a').not(elem).clearQueue().stop(true,true).animate({opacity: 0.5}, "fast")
-
-
     },
     mouseleave: function() {
       $("footer").find('.secondary-nav a').clearQueue().stop(true,true).css('opacity', '1');
 
-    },
-    touchstart: function() {
-
-
-    },
-    touchEnd: function() {
-
-
     }
 });
 
+
+//Info panel
 $(".info--panel").on({
     click: function(event) {
       const elem = $(this);
@@ -193,9 +229,8 @@ $(".info--panel").on({
 
 
 
-
 //flash
-
+/*
 $(document).ready(function(){
 
 	var winWidth = $(window).width();
@@ -253,7 +288,7 @@ $(document).ready(function(){
 	}, false);
 
 });
-
+*/
 //RoyalSlider
 
 // Important note! If you're adding CSS3 transition to slides, fadeInLoadedSlide should be disabled to avoid fade-conflicts.
