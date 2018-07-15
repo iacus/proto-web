@@ -1,16 +1,19 @@
-nav.z-3.ph4.pv3.bg-white.bottom-nav
-  .fl.w-48.pv1
-    .tl
-        if infolink
-          a.dark-gray.link.dim.info--panel(href='#', title='Home')= infolink
-        if backlink
-          span.bl.bw1.ml3.pl3
-          a.dark-gray.link.dim(href='#', title='Back')= backlink
-  .fl.w-12
-    .tl.secondary-nav
-      a.dark-gray.link.dim(href='#', title='Home') Protocol
-  .fl.w-40
-    .tr.secondary-nav
-      a.link.dim.dark-gray.dib.mr3.mr4-ns(href='#', title='Procedure') Procedure
-      a.link.dim.dark-gray.dib.mr3.mr4-ns.theBlackToBlack(href='professionals.html', title='Professionals') Professionals
-      a.link.dim.dark-gray.dib.mr3.mr0-ns(href='#', title='Contact') Contact
+footer.fixed.z-3.w-100.bg-white.bottom-0.pv3
+  nav.z-2.ph4.bottom-nav.flexbox
+    .fl.w-48
+      .tl
+          if infolink
+            a.dark-gray.link.dim.info--panel(href='#', title='Home')= infolink
+          if backlink
+            span.bl.bw1.ml3.pl3
+            a.dark-gray.link.dim.theBlackToBlack(href='index.html', title='Back')= backlink
+          else
+            p a
+    .fl.w-12
+      .tl.secondary-nav
+        a.link-footer.js-light-element.dark-gray.link.dim.js-light-element(href='#', title='Home') Protocol
+    .fl.w-40
+      .tr.secondary-nav
+        a.link-footer.js-light-element.link.dim.dark-gray.dib.mr3.mr4-ns.theBlackToBlack(href='procedure.html', title='Procedure') Procedure
+        a.link-footer.js-light-element.link.dim.dark-gray.dib.mr3.mr4-ns.theBlackToBlack(href='professionals.html', title='Professionals') Professionals
+        a.link-footer.js-light-element.link.dim.dark-gray.dib.mr3.mr0-ns(href='#', title='Contact') Contact

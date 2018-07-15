@@ -1,7 +1,8 @@
 //- professionals-list.pug
-.the-content.fl.w-52.pr4
-  .projects.flex.flex-column.pt7
+main.flexbox
+  .the-content.fl.w-52.pr4.the-black-aligned
+    .projects.flex.flex-column.pv7
 
-    div.bios__blocks
-      for bio in professionalsList
-        +bios-blocks(bio)
+      div.bios__blocks
+        for bio in professionalsList
+          +bios-blocks(bio)

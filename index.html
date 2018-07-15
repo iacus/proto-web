@@ -1,7 +1,8 @@
 
 <!--List of projects for home page-->
+<!--Professionals bocks mixin for procedures page-->
 <!--Professionals list mixin for professionals page-->
-<!--Professionals bocks mixin for professionals page--><!DOCTYPE html5>
+<!--Mixin for procedures page--><!DOCTYPE html5>
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -14,16 +15,15 @@
   </head>
   <body class="visible-the-black">
     <!--a.referencia-titulo= title-->
-    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden">
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
-      <div class="flash">
-        <div class="flash-black"></div>
-      </div>
-      <div class="bg-black h-100 the-black-bg"></div>
+      <!--div.flashdiv.flash-black
+      -->
+      <div class="h-100 the-black-bg"></div>
     </div>
     <div class="wrapper">
-      <header>
-        <nav class="z-2 ph4 pv3 bg-white top-nav">
+      <header class="fixed z-3 w-100 bg-white pv3">
+        <nav class="z-2 ph4 top-nav flexbox">
           <div class="fl w-48 pv1">
             <div class="tl">
               <h2 class="project--title link dark-gray dib mr3 mr0-ns" title="description"></h2>
@@ -37,39 +37,40 @@
           </div>
         </nav>
       </header>
-      <main class="home">
-        <div class="the-content fl w-52">
+      <main class="flexbox">
+        <div class="the-content fl w-52 the-black-aligned">
           <ul class="projects flex flex-column">
-            <li><a class="project--link dark-gray noload theBlackToWhite Vibia" href="project.html" data-cover="vibia.png">Vibia</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Troll" href="project.html" data-cover="accent.png">Troll</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Sageloux" href="project.html" data-cover="vibia.png">Sageloux</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Ledmotive" href="project.html" data-cover="accent.png">Ledmotive</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Escofet" href="project.html" data-cover="vibia.png">Escofet</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Accent" href="project.html" data-cover="accent.png">Accent</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Flint" href="project.html" data-cover="vibia.png">Flint</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Aismalibar" href="project.html" data-cover="accent.png">Aismalibar</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Metalarte" href="project.html" data-cover="vibia.png">Metalarte</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Simón" href="project.html" data-cover="accent.png">Simón</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Marset" href="project.html" data-cover="accent.png">Marset</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Roca" href="project.html" data-cover="vibia.png">Roca</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Vibia" href="project.html" data-cover="accent.png">Vibia</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
-            <li><a class="project--link dark-gray noload theBlackToWhite Simón" href="project.html" data-cover="accent.png">Simón</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Vibia" href="project.html" data-cover="vibia.png">Vibia</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Troll" href="project.html" data-cover="accent.png">Troll</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Sageloux" href="project.html" data-cover="vibia.png">Sageloux</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Ledmotive" href="project.html" data-cover="accent.png">Ledmotive</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Escofet" href="project.html" data-cover="vibia.png">Escofet</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Accent" href="project.html" data-cover="accent.png">Accent</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Flint" href="project.html" data-cover="vibia.png">Flint</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Aismalibar" href="project.html" data-cover="accent.png">Aismalibar</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Metalarte" href="project.html" data-cover="vibia.png">Metalarte</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Simón" href="project.html" data-cover="accent.png">Simón</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Marset" href="project.html" data-cover="accent.png">Marset</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Roca" href="project.html" data-cover="vibia.png">Roca</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Vibia" href="project.html" data-cover="accent.png">Vibia</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
+            <li><a class="project--link dark-gray noload theBlackToWhite js-light-element Simón" href="project.html" data-cover="accent.png">Simón</a></li>
           </ul>
         </div>
       </main>
-      <footer>
-        <nav class="z-3 ph4 pv3 bg-white bottom-nav">
-          <div class="fl w-48 pv1">
+      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3">
+        <nav class="z-2 ph4 bottom-nav flexbox">
+          <div class="fl w-48">
             <div class="tl">
+              <p>a</p>
             </div>
           </div>
           <div class="fl w-12">
-            <div class="tl secondary-nav"><a class="dark-gray link dim" href="#" title="Home">Protocol</a></div>
+            <div class="tl secondary-nav"><a class="link-footer js-light-element dark-gray link dim js-light-element" href="#" title="Home">Protocol</a></div>
           </div>
           <div class="fl w-40">
-            <div class="tr secondary-nav"><a class="link dim dark-gray dib mr3 mr4-ns" href="#" title="Procedure">Procedure</a><a class="link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
+            <div class="tr secondary-nav"><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
           </div>
         </nav>
       </footer>
@@ -77,6 +78,8 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="assets/js/scripts.js" async="async"></script>
+  <script src="assets/js/animations.js" async="async"></script>
   <script src="assets/js/jquery.royalslider.min.js"></script>
+  <script src="assets/js/jquery.sticky-kit.min.js"></script>
   <script src="assets/js/anime.min.js"></script>
 </html>

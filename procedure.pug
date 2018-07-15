@@ -1,4 +1,4 @@
-include data/projects
+include data/procedure
 include partials/variables
 include partials/mixins
 
@@ -10,16 +10,14 @@ html
 	
 	include partials/head+scripts/head.pug
 
-	body.visible-the-black
-		
-		//a.referencia-titulo= title
+	body.visible-the-black.the-black-0.top-nav-black
 		include partials/the-black.pug
         
 		.wrapper
 				
 			include partials/nav/top-nav-fullwidth.pug 
 			
-			include partials/projects-list.pug
+			include partials/procedure-list.pug
 
 			include partials/nav/bottom-nav-fullwidth.pug			
 

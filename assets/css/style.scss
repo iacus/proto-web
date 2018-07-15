@@ -1,8 +1,10 @@
 //styles.scss
-
 @import 'reset';
 @import 'mediaqueries';
 @import 'proto-royalslider';
+
+$black: #000;
+$the-black-color: #111;
 
 
 @font-face {font-family: "NHU";
@@ -14,134 +16,109 @@
   url("../fonts/145bf6f8eebf1ad036f74d821af7d94b.svg#Neue Haas Unica W06 Light") format("svg"); /* iOS 4.1- */
 }
 
-body{
+body {
   font-family: "NHU";
   font-size: 1.5em !important;
   line-height: 1.2;
 }
 
 body.projects-page .wrapper {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
-
 //Layout
-.wrapper{
+.wrapper main {
+  flex: 1;
+  //background-color: yellow;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-
-  header,main,footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  header{
-    flex: 1;
-    //background-color:red;
-    margin-bottom: auto;
-  }
-
-  main{
-    flex: 10;
-    //background-color: yellow;
-  }
-
-  .home{
-    //justify-content: flex-end;
-    //flex-direction: row
-  }
-
-  footer{
-    flex: 1;
-    //background-color: pink;
-    margin-top: auto;
-    flex-grow: 1;
-  }
+  justify-content: center;
+}
+//the black
+.the-black-bg {
+  background-color: $the-black-color;
 }
 
-.home .the-content{
+.the-black-aligned {
   margin-left: auto;
 }
 
-.bottom-nav{
-  margin-top: auto;
+.hidden-the-black .the-black {
+  width: 0;
 }
 
+//Color
+.top-nav-black {
+  header {
+    background-color: $black;
 
+    & * {
+      color: white;
+    }
+  }
 
-.top-nav{
-  margin-bottom: auto;
+  footer {
+    background-color: $black;
+
+    & * {
+      color: white;
+    }
+  }
 }
-
 //Links
 
-a{
+a {
   text-decoration: none;
   color: black;
 
-  :visited{
-
-  }
+  :visited {}
 }
 
-a.project--link{
+a.project--link {
   display: inline-block;
 }
 
-.the-black{
-  background-color: #222
-}
-
-.the-black .image-containter{
-  background-image: url(../images/default.gif);
+.the-black .image-containter {
+  background-image: url("../images/default.gif");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #222;
 
-  .bg-blend &{
+  .bg-blend & {
     background-blend-mode: multiply;
   }
 }
 
-.hide-info-panel{
+.hide-info-panel {
   display: none;
 }
 
-.the-black-bg{
-  top:0px;
-  position: absolute;
-  background-color: #222;
-}
-
-ul.projects{
+ul.projects {
   white-space: nowrap;
 
-  li{
+  li {
     overflow: hidden;
     margin-bottom: 1.2;
     opacity: 0;
   }
 }
 
-
-.referencia-titulo{
+.referencia-titulo {
   position: fixed;
   width: 100%;
   text-align: center;
-  top:0px;
+  top: 0;
   display: block;
   background-color: red;
 }
 
-.hidden-the-black .the-black{
-  width: 0%;
+//anime elements
+.js-hidden {
+  opacity: 0;
 }
 
-
 //flash over black
-
 .flash {
   position: absolute;
   margin-top: -100vh;
@@ -159,7 +136,8 @@ ul.projects{
   left: 0;
   opacity: 0.1;
   z-index: 10;
-  filter: blur(1000px); }
+  filter: blur(1000px);
+}
 
 .flash-white {
   opacity: 0;
@@ -168,21 +146,28 @@ ul.projects{
   margin-left: -100vw;
   width: 200vw;
   height: 200vw;
-  background: #fff; }
-
+  background: #fff;
+}
 @keyframes flash {
   0% {
-    opacity: 1; }
+    opacity: 1;
+  }
 
   30% {
-    opacity: 1; }
+    opacity: 1;
+  }
 
   100% {
-    opacity: 0; } }
+    opacity: 0;
+  }
+}
+
 .flashing .flash-white {
   opacity: 0;
-  z-index: 100; }
+  z-index: 100;
+}
 
 .flash-black {
   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, white 300%);
-  opacity: 1; }
+  opacity: 1;
+}

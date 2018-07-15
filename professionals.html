@@ -1,7 +1,8 @@
 
 <!--List of projects for home page-->
+<!--Professionals bocks mixin for procedures page-->
 <!--Professionals list mixin for professionals page-->
-<!--Professionals bocks mixin for professionals page--><!DOCTYPE html5>
+<!--Mixin for procedures page--><!DOCTYPE html5>
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -14,16 +15,15 @@
   </head>
   <body class="visible-the-black bg-blend">
     <!--a.referencia-titulo= title-->
-    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden">
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
-      <div class="flash">
-        <div class="flash-black"></div>
-      </div>
-      <div class="bg-black h-100 the-black-bg"></div>
+      <!--div.flashdiv.flash-black
+      -->
+      <div class="h-100 the-black-bg"></div>
     </div>
     <div class="wrapper">
-      <header>
-        <nav class="z-2 ph4 pv3 bg-white top-nav">
+      <header class="fixed z-3 w-100 bg-white pv3">
+        <nav class="z-2 ph4 top-nav flexbox">
           <div class="fl w-48 pv1">
             <div class="tl">
               <h2 class="project--title link dark-gray dib mr3 mr0-ns" title="description"></h2>
@@ -37,37 +37,38 @@
           </div>
         </nav>
       </header>
-      <main class="home">
-        <div class="the-content fl w-52 pr4">
-          <div class="projects flex flex-column pt7">
+      <main class="flexbox">
+        <div class="the-content fl w-52 pr4 the-black-aligned">
+          <div class="projects flex flex-column pv7">
             <div class="bios__blocks">
-              <div class="bio__block__item mb4" title="Riki Hugàs" data-cover="riki.jpg">
+              <div class="bio__block__item mb4 js-light-element" title="Riki Hugàs" data-cover="riki.jpg">
                 <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Riki Hugàs. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
               </div>
-              <div class="bio__block__item mb4" title="Xavi Grau" data-cover="xavi.jpg">
+              <div class="bio__block__item mb4 js-light-element" title="Xavi Grau" data-cover="xavi.jpg">
                 <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Xavi Grau. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
               </div>
-              <div class="bio__block__item mb4" title="Xiqui Mateu" data-cover="xiqui.jpg">
+              <div class="bio__block__item mb4 js-light-element" title="Xiqui Mateu" data-cover="xiqui.jpg">
                 <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Xiqui Mateu. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
               </div>
-              <div class="bio__block__item mb4" title="Regina Hugas" data-cover="regi.jpg">
+              <div class="bio__block__item mb4 js-light-element" title="Regina Hugas" data-cover="regi.jpg">
                 <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Regina Hugas. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <footer>
-        <nav class="z-3 ph4 pv3 bg-white bottom-nav">
-          <div class="fl w-48 pv1">
+      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3">
+        <nav class="z-2 ph4 bottom-nav flexbox">
+          <div class="fl w-48">
             <div class="tl">
+              <p>a</p>
             </div>
           </div>
           <div class="fl w-12">
-            <div class="tl secondary-nav"><a class="dark-gray link dim" href="#" title="Home">Protocol</a></div>
+            <div class="tl secondary-nav"><a class="link-footer js-light-element dark-gray link dim js-light-element" href="#" title="Home">Protocol</a></div>
           </div>
           <div class="fl w-40">
-            <div class="tr secondary-nav"><a class="link dim dark-gray dib mr3 mr4-ns" href="#" title="Procedure">Procedure</a><a class="link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
+            <div class="tr secondary-nav"><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
           </div>
         </nav>
       </footer>
@@ -75,6 +76,8 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="assets/js/scripts.js" async="async"></script>
+  <script src="assets/js/animations.js" async="async"></script>
   <script src="assets/js/jquery.royalslider.min.js"></script>
+  <script src="assets/js/jquery.sticky-kit.min.js"></script>
   <script src="assets/js/anime.min.js"></script>
 </html>

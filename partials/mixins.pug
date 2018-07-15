@@ -3,19 +3,27 @@
 mixin project-list(project)
 	
 	li
-		a.project--link.dark-gray.noload.theBlackToWhite(class=project.title, href=project.url, data-cover= project.cover)= project.title
+		a.project--link.dark-gray.noload.theBlackToWhite.js-light-element(class=project.title, href=project.url, data-cover= project.cover)= project.title
 
-//Professionals list mixin for professionals page
-mixin professionals-list(professional)
-	
-	li
-		a.professional__item.dark-gray(class=professional.name, data-cover= professional.image)= professional.name
- 
-
-//Professionals bocks mixin for professionals page
+//Professionals bocks mixin for procedures page
 mixin bios-blocks(professional)
 	
-	div.bio__block__item.mb4(title=professional.name, data-cover= professional.image)
+	div.bio__block__item.mb4.js-light-element(title=professional.name, data-cover= professional.image)
 		p.bio__block__text-wrapper.dark-gray
 			span.bio__block_name= professional.name + '. '
 			span.bio__block_name= professional.bio
+
+
+//Professionals list mixin for professionals page
+mixin procedure-list(procedure)
+	
+	li
+		a.procedure__item.white.js-light-element(href="#" + procedure.id,class=procedure.name)= procedure.name
+ 
+
+//Mixin for procedures page
+mixin procedure-blocks(procedure)
+	
+	div.procedure__block__item.mb4.js-light-element(title=procedure.name,id=procedure.id)
+		p.procedure__block__text-wrapper.white
+			span.procedure__block_name= procedure.text

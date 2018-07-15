@@ -1,7 +1,8 @@
 
 <!--List of projects for home page-->
+<!--Professionals bocks mixin for procedures page-->
 <!--Professionals list mixin for professionals page-->
-<!--Professionals bocks mixin for professionals page--><!DOCTYPE html5>
+<!--Mixin for procedures page--><!DOCTYPE html5>
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -13,18 +14,16 @@
     <link rel="stylesheet" href="assets/css/royalslider/skins/minimal-white/rs-minimal-white.css"/>
   </head>
   <body class="projects-page hidden-the-black"> 
-    <!--a.referencia-titulo= title-->
-    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden">
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
-      <div class="flash">
-        <div class="flash-black"></div>
-      </div>
-      <div class="bg-black h-100 the-black-bg"></div>
+      <!--div.flashdiv.flash-black
+      -->
+      <div class="h-100 the-black-bg"></div>
     </div>
   </body>
   <div class="wrapper">
-    <header>
-      <nav class="z-2 ph4 pv3 bg-white top-nav">
+    <header class="fixed z-3 w-100 bg-white pv3">
+      <nav class="z-2 ph4 top-nav flexbox">
         <div class="fl w-48 pv1">
           <div class="tl">
             <h2 class="project--title link dark-gray dib mr3 mr0-ns" title="description">Vibia</h2>
@@ -38,8 +37,8 @@
         </div>
       </nav>
     </header>
-    <main>
-      <div class="project--info fl w-40 h-100 bg-black absolute z-5" style="display:none">
+    <main class="h-100">
+      <div class="project--info fl w-40 h-100 absolute z-5 js-hidden the-black-bg">
         <div class="wrapper--info pa4 pv3 h-100 flex flex-column">
           <h2 class="project--title link white dib mr3 mr0-ns" title="description">Vibia</h2>
           <p class="white-90 pt4">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</p>
@@ -47,27 +46,29 @@
           <p class="items-end mta"><a class="info--panel white bg-black link dim" href="#" title="Home">Close</a></p>
         </div>
       </div>
-      <div class="project__gallery w-100">
+      <div class="project__gallery w-100 js-hidden">
         <div class="royalSlider rsMinW visibleNearby" id="gallery-1"><a class="rsImg" href="content/vibia.png" data-rsw="470" data-rsh="600"></a><a class="rsImg" href="content/vibia2.png" data-rsw="800" data-rsh="600"></a><a class="rsImg" href="content/vibia.png" data-rsw="470" data-rsh="600" data-rsvideo="http://www.youtube.com/watch?v=HFbHRWwyihE"></a><a class="rsImg" href="content/vibia2.png" data-rsw="800" data-rsh="600"></a></div>
       </div>
     </main>
-    <footer>
-      <nav class="z-3 ph4 pv3 bg-white bottom-nav">
-        <div class="fl w-48 pv1">
-          <div class="tl"><a class="dark-gray link dim info--panel" href="#" title="Home">+ Info</a><span class="bl bw1 ml3 pl3"></span><a class="dark-gray link dim" href="#" title="Back">Back</a>
+    <footer class="fixed z-3 w-100 bg-white bottom-0 pv3">
+      <nav class="z-2 ph4 bottom-nav flexbox">
+        <div class="fl w-48">
+          <div class="tl"><a class="dark-gray link dim info--panel" href="#" title="Home">+ Info</a><span class="bl bw1 ml3 pl3"></span><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Back">Back</a>
           </div>
         </div>
         <div class="fl w-12">
-          <div class="tl secondary-nav"><a class="dark-gray link dim" href="#" title="Home">Protocol</a></div>
+          <div class="tl secondary-nav"><a class="link-footer js-light-element dark-gray link dim js-light-element" href="#" title="Home">Protocol</a></div>
         </div>
         <div class="fl w-40">
-          <div class="tr secondary-nav"><a class="link dim dark-gray dib mr3 mr4-ns" href="#" title="Procedure">Procedure</a><a class="link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
+          <div class="tr secondary-nav"><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
         </div>
       </nav>
     </footer>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="assets/js/scripts.js" async="async"></script>
+  <script src="assets/js/animations.js" async="async"></script>
   <script src="assets/js/jquery.royalslider.min.js"></script>
+  <script src="assets/js/jquery.sticky-kit.min.js"></script>
   <script src="assets/js/anime.min.js"></script>
 </html>
