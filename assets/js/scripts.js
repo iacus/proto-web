@@ -11,10 +11,6 @@ $(document).ready(function() {
 
   if (theBlack.parents('.visible-the-black').length) {
 
-    /*theBlackPosition = theBlack.parents('.visible-the-black').split('-');
-    theBlackPosition = theBlackPosition[theBlackPosition.length-1];
-    console.log("Medida array" + theBlackPosition);*/
-
     setTimeout(function() {
       if (theBlack.parents('.the-black-0').length) {
         animateTheBlack('0%');
@@ -78,57 +74,50 @@ $(".project--link").on({
 
     event.preventDefault();
 
-  },
-  mouseenter: function() {
-    const elem = $(this);
-    const coverImage = $(this).attr('data-cover');
-    const coverImageRoute = 'url("' + urlImages + coverImage + '")';
-
-    theBlack.find('.image-containter').stop(true, true).delay(1000).fadeIn().css('background-image', coverImageRoute);
-
-  },
-  mouseleave: function() {
-    theBlack.find('.image-containter').stop(true, true).delay(5000).clearQueue().fadeOut().css('background-image', defaultTheBlack);
-
-  },
-  touchstart: function() {},
-  touchEnd: function() {}
+  }
 });
 
-//Professionals illustrations
-$(".bio__block__item").on({
+
+$(".js-buttonMenuResponsive").on({
   click: function(event) {
+    const menuResponsive = $('.menuResponsive');
     event.preventDefault();
 
-  },
+    menuResponsive.toggleClass('js-hidden');
+
+    if (menuResponsive.is('.js-hidden'))
+      showMenuResponsive();
+    else
+      hideMenuResponsive();
+
+    }
+  });
+
+
+
+
+
+$(".js-theBlackImage").on({
   mouseenter: function() {
     const coverImage = $(this).attr('data-cover');
     const coverImageRoute = 'url("' + urlImages + coverImage + '")';
 
-    theBlack.find('.image-containter').delay(100).stop(true, true).fadeIn().css('background-image', coverImageRoute);
+    theBlack.find('.image-containter').stop(true, true).delay(600).fadeIn().css('background-image', coverImageRoute);
 
   },
   mouseleave: function() {
-    theBlack.find('.image-containter').fadeOut().css('background-image', defaultTheBlack);
+    theBlack.find('.image-containter').stop(true, true).delay(2000).clearQueue().fadeOut().css('background-image', defaultTheBlack);
   }
 });
 
-$(".js-light-element").on({
-  mouseenter: function() {
-    const elem = $(this);
-    const elemFirstClass = "." + $(this).attr('class').split(' ')[0];
 
-    elem.css('opacity', '1');
-    $(elemFirstClass).not($(this)).clearQueue().animate({opacity: 0.5}, "fast")
+function theBlackMap() {
+  const coverImage = "map.png";
+  const coverImageRoute = 'url("' + urlImages + coverImage + '")';
 
-  },
-  mouseleave: function() {
-    const elemFirstClass = "." + $(this).attr('class').split(' ')[0];
+  theBlack.find('.image-containter').stop(true, true).delay(600).fadeIn().css('background-image', coverImageRoute);
 
-    $(elemFirstClass).clearQueue().stop(true, true).delay(100).animate({opacity: 1}, "fast")
-
-  }
-});
+}
 
 //Info panel
 $(".info--panel").on({

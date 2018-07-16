@@ -2,13 +2,24 @@
 //List of projects for home page
 mixin project-list(project)
 	
-	li
-		a.project--link.dark-gray.noload.theBlackToWhite.js-light-element(class=project.title, href=project.url, data-cover= project.cover)= project.title
+	//Inicialize all projects to 0 opacity for the animation
+	li.truncate.o-0
+		a.project--link.dark-gray.noload.theBlackToWhite.js-FocusElement.js-theBlackImage(class=project.title, href=project.url, data-cover= project.cover)= project.title
+
+//List of projects for menu responsive
+mixin project-list-ns(project)
+	
+	//Inicialize all projects to 0 opacity for the animation
+	//Opcion Pràctica: .f6.b--white-30.bb.pv1
+	//Opcion Iago: .f5
+	li.truncate.lh-title.f6.b--white-30.bb.pv1
+		a.projects__link_ns.white.noload.theBlackToWhite.js-FocusElement.js-theBlackImage(class=project.title, href=project.url, data-cover= project.cover)= project.title
+
 
 //Professionals bocks mixin for procedures page
 mixin bios-blocks(professional)
 	
-	div.bio__block__item.mb4.js-light-element(title=professional.name, data-cover= professional.image)
+	div.bio__block__item.mb4.js-FocusElement.js-theBlackImage(title=professional.name, data-cover= professional.image)
 		p.bio__block__text-wrapper.dark-gray
 			span.bio__block_name= professional.name + '. '
 			span.bio__block_name= professional.bio
@@ -17,13 +28,14 @@ mixin bios-blocks(professional)
 //Professionals list mixin for professionals page
 mixin procedure-list(procedure)
 	
-	li
-		a.procedure__item.white.js-light-element(href="#" + procedure.id,class=procedure.name)= procedure.name
+	li.truncate
+		a.procedure__item.white.js-FocusElement.jsScrollTo(href="#block" + procedure.id,class=procedure.name)!= procedure.name
  
 
-//Mixin for procedures page
+//List of procedures for procedures page
 mixin procedure-blocks(procedure)
 	
-	div.procedure__block__item.mb4.js-light-element(title=procedure.name,id=procedure.id)
-		p.procedure__block__text-wrapper.white
-			span.procedure__block_name= procedure.text
+	div
+		div.procedure__block__item.mb4(id="#block" + procedure.id, title=procedure.name)
+			p.procedure__block__text-wrapper.white
+				span.procedure__block_name!= procedure.text

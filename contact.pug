@@ -1,4 +1,4 @@
-include data/procedure
+include data/contact
 include data/projects
 include partials/variables
 include partials/mixins
@@ -11,14 +11,16 @@ html
 	
 	include partials/head+scripts/head.pug
 
-	body.visible-the-black.the-black-0.top-nav-black
+	body.visible-the-black.contact
+		
+		//a.referencia-titulo= title
 		include partials/the-black.pug
         
 		.wrapper
 				
 			include partials/nav/top-nav-fullwidth.pug 
 			
-			include partials/procedure-list.pug
+			include partials/contact-content.pug
 
 			include partials/nav/bottom-nav-fullwidth.pug			
 

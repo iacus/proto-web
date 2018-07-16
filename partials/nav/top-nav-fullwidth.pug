@@ -1,4 +1,4 @@
-header.fixed.z-3.w-100.bg-white.pv3
+header.fixed-ns.z-3.w-100.bg-white.pv3.dn.db-m.db-l
   nav.z-2.ph4.top-nav.flexbox
     .fl.w-48.pv1
       .tl
@@ -9,3 +9,37 @@ header.fixed.z-3.w-100.bg-white.pv3
     .fl.w-40
       .tr
         span.link.dark-gray.dib.mr3.mr0-ns(title= 'description' )= description
+        a.link.dark-gray.dim.mr3.mr0-ns.dn-ns.js-showMenuResponsive.theBlackToBlack(href='#', title= 'menu responsive' ) Menu
+
+//Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño
+header.fixed-ns.z-3.w-100.bg-white.pv3.db-ns.dn-m.dn-l.relative.h-50
+  nav.z-2.ph4.top-nav.flexbox
+    .fl.w-50
+      .tl
+        a.dark-gray.link.dim.theBlackToBlack(href='index.html', title='Home')= title
+    .fl.w-50
+      .tr
+        a.link.dark-gray.dim.mr0-ns.dn-ns.js-buttonMenuResponsive.theBlackToBlack(href='#', title= 'menu responsive' ) Menu
+  .tc.absolute.bottom-1.center.w-100
+    span.link.dark-gray.dib.mr3.mr0-ns(title= 'description')= description
+              
+//Menu responsive      
+div.w-100.h-100.top-0.z-999.fixed.relative.the-black-bg.overflow-y-scroll.menuResponsive.js-hidden
+    nav.ph4.pv3
+      .fl.w-50
+        .tl
+          a.link-responsive-top.js-FocusElement.link.dim.white.dt.mb3.theBlackToBlack(href='index.html', title='Home')= title
+      .fl.w-50
+        .tr
+          a.link-responsive-top.js-FocusElement.link.dim.white.dib.js-buttonMenuResponsive(href='#', title= 'close menu') Close
+      .fl.w-100
+          //Añadiendo la clase projects animamos los proyectos
+          ul.flex.flex-column 
+            for project in projectList
+              +project-list-ns(project)
+          .mt3.mb3
+            a.link-responsive.js-FocusElement.link.dim.white.dt.theBlackToBlack(href='procedure.html', title='Procedure') Procedure
+            a.link-responsive.js-FocusElement.link.dim.white.dt.theBlackToBlack(href='professionals.html', title='Professionals') Professionals
+            a.link-responsive.js-FocusElement.link.dim.white.dt.theBlackToBlack(href='contact.html', title='Contact') Contact
+      
+  

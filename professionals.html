@@ -1,8 +1,9 @@
 
 <!--List of projects for home page-->
+<!--List of projects for menu responsive-->
 <!--Professionals bocks mixin for procedures page-->
 <!--Professionals list mixin for professionals page-->
-<!--Mixin for procedures page--><!DOCTYPE html5>
+<!--List of procedures for procedures page--><!DOCTYPE html5>
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -15,14 +16,24 @@
   </head>
   <body class="visible-the-black bg-blend">
     <!--a.referencia-titulo= title-->
-    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg">
+    <!--The black big sizes-->
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg dn db-m db-l">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
-      <!--div.flashdiv.flash-black
-      -->
+      <div class="flash">
+        <div class="flash-black"></div>
+      </div>
+      <div class="h-100 the-black-bg"></div>
+    </div>
+    <!--The black mobile-->
+    <div class="the-black fl w-100 h-50 bottom-0 z-999 fixed relative overflow-hidden the-black-bg db-ns dn-m dn-l">
+      <div class="image-containter h-100 hide-cover" style="display:none"></div>
+      <div class="flash">
+        <div class="flash-black"></div>
+      </div>
       <div class="h-100 the-black-bg"></div>
     </div>
     <div class="wrapper">
-      <header class="fixed z-3 w-100 bg-white pv3">
+      <header class="fixed-ns z-3 w-100 bg-white pv3 dn db-m db-l">
         <nav class="z-2 ph4 top-nav flexbox">
           <div class="fl w-48 pv1">
             <div class="tl">
@@ -33,31 +44,122 @@
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
           <div class="fl w-40">
-            <div class="tr"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+            <div class="tr"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span><a class="link dark-gray dim mr3 mr0-ns dn-ns js-showMenuResponsive theBlackToBlack" href="#" title="menu responsive">Menu</a></div>
           </div>
         </nav>
       </header>
-      <main class="flexbox">
-        <div class="the-content fl w-52 pr4 the-black-aligned">
-          <div class="projects flex flex-column pv7">
-            <div class="bios__blocks">
-              <div class="bio__block__item mb4 js-light-element" title="Riki Hugàs" data-cover="riki.jpg">
-                <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Riki Hugàs. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
-              </div>
-              <div class="bio__block__item mb4 js-light-element" title="Xavi Grau" data-cover="xavi.jpg">
-                <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Xavi Grau. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
-              </div>
-              <div class="bio__block__item mb4 js-light-element" title="Xiqui Mateu" data-cover="xiqui.jpg">
-                <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Xiqui Mateu. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
-              </div>
-              <div class="bio__block__item mb4 js-light-element" title="Regina Hugas" data-cover="regi.jpg">
-                <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Regina Hugas. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
-              </div>
+      <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
+      <header class="fixed-ns z-3 w-100 bg-white pv3 db-ns dn-m dn-l relative h-50">
+        <nav class="z-2 ph4 top-nav flexbox">
+          <div class="fl w-50">
+            <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
+          </div>
+          <div class="fl w-50">
+            <div class="tr"><a class="link dark-gray dim mr0-ns dn-ns js-buttonMenuResponsive theBlackToBlack" href="#" title="menu responsive">Menu</a></div>
+          </div>
+        </nav>
+        <div class="tc absolute bottom-1 center w-100"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+      </header>
+      <!--Menu responsive      -->
+      <div class="w-100 h-100 top-0 z-999 fixed relative the-black-bg overflow-y-scroll menuResponsive js-hidden">
+        <nav class="ph4 pv3">
+          <div class="fl w-50">
+            <div class="tl"><a class="link-responsive-top js-FocusElement link dim white dt mb3 theBlackToBlack" href="index.html" title="Home">Proto</a></div>
+          </div>
+          <div class="fl w-50">
+            <div class="tr"><a class="link-responsive-top js-FocusElement link dim white dib js-buttonMenuResponsive" href="#" title="close menu">Close</a></div>
+          </div>
+          <div class="fl w-100">
+            <!--Añadiendo la clase projects animamos los proyectos-->
+            <ul class="flex flex-column"> 
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Vibia" href="project.html" data-cover="vibia.png">Vibia</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Troll" href="project.html" data-cover="accent.png">Troll</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Sageloux" href="project.html" data-cover="vibia.png">Sageloux</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Ledmotive" href="project.html" data-cover="accent.png">Ledmotive</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Escofet" href="project.html" data-cover="vibia.png">Escofet</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Accent" href="project.html" data-cover="accent.png">Accent</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Flint" href="project.html" data-cover="vibia.png">Flint</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Aismalibar" href="project.html" data-cover="accent.png">Aismalibar</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Metalarte" href="project.html" data-cover="vibia.png">Metalarte</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Simón" href="project.html" data-cover="accent.png">Simón</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Marset" href="project.html" data-cover="accent.png">Marset</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Roca" href="project.html" data-cover="vibia.png">Roca</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Vibia" href="project.html" data-cover="accent.png">Vibia</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Simón" href="project.html" data-cover="accent.png">Simón</a></li>
+            </ul>
+            <div class="mt3 mb3"><a class="link-responsive js-FocusElement link dim white dt theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-responsive js-FocusElement link dim white dt theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-responsive js-FocusElement link dim white dt theBlackToBlack" href="contact.html" title="Contact">Contact</a></div>
+          </div>
+        </nav>
+      </div>
+      <main>
+        <div class="the-content fl w-52 pr4 pv7 the-black-aligned">
+          <div class="bios__blocks mw8">
+            <div class="bio__block__item mb4 js-FocusElement js-theBlackImage" title="Riki Hugàs" data-cover="riki.jpg">
+              <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Riki Hugàs. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+            </div>
+            <div class="bio__block__item mb4 js-FocusElement js-theBlackImage" title="Xavi Grau" data-cover="xavi.jpg">
+              <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Xavi Grau. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+            </div>
+            <div class="bio__block__item mb4 js-FocusElement js-theBlackImage" title="Xiqui Mateu" data-cover="xiqui.jpg">
+              <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Xiqui Mateu. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+            </div>
+            <div class="bio__block__item mb4 js-FocusElement js-theBlackImage" title="Regina Hugas" data-cover="regi.jpg">
+              <p class="bio__block__text-wrapper dark-gray"><span class="bio__block_name">Regina Hugas. </span><span class="bio__block_name">Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
             </div>
           </div>
         </div>
       </main>
-      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3">
+      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m db-l">
         <nav class="z-2 ph4 bottom-nav flexbox">
           <div class="fl w-48">
             <div class="tl">
@@ -65,10 +167,10 @@
             </div>
           </div>
           <div class="fl w-12">
-            <div class="tl secondary-nav"><a class="link-footer js-light-element dark-gray link dim js-light-element" href="#" title="Home">Protocol</a></div>
+            <div class="tl secondary-nav"><a class="link-footer js-FocusElement dark-gray link dim" href="#" title="Home">Protocol</a></div>
           </div>
           <div class="fl w-40">
-            <div class="tr secondary-nav"><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
+            <div class="tr secondary-nav"><a class="link-footer js-FocusElement link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-footer js-FocusElement link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-footer js-FocusElement link dim dark-gray dib mr3 mr0-ns theBlackToBlack" href="contact.html" title="Contact">Contact</a></div>
           </div>
         </nav>
       </footer>
@@ -77,6 +179,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="assets/js/scripts.js" async="async"></script>
   <script src="assets/js/animations.js" async="async"></script>
+  <script src="assets/js/iagoScripts.js" async="async"></script>
   <script src="assets/js/jquery.royalslider.min.js"></script>
   <script src="assets/js/jquery.sticky-kit.min.js"></script>
   <script src="assets/js/anime.min.js"></script>

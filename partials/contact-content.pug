@@ -1,0 +1,10 @@
+//Contact content
+//- professionals-list.pug
+main
+  .the-content.fl.w-52.pr4.pv7.the-black-aligned
+      div.contact__blocks
+        span.contact__block_address.db(title="address")!= address
+        span.contact__block_email.db(title="email")
+          a.dim(href="mailto:" + email )= email
+        span.contact__block_phone.db(title="phone")
+          a.dim(href="tel:" + phone )= phone

@@ -1,8 +1,6 @@
 //- professionals-list.pug
-main.flexbox
-  .the-content.fl.w-52.pr4.the-black-aligned
-    .projects.flex.flex-column.pv7
-
-      div.bios__blocks
+main
+  .the-content.fl.w-52.pr4.pv7.the-black-aligned
+      div.bios__blocks.mw8
         for bio in professionalsList
           +bios-blocks(bio)

@@ -1,8 +1,9 @@
 
 <!--List of projects for home page-->
+<!--List of projects for menu responsive-->
 <!--Professionals bocks mixin for procedures page-->
 <!--Professionals list mixin for professionals page-->
-<!--Mixin for procedures page--><!DOCTYPE html5>
+<!--List of procedures for procedures page--><!DOCTYPE html5>
 <html>
   <head>
     <meta charset="UTF-8"/>
@@ -14,14 +15,24 @@
     <link rel="stylesheet" href="assets/css/royalslider/skins/minimal-white/rs-minimal-white.css"/>
   </head>
   <body class="visible-the-black the-black-0 top-nav-black">
-    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg">
+    <!--The black big sizes-->
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg dn db-m db-l">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
-      <!--div.flashdiv.flash-black
-      -->
+      <div class="flash">
+        <div class="flash-black"></div>
+      </div>
+      <div class="h-100 the-black-bg"></div>
+    </div>
+    <!--The black mobile-->
+    <div class="the-black fl w-100 h-50 bottom-0 z-999 fixed relative overflow-hidden the-black-bg db-ns dn-m dn-l">
+      <div class="image-containter h-100 hide-cover" style="display:none"></div>
+      <div class="flash">
+        <div class="flash-black"></div>
+      </div>
       <div class="h-100 the-black-bg"></div>
     </div>
     <div class="wrapper">
-      <header class="fixed z-3 w-100 bg-white pv3">
+      <header class="fixed-ns z-3 w-100 bg-white pv3 dn db-m db-l">
         <nav class="z-2 ph4 top-nav flexbox">
           <div class="fl w-48 pv1">
             <div class="tl">
@@ -32,57 +43,166 @@
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
           <div class="fl w-40">
-            <div class="tr"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+            <div class="tr"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span><a class="link dark-gray dim mr3 mr0-ns dn-ns js-showMenuResponsive theBlackToBlack" href="#" title="menu responsive">Menu</a></div>
           </div>
         </nav>
       </header>
+      <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
+      <header class="fixed-ns z-3 w-100 bg-white pv3 db-ns dn-m dn-l relative h-50">
+        <nav class="z-2 ph4 top-nav flexbox">
+          <div class="fl w-50">
+            <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
+          </div>
+          <div class="fl w-50">
+            <div class="tr"><a class="link dark-gray dim mr0-ns dn-ns js-buttonMenuResponsive theBlackToBlack" href="#" title="menu responsive">Menu</a></div>
+          </div>
+        </nav>
+        <div class="tc absolute bottom-1 center w-100"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+      </header>
+      <!--Menu responsive      -->
+      <div class="w-100 h-100 top-0 z-999 fixed relative the-black-bg overflow-y-scroll menuResponsive js-hidden">
+        <nav class="ph4 pv3">
+          <div class="fl w-50">
+            <div class="tl"><a class="link-responsive-top js-FocusElement link dim white dt mb3 theBlackToBlack" href="index.html" title="Home">Proto</a></div>
+          </div>
+          <div class="fl w-50">
+            <div class="tr"><a class="link-responsive-top js-FocusElement link dim white dib js-buttonMenuResponsive" href="#" title="close menu">Close</a></div>
+          </div>
+          <div class="fl w-100">
+            <!--Añadiendo la clase projects animamos los proyectos-->
+            <ul class="flex flex-column"> 
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Vibia" href="project.html" data-cover="vibia.png">Vibia</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Troll" href="project.html" data-cover="accent.png">Troll</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Sageloux" href="project.html" data-cover="vibia.png">Sageloux</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Ledmotive" href="project.html" data-cover="accent.png">Ledmotive</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Escofet" href="project.html" data-cover="vibia.png">Escofet</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Accent" href="project.html" data-cover="accent.png">Accent</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Flint" href="project.html" data-cover="vibia.png">Flint</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Aismalibar" href="project.html" data-cover="accent.png">Aismalibar</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Metalarte" href="project.html" data-cover="vibia.png">Metalarte</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Simón" href="project.html" data-cover="accent.png">Simón</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Marset" href="project.html" data-cover="accent.png">Marset</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Roca" href="project.html" data-cover="vibia.png">Roca</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Vibia" href="project.html" data-cover="accent.png">Vibia</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Santa&amp;Cole" href="project.html" data-cover="vibia.png">Santa&amp;Cole</a></li>
+              <!--Inicialize all projects to 0 opacity for the animation-->
+              <!--Opcion Pràctica: .f6.b--white-30.bb.pv1-->
+              <!--Opcion Iago: .f5-->
+              <li class="truncate lh-title f6 b--white-30 bb pv1"><a class="projects__link_ns white noload theBlackToWhite js-FocusElement js-theBlackImage Simón" href="project.html" data-cover="accent.png">Simón</a></li>
+            </ul>
+            <div class="mt3 mb3"><a class="link-responsive js-FocusElement link dim white dt theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-responsive js-FocusElement link dim white dt theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-responsive js-FocusElement link dim white dt theBlackToBlack" href="contact.html" title="Contact">Contact</a></div>
+          </div>
+        </nav>
+      </div>
       <main class="flexbox bg-black">
-        <div class="the-content w-100 mw8 center ph3-ns mt5">
+        <div class="the-content w-100 mw8 center ph3-ns pt5">
           <div class="cf ph2-ns">
             <div class="fl w-100 w-30-ns pa2 sticky">
               <ul class="procedure__list">
-                <li><a class="procedure__item white js-light-element Intro" href="#1">Intro</a></li>
-                <li><a class="procedure__item white js-light-element Method Prot" href="#2">Method Prot</a></li>
-                <li><a class="procedure__item white js-light-element Strategy" href="#3">Strategy</a></li>
-                <li><a class="procedure__item white js-light-element Branding" href="#4">Branding</a></li>
-                <li><a class="procedure__item white js-light-element Art direction" href="#5">Art direction</a></li>
-                <li><a class="procedure__item white js-light-element Product concepts" href="#6">Product concepts</a></li>
-                <li><a class="procedure__item white js-light-element Storytelling" href="#7">Storytelling</a></li>
-                <li><a class="procedure__item white js-light-element Communication" href="#8">Communication</a></li>
+                <li class="truncate"><a class="procedure__item white js-FocusElement jsScrollTo Intro" href="#block1">Intro</a></li>
+                <li class="truncate"><a class="procedure__item white js-FocusElement jsScrollTo Method Proto&lt;/br&gt;" href="#block2">Method Proto</br></a></li>
+                <li class="truncate"><a class="procedure__item white js-FocusElement jsScrollTo Strategy" href="#block3">Strategy</a></li>
+                <li class="truncate"><a class="procedure__item white js-FocusElement jsScrollTo Branding" href="#block4">Branding</a></li>
+                <li class="truncate"><a class="procedure__item white js-FocusElement jsScrollTo Art direction" href="#block5">Art direction</a></li>
+                <li class="truncate"><a class="procedure__item white js-FocusElement jsScrollTo Product concepts" href="#block6">Product concepts</a></li>
+                <li class="truncate"><a class="procedure__item white js-FocusElement jsScrollTo Storytelling" href="#block7">Storytelling</a></li>
+                <li class="truncate"><a class="procedure__item white js-FocusElement jsScrollTo Communication" href="#block8">Communication</a></li>
               </ul>
             </div>
             <div class="fl w-100 w-70-ns pa2">
               <div class="procedure__blocks">
-                <div class="procedure__block__item mb4 js-light-element" title="Intro" id="1">
-                  <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Intro Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                <div>
+                  <div class="procedure__block__item mb4" id="#block1" title="Intro">
+                    <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">En Proto somos especialistas en el habitat tech: iluminación, mobiliario, pavimentos, domótica, etc. Mediante nuestra complicidad con los arquitectos, diseñadores y proyectistas de las marcas para las que trabajamos, el valor de sus propuestas aumenta a través de la implementación de conceptos estratégicos y creativos.<br/><br/>  Interactuamos en los lugares que conforman nuestra vida, compuestos por elementos constructivos y tecnológicos donde coinciden usuarios y creadores. Las marcas, sus productos y sus fans —la tribu—, mantienen una relación muy próxima e indisociable, motivo por el cual las estrategias a desarrollar en los tres universos deben estar coordinadas, pensadas y ejecutadas al unísono. <br/><br/>  Proponemos distintas formas de colaboración a través de las que imaginar, conceptualizar y desarrollar tu marca y productos.</span></p>
+                  </div>
                 </div>
-                <div class="procedure__block__item mb4 js-light-element" title="Method Prot" id="2">
-                  <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Method Prot Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                <div>
+                  <div class="procedure__block__item mb4" id="#block2" title="Method Proto&lt;/br&gt;">
+                    <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">El método Proto consiste en el desarrollo de las combinaciones que surgen de relacionar entre sí los apartados siguientes:</span></p>
+                  </div>
                 </div>
-                <div class="procedure__block__item mb4 js-light-element" title="Strategy" id="3">
-                  <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Strategy Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                <div>
+                  <div class="procedure__block__item mb4" id="#block3" title="Strategy">
+                    <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Strategy Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                  </div>
                 </div>
-                <div class="procedure__block__item mb4 js-light-element" title="Branding" id="4">
-                  <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Branding Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                <div>
+                  <div class="procedure__block__item mb4" id="#block4" title="Branding">
+                    <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Branding Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                  </div>
                 </div>
-                <div class="procedure__block__item mb4 js-light-element" title="Art direction" id="5">
-                  <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Art direction Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                <div>
+                  <div class="procedure__block__item mb4" id="#block5" title="Art direction">
+                    <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Art direction Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                  </div>
                 </div>
-                <div class="procedure__block__item mb4 js-light-element" title="Product concepts" id="6">
-                  <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Product concepts Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                <div>
+                  <div class="procedure__block__item mb4" id="#block6" title="Product concepts">
+                    <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Product concepts Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                  </div>
                 </div>
-                <div class="procedure__block__item mb4 js-light-element" title="Storytelling" id="7">
-                  <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Storytelling Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                <div>
+                  <div class="procedure__block__item mb4" id="#block7" title="Storytelling">
+                    <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Storytelling Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                  </div>
                 </div>
-                <div class="procedure__block__item mb4 js-light-element" title="Communication" id="8">
-                  <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Communication Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                <div>
+                  <div class="procedure__block__item mb4" id="#block8" title="Communication">
+                    <p class="procedure__block__text-wrapper white"><span class="procedure__block_name">Communication Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae. Tendi num quis demporuptate et vid et peribusa quas volo endam non estotat. aut volorer spiducium saperibus, od maio te porem dolo et restrunt alitae natur? Qui utem fugia verum quid ea que eos et et earum non et, si rectatiore coreceation nossini endandae provitae.</span></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3">
+      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m db-l">
         <nav class="z-2 ph4 bottom-nav flexbox">
           <div class="fl w-48">
             <div class="tl">
@@ -90,10 +210,10 @@
             </div>
           </div>
           <div class="fl w-12">
-            <div class="tl secondary-nav"><a class="link-footer js-light-element dark-gray link dim js-light-element" href="#" title="Home">Protocol</a></div>
+            <div class="tl secondary-nav"><a class="link-footer js-FocusElement dark-gray link dim" href="#" title="Home">Protocol</a></div>
           </div>
           <div class="fl w-40">
-            <div class="tr secondary-nav"><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-footer js-light-element link dim dark-gray dib mr3 mr0-ns" href="#" title="Contact">Contact</a></div>
+            <div class="tr secondary-nav"><a class="link-footer js-FocusElement link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-footer js-FocusElement link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-footer js-FocusElement link dim dark-gray dib mr3 mr0-ns theBlackToBlack" href="contact.html" title="Contact">Contact</a></div>
           </div>
         </nav>
       </footer>
@@ -102,6 +222,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="assets/js/scripts.js" async="async"></script>
   <script src="assets/js/animations.js" async="async"></script>
+  <script src="assets/js/iagoScripts.js" async="async"></script>
   <script src="assets/js/jquery.royalslider.min.js"></script>
   <script src="assets/js/jquery.sticky-kit.min.js"></script>
   <script src="assets/js/anime.min.js"></script>

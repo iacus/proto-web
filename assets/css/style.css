@@ -157,6 +157,9 @@ a {
   text-decoration: none;
   color: black; }
 
+main ul.projects {
+  margin-top: -90px; }
+
 a.project--link {
   display: inline-block; }
 
@@ -172,13 +175,6 @@ a.project--link {
 .hide-info-panel {
   display: none; }
 
-ul.projects {
-  white-space: nowrap; }
-  ul.projects li {
-    overflow: hidden;
-    margin-bottom: 1.2;
-    opacity: 0; }
-
 .referencia-titulo {
   position: fixed;
   width: 100%;
@@ -190,26 +186,30 @@ ul.projects {
 .js-hidden {
   opacity: 0; }
 
+.is_stuck {
+  margin-top: 60px; }
+
 .flash {
   position: absolute;
   margin-top: -100vh;
   margin-left: -100vh;
-  width: 200vh;
-  height: 200vh;
-  background: -webkit-gradient(ellipse at center, radial, 0% 0%, 0% 100%, from(white), to(black));
+  width: 500vh;
+  height: 300vh;
+  /*background: -webkit-gradient(ellipse at center, radial, 0% 0%, 0% 100%, from(white), to(black));
   background: -webkit-radial-gradient(ellipse at center, white, black);
   background: -moz-radial-gradient(ellipse at center, white, black);
   background: -ms-radial-gradient(ellipse at center, white, black);
   background: -o-radial-gradient(ellipse at center, white, black);
-  background: -webkit-radial-gradient(center, ellipse, white, black);
-  background: -o-radial-gradient(center, ellipse, white, black);
   background: radial-gradient(ellipse at center, white, black);
-  top: 50%;
+  */
+  background: url("../../content/gradient.png");
+  background-size: 200%;
+  background-position: -200px;
+  background-repeat: no-repeat;
+  top: 30%;
   left: 0;
-  opacity: 0.1;
-  z-index: 10;
-  -webkit-filter: blur(1000px);
-  filter: blur(1000px); }
+  opacity: 0.2;
+  z-index: 10; }
 
 .flash-white {
   opacity: 0;

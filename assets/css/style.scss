@@ -25,6 +25,7 @@ body {
 body.projects-page .wrapper {
   overflow-y: hidden;
 }
+
 //Layout
 .wrapper main {
   flex: 1;
@@ -74,6 +75,11 @@ a {
   :visited {}
 }
 
+main ul.projects {
+    //Desplazamiento para los proyectos en la home para controlar la animación
+    margin-top: -90px;
+}
+
 a.project--link {
   display: inline-block;
 }
@@ -94,16 +100,6 @@ a.project--link {
   display: none;
 }
 
-ul.projects {
-  white-space: nowrap;
-
-  li {
-    overflow: hidden;
-    margin-bottom: 1.2;
-    opacity: 0;
-  }
-}
-
 .referencia-titulo {
   position: fixed;
   width: 100%;
@@ -118,25 +114,36 @@ ul.projects {
   opacity: 0;
 }
 
+//sticky fix
+.is_stuck{
+  margin-top: 60px;
+}
+
 //flash over black
 .flash {
   position: absolute;
   margin-top: -100vh;
   margin-left: -100vh;
-  width: 200vh;
-  height: 200vh;
+  width: 500vh;
+  height: 300vh;
   //background: radial-gradient(ellipse at center, white 0%, rgba(255, 255, 255, 0) 90%);
-  background: -webkit-gradient(ellipse at center, radial, 0% 0%, 0% 100%, from(white), to(black));
+  /*background: -webkit-gradient(ellipse at center, radial, 0% 0%, 0% 100%, from(white), to(black));
   background: -webkit-radial-gradient(ellipse at center, white, black);
   background: -moz-radial-gradient(ellipse at center, white, black);
   background: -ms-radial-gradient(ellipse at center, white, black);
   background: -o-radial-gradient(ellipse at center, white, black);
   background: radial-gradient(ellipse at center, white, black);
-  top: 50%;
+  */
+  background: url("../../content/gradient.png");
+  background-size: 200%;
+  background-position: -200px;
+  background-repeat: no-repeat;
+  //background-blend-mode: multiply;
+  top: 30%;
   left: 0;
-  opacity: 0.1;
+  opacity: 0.2;
   z-index: 10;
-  filter: blur(1000px);
+  //filter: blur(500px);
 }
 
 .flash-white {
