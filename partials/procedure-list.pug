@@ -1,12 +1,14 @@
 //- procedure-list.pug
-main.flexbox.bg-black
-  .the-content.w-100.mw8.center.ph3-ns.pt5
+main.bg-black
+  .the-content.w-100.left.ph3-ns
     .cf.ph2-ns
-      .fl.w-100.w-30-ns.pa2.sticky
+      .fl.w-40-m.w-20-l.ph2.dn.db-m.db-l.sticky
         ul.procedure__list
           for name in procedureList
             +procedure-list(name)
-      .fl.w-100.w-70-ns.pa2
+      .fl.w-100-ns.w-60-m.w-80-l.ph2.mw8
         div.procedure__blocks
           for name,text in procedureList
             +procedure-blocks(name)
+            
+            

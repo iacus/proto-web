@@ -10,8 +10,6 @@ mixin project-list(project)
 mixin project-list-ns(project)
 	
 	//Inicialize all projects to 0 opacity for the animation
-	//Opcion Pràctica: .f6.b--white-30.bb.pv1
-	//Opcion Iago: .f5
 	li.truncate.lh-title.f5.b--white-30.bb.pv1
 		a.projects__link_ns.white.noload.theBlackToWhite.js-FocusElement.js-theBlackImage(class=project.title, href=project.url, data-cover= project.cover)= project.title
 
@@ -19,7 +17,7 @@ mixin project-list-ns(project)
 //Professionals bocks mixin for procedures page
 mixin bios-blocks(professional)
 	
-	div.bio__block__item.mb4.js-FocusElement.js-theBlackImage(title=professional.name, data-cover= professional.image)
+	div.bio__block__item.mb4.js-theBlackImage.js-FocusElement(title=professional.name, data-cover= professional.image)
 		p.bio__block__text-wrapper.dark-gray
 			span.bio__block_name= professional.name + '. '
 			span.bio__block_name= professional.bio

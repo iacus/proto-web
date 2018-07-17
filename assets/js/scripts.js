@@ -1,10 +1,11 @@
 //scripts.js
 //Global variables
-var urlImages = "/content/";
+var urlImages = "./content/";
 var theBlack = $('.the-black');
 var theBlackJs = document.querySelector('.the-black');
 var defaultTheBlack = theBlack.css('background-image');
 
+console.log(process.env.PUBLIC_URL);
 //Preloader
 
 $(document).ready(function() {
@@ -102,6 +103,7 @@ $(".js-theBlackImage").on({
     const coverImage = $(this).attr('data-cover');
     const coverImageRoute = 'url("' + urlImages + coverImage + '")';
 
+    emptyTheBlack();
     theBlack.find('.image-containter').stop(true, true).delay(600).fadeIn().css('background-image', coverImageRoute);
 
   },
@@ -119,6 +121,26 @@ function theBlackMap() {
 
 }
 
+function emptyTheBlack() {
+  theBlack.find('.image-containter').stop(true, true).delay(2000).clearQueue().fadeOut().css('background-image', defaultTheBlack);
+}
+
+function theBlackProfessional() {
+  const items = $('.bio__block__item');
+  const firstItem = items.first();
+  const coverImage = firstItem.attr('data-cover');
+  const coverImageRoute = 'url("' + urlImages + coverImage + '")';
+  console.log(coverImage);
+  console.log($(this));
+
+  items.first().css('opacity', '1');
+  items.not(items.first()).delay(300).animate({opacity: 0.3}, "slow");
+  theBlack.find('.image-containter').delay(200).fadeIn("fast").css('background-image', coverImageRoute);
+
+}
+
+
+
 //Info panel
 $(".info--panel").on({
   click: function(event) {
@@ -134,12 +156,6 @@ $(".info--panel").on({
 
     }
   });
-
-
-//Sticky column on procedures
-$(".sticky").stick_in_parent();
-//Opciones: $(".sticky").stick_in_parent({offset_top: 50});
-
 
 //flash
 

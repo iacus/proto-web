@@ -41,6 +41,19 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*
+
+   QUERIES
+
+*/
+/*
+ * Mixing for mobile first queries.
+ * Two breakpoints.
+ * Use like @include break(medium) {
+ *  ***Styles***
+ * }
+ *
+ */
 .royalSlider {
   width: 100% !important; }
 
@@ -112,11 +125,17 @@ table {
 
 body {
   font-family: "NHU";
-  font-size: 1.5em !important;
+  font-size: 1.4em !important;
   line-height: 1.2; }
-
-body.projects-page .wrapper {
-  overflow-y: hidden; }
+  @media screen and (min-width: 48em) {
+    body {
+      font-size: 1.4em !important; } }
+  @media screen and (min-width: 48em) and (max-width: 64em) {
+    body {
+      font-size: 1.2em !important; } }
+  @media screen and (min-width: 64em) {
+    body {
+      font-size: 1.5em !important; } }
 
 .wrapper main {
   -webkit-box-flex: 1;
@@ -130,9 +149,14 @@ body.projects-page .wrapper {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+  padding-top: 7em; }
+  .projects-page .wrapper main {
+    padding-top: 0;
+    overflow-y: hidden;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%; }
 
 .the-black-bg {
   background-color: #111; }
@@ -153,12 +177,24 @@ body.projects-page .wrapper {
   .top-nav-black footer * {
     color: white; }
 
+.top-space {
+  padding-top: 7em; }
+
 a {
   text-decoration: none;
   color: black; }
 
+.separator {
+  display: inline-block;
+  background-color: black;
+  width: 2px;
+  height: 0.8em;
+  vertical-align: baseline;
+  margin-left: .6em;
+  margin-right: .6em; }
+
 main ul.projects {
-  margin-top: -90px; }
+  margin-top: -45px; }
 
 a.project--link {
   display: inline-block; }
@@ -186,8 +222,10 @@ a.project--link {
 .js-hidden {
   opacity: 0; }
 
-.is_stuck {
-  margin-top: 60px; }
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 7em; }
 
 .flash {
   position: absolute;

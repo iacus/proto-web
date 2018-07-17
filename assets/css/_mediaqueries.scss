@@ -1,42 +1,32 @@
-//-mediaqueries.scss
+/*
 
-// Small tablets and large smartphones (landscape view)
-$screen-sm-min: 576px;
+   QUERIES
 
-// Small tablets (portrait view)
-$screen-md-min: 768px;
+*/
 
-// Tablets and small desktops
-$screen-lg-min: 992px;
+/*
+ * Mixing for mobile first queries.
+ * Two breakpoints.
+ * Use like @include break(medium) {
+ *  ***Styles***
+ * }
+ *
+ */
 
-// Large tablets and desktops
-$screen-xl-min: 1200px;
-
-
-// Small devices
-@mixin sm {
-   @media (min-width: #{$screen-sm-min}) {
-       @content;
-   }
-}
-
-// Medium devices
-@mixin md {
-   @media (min-width: #{$screen-md-min}) {
-       @content;
-   }
-}
-
-// Large devices
-@mixin lg {
-   @media (min-width: #{$screen-lg-min}) {
-       @content;
-   }
-}
-
-// Extra large devices
-@mixin xl {
-   @media (min-width: #{$screen-xl-min}) {
-       @content;
-   }
+@mixin break($point) {
+  @if $point == not-small {
+    @media screen and (min-width: 48em) {
+      @content;
+    }
+  }
+  @else if $point == medium {
+    @media screen and (min-width: 48em) and (max-width: 64em) {
+      @content;
+    }
+  }
+  @else if $point == large {
+    @media screen and (min-width: 64em)  {
+      @content;
+    }
+  }
 }

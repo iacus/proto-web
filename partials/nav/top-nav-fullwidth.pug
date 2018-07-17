@@ -1,5 +1,5 @@
-header.fixed-ns.z-3.w-100.bg-white.pv3.dn.db-m.db-l
-  nav.z-2.ph4.top-nav.flexbox
+header.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.dn.db-m.db-l
+  nav.z-2.ph4.flexbox
     .fl.w-48.pv1
       .tl
           h2.project--title.link.dark-gray.dib.mr3.mr0-ns(title= 'description' )= project
@@ -12,16 +12,15 @@ header.fixed-ns.z-3.w-100.bg-white.pv3.dn.db-m.db-l
         a.link.dark-gray.dim.mr3.mr0-ns.dn-ns.js-showMenuResponsive.theBlackToBlack(href='#', title= 'menu responsive' ) Menu
 
 //Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño
-header.fixed-ns.z-3.w-100.bg-white.pv3.db-ns.dn-m.dn-l.relative.h-50
-  nav.z-2.ph4.top-nav.flexbox
+header.responsive__nav.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.db-ns.dn-m.dn-l.relative.h-50
+  nav.z-2.ph4.flexbox
     .fl.w-50
       .tl
         a.dark-gray.link.dim.theBlackToBlack(href='index.html', title='Home')= title
     .fl.w-50
       .tr
         a.link.dark-gray.dim.mr0-ns.dn-ns.js-buttonMenuResponsive.theBlackToBlack(href='#', title= 'menu responsive' ) Menu
-  .tc.absolute.bottom-1.center.w-100
-    span.link.dark-gray.dib.mr3.mr0-ns(title= 'description')= description
+
               
 //Menu responsive      
 div.w-100.h-100.top-0.z-999.fixed.relative.the-black-bg.overflow-y-scroll.menuResponsive.js-hidden

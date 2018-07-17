@@ -10,6 +10,10 @@ function animateTheBlack(bgPosition,thisLink) {
     targets: theBlackJs,
     width: bgPosition,
     easing: 'easeInOutSine',
+    begin: function(anim) {
+      //Before move The Black, empties the image
+      emptyTheBlack();
+    },
     complete: function(anim) {
       console.log("Animacion completa");
       console.log(thisLink);
@@ -27,6 +31,11 @@ function animateTheBlack(bgPosition,thisLink) {
       if (theBlack.parents('.contact').length) {
         console.log("contact page");
         theBlackMap();
+      }
+
+      if (theBlack.parents('.professionals').length) {
+        console.log("contact page");
+        theBlackProfessional();
       }
 
     }
@@ -94,7 +103,7 @@ var animateMenuResponsive = anime({
     value: 1,
     duration: 20
   },
-  translateY: [2000, 0],
+  translateX: [-2000, 0],
   easing: 'easeInOutSine',
   duration: 400,
   autoplay: false

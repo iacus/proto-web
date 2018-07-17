@@ -1,8 +1,9 @@
 //Contact content
 //- professionals-list.pug
-main
-  .the-content.fl.w-52.pr4.pv7.the-black-aligned
-      div.contact__blocks
+main.dn.flex-m.flex-l
+  .the-content.fl.w-52.the-black-aligned
+      div.contact__blocks.mw6
+        p.contact__block_text.db(title="text")!= text
         span.contact__block_address.db(title="address")!= address
         span.contact__block_email.db(title="email")
           a.dim(href="mailto:" + email )= email
