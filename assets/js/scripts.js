@@ -5,7 +5,6 @@ var theBlack = $('.the-black');
 var theBlackJs = document.querySelector('.the-black');
 var defaultTheBlack = theBlack.css('background-image');
 
-console.log(process.env.PUBLIC_URL);
 //Preloader
 
 $(document).ready(function() {
