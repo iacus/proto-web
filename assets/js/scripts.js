@@ -1,6 +1,6 @@
 //scripts.js
 //Global variables
-var urlImages = "content/";
+var urlImages = "proto-web/content/";
 var theBlack = $('.the-black');
 var theBlackJs = document.querySelector('.the-black');
 var defaultTheBlack = theBlack.css('background-image');
