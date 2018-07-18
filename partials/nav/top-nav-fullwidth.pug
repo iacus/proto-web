@@ -1,5 +1,5 @@
-header.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.dn.db-m.db-l
-  nav.z-2.ph4.flexbox
+header.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.dn.db-m.db-l.db-sl
+  nav.z-2.ph4
     .fl.w-48.pv1
       .tl
           h2.project--title.link.dark-gray.dib.mr3.mr0-ns(title= 'description' )= project
@@ -9,11 +9,10 @@ header.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.dn.db-m.db-l
     .fl.w-40
       .tr
         span.link.dark-gray.dib.mr3.mr0-ns(title= 'description' )= description
-        a.link.dark-gray.dim.mr3.mr0-ns.dn-ns.js-showMenuResponsive.theBlackToBlack(href='#', title= 'menu responsive' ) Menu
 
 //Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño
-header.responsive__nav.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.db-ns.dn-m.dn-l.relative.h-50
-  nav.z-2.ph4.flexbox
+header.responsive__nav.top-nav.z-3.w-100.bg-white.pv3.db-ns.dn-m.dn-l.dn-sl.relative.h-50
+  nav.z-2.ph4
     .fl.w-50
       .tl
         a.dark-gray.link.dim.theBlackToBlack(href='index.html', title='Home')= title
@@ -23,22 +22,25 @@ header.responsive__nav.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.db-ns.dn-m.dn-l.r
 
               
 //Menu responsive      
-div.w-100.h-100.top-0.z-999.fixed.relative.the-black-bg.overflow-y-scroll.menuResponsive.js-hidden
+div.menuResponsive.w-100.h-100.top-0.z-999.fixed.relative.the-black-bg.overflow-y-scroll.js-hidden
     nav.ph4.pv3
       .fl.w-50
         .tl
-          a.link-responsive-top.js-FocusElement.link.dim.white.dt.mb3.theBlackToBlack(href='index.html', title='Home')= title
+          a.link-responsive-top.link.dim.white.dt.mb3.theBlackToBlack.js-FocusElement(href='index.html', title='Home')= title
       .fl.w-50
         .tr
-          a.link-responsive-top.js-FocusElement.link.dim.white.dib.js-buttonMenuResponsive(href='#', title= 'close menu') Close
+          a.link-responsive-top.link.dim.white.dib.js-buttonMenuResponsive.js-FocusElement(href='#', title= 'close menu') Close
       .fl.w-100
-          //Añadiendo la clase projects animamos los proyectos
-          ul.flex.flex-column 
-            for project in projectList
-              +project-list-ns(project)
           .mt3.mb3
-            a.link-responsive.js-FocusElement.link.dim.white.dt.theBlackToBlack(href='procedure.html', title='Procedure') Procedure
-            a.link-responsive.js-FocusElement.link.dim.white.dt.theBlackToBlack(href='professionals.html', title='Professionals') Professionals
-            a.link-responsive.js-FocusElement.link.dim.white.dt.theBlackToBlack(href='contact.html', title='Contact') Contact
-      
-  
+            ul
+              li.truncate.lh-title.f5.b--white-30.bt.pv1
+                a.link-responsive.link.white.dt.theBlackToBlack.js-ShowSubmenu.js-FocusElement(title='Projects') Projects
+                ul.submenu.collapsed.mt4.mb4
+                  for project in projectList
+                    +project-list-ns(project)
+              li.truncate.lh-title.f5.b--white-30.bt.pv1.js-FocusElement
+                a.link-responsive.link.white.dt.theBlackToBlack.js-ShowSubmenu(href='procedure.html', title='Procedure') Procedure
+              li.truncate.lh-title.f5.b--white-30.bt.pv1.js-FocusElement
+                a.link-responsive.link.white.dt.theBlackToBlack.js-ShowSubmenu(href='professionals.html', title='Professionals') Professionals
+              li.truncate.lh-title.f5.b--white-30.bt.pv1.js-FocusElement
+                a.link-responsive.link.white.dt.theBlackToBlack.js-ShowSubmenu(href='index.html', title='Projects') Protocol

@@ -47,3 +47,8 @@
   .tc-l  { text-align: center; }
 }
 
+@media #{$breakpoint-super-large} {
+  .tl-sl  { text-align: left; }
+  .tr-sl  { text-align: right; }
+  .tc-sl  { text-align: center; }
+}

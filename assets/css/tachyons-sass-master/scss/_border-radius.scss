@@ -132,3 +132,29 @@
       border-bottom-right-radius: 0;
   }
 }
+
+@media #{$breakpoint-super-large} {
+  .br0-sl {     border-radius: $border-radius-none }
+  .br1-sl {     border-radius: $border-radius-1; }
+  .br2-sl {     border-radius: $border-radius-2; }
+  .br3-sl {     border-radius: $border-radius-3; }
+  .br4-sl {     border-radius: $border-radius-4; }
+  .br-100-sl {  border-radius: $border-radius-circle; }
+  .br-pill-sl { border-radius: $border-radius-pill; }
+  .br--bottom-sl {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+  }
+  .br--top-sl {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+  }
+  .br--right-sl {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .br--left-sl {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+  }
+}

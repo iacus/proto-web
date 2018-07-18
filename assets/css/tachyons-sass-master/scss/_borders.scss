@@ -63,3 +63,11 @@
   .bn-l { border-style: none; border-width: 0; }
 }
 
+@media #{$breakpoint-super-large} {
+  .ba-sl { border-style: solid; border-width: 1px; }
+  .bt-sl { border-top-style: solid; border-top-width: 1px; }
+  .br-sl { border-right-style: solid; border-right-width: 1px; }
+  .bb-sl { border-bottom-style: solid; border-bottom-width: 1px; }
+  .bl-sl { border-left-style: solid; border-left-width: 1px; }
+  .bn-sl { border-style: none; border-width: 0; }
+}

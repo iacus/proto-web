@@ -100,3 +100,21 @@
   .f6-l { font-size: $font-size-6; }
   .f7-l { font-size: $font-size-7; }
 }
+
+@media #{$breakpoint-super-large} {
+  .f-6-sl,
+  .f-headline-sl {
+    font-size: $font-size-headline;
+  }
+  .f-5-sl,
+  .f-subheadline-sl {
+    font-size: $font-size-subheadline;
+  }
+  .f1-sl { font-size: $font-size-1; }
+  .f2-sl { font-size: $font-size-2; }
+  .f3-sl { font-size: $font-size-3; }
+  .f4-sl { font-size: $font-size-4; }
+  .f5-sl { font-size: $font-size-5; }
+  .f6-sl { font-size: $font-size-6; }
+  .f7-sl { font-size: $font-size-7; }
+}

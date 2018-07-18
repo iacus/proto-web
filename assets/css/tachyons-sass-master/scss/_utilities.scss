@@ -55,3 +55,12 @@
   .mr-auto-l { margin-right: auto; }
   .ml-auto-l { margin-left:  auto; }
 }
+
+@media #{$breakpoint-super-large}{
+  .center-sl {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .mr-auto-sl { margin-right: auto; }
+  .ml-auto-sl { margin-left:  auto; }
+}

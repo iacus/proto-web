@@ -39,3 +39,8 @@
   .pre-l { white-space: pre; }
 }
 
+@media #{$breakpoint-super-large} {
+  .ws-normal-sl { white-space: normal; }
+  .nowrap-sl { white-space: nowrap; }
+  .pre-sl { white-space: pre; }
+}

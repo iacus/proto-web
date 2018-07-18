@@ -127,3 +127,28 @@
     text-overflow: ellipsis;
   }
 }
+
+@media #{$breakpoint-super-large} {
+  .measure-sl {
+    max-width: $measure;
+  }
+  .measure-wide-sl {
+    max-width: $measure-wide;
+  }
+  .measure-narrow-sl {
+    max-width: $measure-narrow;
+  }
+  .indent-sl {
+    text-indent: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .small-caps-sl {
+    font-variant: small-caps;
+  }
+  .truncate-sl {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

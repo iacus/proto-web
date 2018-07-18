@@ -41,3 +41,10 @@
   .v-top-l      { vertical-align: top; }
   .v-btm-l      { vertical-align: bottom; }
 }
+
+@media #{$breakpoint-super-large} {
+  .v-base-sl     { vertical-align: baseline; }
+  .v-mid-sl      { vertical-align: middle; }
+  .v-top-sl      { vertical-align: top; }
+  .v-btm-sl      { vertical-align: bottom; }
+}

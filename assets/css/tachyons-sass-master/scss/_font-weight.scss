@@ -85,3 +85,17 @@
   .fw8-l    { font-weight: 800; }
   .fw9-l    { font-weight: 900; }
 }
+
+@media #{$breakpoint-super-large} {
+  .normal-sl { font-weight: normal; }
+  .b-sl      { font-weight: bold; }
+  .fw1-sl    { font-weight: 100; }
+  .fw2-sl    { font-weight: 200; }
+  .fw3-sl    { font-weight: 300; }
+  .fw4-sl    { font-weight: 400; }
+  .fw5-sl    { font-weight: 500; }
+  .fw6-sl    { font-weight: 600; }
+  .fw7-sl    { font-weight: 700; }
+  .fw8-sl    { font-weight: 800; }
+  .fw9-sl    { font-weight: 900; }
+}

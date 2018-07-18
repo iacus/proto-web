@@ -154,3 +154,28 @@
   .w-two-thirds-l { width: (100% / 1.5); }
   .w-auto-l {    width: auto; }
 }
+
+@media #{$breakpoint-super-large} {
+  .w1-sl {      width: $width-1; }
+  .w2-sl {      width: $width-2; }
+  .w3-sl {      width: $width-3; }
+  .w4-sl {      width: $width-4; }
+  .w5-sl {      width: $width-5; }
+  .w-10-sl {    width:  10%; }
+  .w-20-sl {    width:  20%; }
+  .w-25-sl {    width:  25%; }
+  .w-30-sl {    width:  30%; }
+  .w-33-sl {    width:  33%; }
+  .w-34-sl {    width:  34%; }
+  .w-40-sl {    width:  40%; }
+  .w-50-sl {    width:  50%; }
+  .w-60-sl {    width:  60%; }
+  .w-70-sl {    width:  70%; }
+  .w-75-sl {    width:  75%; }
+  .w-80-sl {    width:  80%; }
+  .w-90-sl {    width:  90%; }
+  .w-100-sl {   width: 100%; }
+  .w-third-sl { width: (100% / 3); }
+  .w-two-thirds-sl { width: (100% / 1.5); }
+  .w-auto-sl {    width: auto; }
+}

@@ -255,3 +255,64 @@
   .flex-shrink-0-l { flex-shrink: 0; }
   .flex-shrink-1-l { flex-shrink: 1; }
 }
+
+
+@media #{$breakpoint-super-large} {
+  .flex-sl { display: flex; }
+  .inline-flex-sl { display: inline-flex; }
+  .flex-auto-sl {
+    flex: 1 1 auto;
+    min-width: 0; /* 1 */
+    min-height: 0; /* 1 */
+  }
+  .flex-none-sl { flex: none; }
+  .flex-column-sl { flex-direction: column; }
+  .flex-row-sl { flex-direction: row; }
+  .flex-wrap-sl { flex-wrap: wrap; }
+  .flex-nowrap-sl { flex-wrap: nowrap; }
+  .flex-wrap-reverse-sl { flex-wrap: wrap-reverse; }
+  .flex-column-reverse-sl { flex-direction: column-reverse; }
+  .flex-row-reverse-sl { flex-direction: row-reverse; }
+
+  .items-start-sl { align-items: flex-start; }
+  .items-end-sl { align-items: flex-end; }
+  .items-center-sl { align-items: center; }
+  .items-baseline-sl { align-items: baseline; }
+  .items-stretch-sl { align-items: stretch; }
+
+  .self-start-sl { align-self: flex-start; }
+  .self-end-sl { align-self: flex-end; }
+  .self-center-sl { align-self: center; }
+  .self-baseline-sl { align-self: baseline; }
+  .self-stretch-sl { align-self: stretch; }
+
+  .justify-start-sl { justify-content: flex-start; }
+  .justify-end-sl { justify-content: flex-end; }
+  .justify-center-sl { justify-content: center; }
+  .justify-between-sl { justify-content: space-between; }
+  .justify-around-sl { justify-content: space-around; }
+
+  .content-start-sl { align-content: flex-start; }
+  .content-end-sl { align-content: flex-end; }
+  .content-center-sl { align-content: center; }
+  .content-between-sl { align-content: space-between; }
+  .content-around-sl { align-content: space-around; }
+  .content-stretch-sl { align-content: stretch; }
+
+  .order-0-sl { order: 0; }
+  .order-1-sl { order: 1; }
+  .order-2-sl { order: 2; }
+  .order-3-sl { order: 3; }
+  .order-4-sl { order: 4; }
+  .order-5-sl { order: 5; }
+  .order-6-sl { order: 6; }
+  .order-7-sl { order: 7; }
+  .order-8-sl { order: 8; }
+  .order-last-sl { order: 99999; }
+
+  .flex-grow-0-sl { flex-grow: 0; }
+  .flex-grow-1-sl { flex-grow: 1; }
+
+  .flex-shrink-0-sl { flex-shrink: 0; }
+  .flex-shrink-1-sl { flex-shrink: 1; }
+}

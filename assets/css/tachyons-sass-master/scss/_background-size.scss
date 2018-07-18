@@ -39,3 +39,8 @@
   .cover-l { background-size: cover!important; }
   .contain-l { background-size: contain!important; }
 }
+
+@media #{$breakpoint-super-large} {
+  .cover-sl { background-size: cover!important; }
+  .contain-sl { background-size: contain!important; }
+}

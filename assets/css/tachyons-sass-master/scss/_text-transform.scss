@@ -51,3 +51,10 @@
   .ttu-l { text-transform: uppercase; }
   .ttn-l { text-transform: none; }
 }
+
+@media #{$breakpoint-super-large} {
+  .ttc-sl { text-transform: capitalize; }
+  .ttl-sl { text-transform: lowercase; }
+  .ttu-sl { text-transform: uppercase; }
+  .ttn-sl { text-transform: none; }
+}

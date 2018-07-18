@@ -53,3 +53,10 @@
   .b--solid-l {  border-style: solid; }
   .b--none-l {   border-style: none; }
 }
+
+@media #{$breakpoint-super-large} {
+  .b--dotted-sl { border-style: dotted; }
+  .b--dashed-sl { border-style: dashed; }
+  .b--solid-sl {  border-style: solid; }
+  .b--none-sl {   border-style: none; }
+}

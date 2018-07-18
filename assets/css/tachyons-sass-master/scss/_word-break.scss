@@ -41,3 +41,8 @@
   .word-nowrap-l { word-break: keep-all; }
 }
 
+@media #{$breakpoint-super-large} {
+  .word-normal-sl { word-break: normal; }
+  .word-wrap-sl { word-break: break-all; }
+  .word-nowrap-sl { word-break: keep-all; }
+}

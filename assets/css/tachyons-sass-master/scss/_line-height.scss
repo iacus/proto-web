@@ -39,3 +39,8 @@
   .lh-copy-l  { line-height: $line-height-copy; }
 }
 
+@media #{$breakpoint-super-large} {
+  .lh-solid-sl { line-height: $line-height-solid; }
+  .lh-title-sl { line-height: $line-height-title; }
+  .lh-copy-sl  { line-height: $line-height-copy; }
+}

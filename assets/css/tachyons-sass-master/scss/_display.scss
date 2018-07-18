@@ -109,3 +109,21 @@
   }
 }
 
+@media #{$breakpoint-super-large} {
+  .dn-sl {              display: none; }
+  .di-sl {              display: inline; }
+  .db-sl {              display: block; }
+  .dib-sl {             display: inline-block; }
+  .dit-sl {             display: inline-table; }
+  .dt-sl {              display: table; }
+  .dtc-sl {             display: table-cell; }
+  .dt-row-sl {          display: table-row; }
+  .dt-row-group-sl {    display: table-row-group; }
+  .dt-column-sl {       display: table-column; }
+  .dt-column-group-sl { display: table-column-group; }
+
+  .dt--fixed-sl {
+    table-layout: fixed;
+    width: 100%;
+  }
+}

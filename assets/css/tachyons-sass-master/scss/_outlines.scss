@@ -37,3 +37,9 @@
   .outline-transparent-l { outline: 1px solid transparent; }
   .outline-0-l { outline: 0; }
 }
+
+@media #{$breakpoint-super-large} {
+  .outline-sl { outline: 1px solid; }
+  .outline-transparent-sl { outline: 1px solid transparent; }
+  .outline-0-sl { outline: 0; }
+}

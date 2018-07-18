@@ -20,17 +20,20 @@ $top-space: 7em;
 
 body {
   font-family: "NHU";
-  font-size: 1.4em !important;
+  font-size: 1.1em !important;
   line-height: 1.2;
 
   @include break(not-small) {
-    font-size: 1.4em !important;
+    font-size: 1.1em !important;
   }
   @include break(medium) {
     font-size: 1.2em !important;
   }
   @include break(large) {
     font-size: 1.5em !important;
+  }
+  @include break(super-large) {
+    font-size: 1.8em !important;
   }
 
 }
@@ -151,6 +154,10 @@ a.project--link {
 //anime elements
 .js-hidden {
   opacity: 0;
+}
+
+.collapsed{
+  display: none;
 }
 
 .focus{

@@ -140,3 +140,31 @@
         z-index: 100;
     }
 }
+
+@media #{$breakpoint-super-large}{
+    .aspect-ratio-sl {
+      height: 0;
+      position: relative;
+    }
+    .aspect-ratio--16x9-sl { padding-bottom: 56.25%; }
+    .aspect-ratio--9x16-sl { padding-bottom: 177.77%; }
+    .aspect-ratio--4x3-sl {  padding-bottom: 75%; }
+    .aspect-ratio--3x4-sl {  padding-bottom: 133.33%; }
+    .aspect-ratio--6x4-sl {  padding-bottom: 66.6%; }
+    .aspect-ratio--4x6-sl {  padding-bottom: 150%; }
+    .aspect-ratio--8x5-sl {  padding-bottom: 62.5%; }
+    .aspect-ratio--5x8-sl {  padding-bottom: 160%; }
+    .aspect-ratio--7x5-sl {  padding-bottom: 71.42%; }
+    .aspect-ratio--5x7-sl {  padding-bottom: 140%; }
+    .aspect-ratio--1x1-sl {  padding-bottom: 100%; }
+    .aspect-ratio--object-sl {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+    }
+}

@@ -103,3 +103,19 @@
 
   .mw-none-l { max-width: none; }
 }
+
+@media #{$breakpoint-super-large} {
+  .mw-100-sl  { max-width: 100%; }
+
+  .mw1-sl  {  max-width: $max-width-1; }
+  .mw2-sl  {  max-width: $max-width-2; }
+  .mw3-sl  {  max-width: $max-width-3; }
+  .mw4-sl  {  max-width: $max-width-4; }
+  .mw5-sl  {  max-width: $max-width-5; }
+  .mw6-sl  {  max-width: $max-width-6; }
+  .mw7-sl  {  max-width: $max-width-7; }
+  .mw8-sl  {  max-width: $max-width-8; }
+  .mw9-sl  {  max-width: $max-width-9; }
+
+  .mw-none-sl { max-width: none; }
+}

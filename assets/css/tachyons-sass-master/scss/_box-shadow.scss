@@ -46,3 +46,11 @@
   .shadow-4-l { box-shadow: $box-shadow-4; }
   .shadow-5-l { box-shadow: $box-shadow-5; }
 }
+
+@media #{$breakpoint-super-large} {
+  .shadow-1-sl { box-shadow: $box-shadow-1; }
+  .shadow-2-sl { box-shadow: $box-shadow-2; }
+  .shadow-3-sl { box-shadow: $box-shadow-3; }
+  .shadow-4-sl { box-shadow: $box-shadow-4; }
+  .shadow-5-sl { box-shadow: $box-shadow-5; }
+}

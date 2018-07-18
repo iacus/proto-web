@@ -7,6 +7,9 @@ var defaultTheBlack = theBlack.css('background-image');
 
 //Preloader
 
+
+
+
 $(document).ready(function() {
 
   if (theBlack.parents('.visible-the-black').length) {
@@ -22,6 +25,15 @@ $(document).ready(function() {
   }
 
 });
+
+
+$(document).on({
+  scroll: function () {
+    var menuSelector = $('.js-ScrollAndFocus');
+    initScroll(menuSelector);
+  }
+});
+
 
 //Animate The-black transition
 $(".theBlackToBlack").on({

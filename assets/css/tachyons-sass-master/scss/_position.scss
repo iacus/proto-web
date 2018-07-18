@@ -42,3 +42,10 @@
   .absolute-l  { position: absolute; }
   .fixed-l  { position: fixed; }
 }
+
+@media #{$breakpoint-super-large} {
+  .static-sl { position: static; }
+  .relative-sl  { position: relative; }
+  .absolute-sl  { position: absolute; }
+  .fixed-sl  { position: fixed; }
+}

@@ -40,3 +40,9 @@
   .underline-l {    text-decoration: underline; }
   .no-underline-l { text-decoration: none; }
 }
+
+@media #{$breakpoint-super-large} {
+  .strike-sl       { text-decoration: line-through; }
+  .underline-sl {    text-decoration: underline; }
+  .no-underline-sl { text-decoration: none; }
+}

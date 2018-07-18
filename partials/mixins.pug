@@ -10,29 +10,32 @@ mixin project-list(project)
 mixin project-list-ns(project)
 	
 	//Inicialize all projects to 0 opacity for the animation
-	li.truncate.lh-title.f5.b--white-30.bb.pv1
-		a.projects__link_ns.white.noload.theBlackToWhite.js-FocusElement.js-theBlackImage(class=project.title, href=project.url, data-cover= project.cover)= project.title
+	li.projects__item_ns.truncate.lh-title.f5.b--white-10.bt.pv1.js-FocusElement
+		a.projects__link_ns.white.noload.theBlackToWhite(class=project.title, href=project.url, data-cover= project.cover)= project.title
 
 
 //Professionals bocks mixin for proffesionals page
 mixin bios-blocks(professional)
 	
-	div.bio__block__item.mb4.js-theBlackImageAndFix.js-FocusElementAndFix(title=professional.name, data-cover= professional.image)
-		p.bio__block__text-wrapper.dark-gray
-			span.bio__block_name= professional.name + '. '
-			span.bio__block_name= professional.bio
+	div.bio__block__item.js-theBlackImageAndFix.js-FocusElementAndFix(title=professional.name, data-cover= professional.image)
+		p.bio__block__text-wrapper.mb4.dark-gray
+			p
+				span.bio__block_name= professional.name + '. '
+				span.bio__block_name= professional.rol + '. '
+			p.bio__block_name= professional.bio
 
 
 //Professionals list mixin for procedure page
 mixin procedure-list(procedure)
 	
-	li.truncate
-		a.procedure__item.white.js-FocusElement.js-ItemScrollToBlock(href="#block" + procedure.id,class="block" + procedure.id)!= procedure.name
+	li.truncate.bg-transparent
+		a.procedure__item.white.js-FocusElement.js-ItemScrollToBlock.js-ScrollAndFocus(href="#block" + procedure.id,class="block" + procedure.id)!= procedure.name
  
 
 //List of procedures for procedures page
 mixin procedure-blocks(procedure)
 	
-	div.procedure__block__item.mb4.js-FocusElement.js-BlockScrollToItem(id="block" + procedure.id, title=procedure.name)
-		p.procedure__block__text-wrapper.white
+	div.procedure__block__item(id="block" + procedure.id, title=procedure.name)
+		p.procedure__block__text-wrapper.white.pb4
+			span.procedure__block_name.db.db-ns.db-m.dn-l.dn-sl!= procedure.name
 			span.procedure__block_name!= procedure.text

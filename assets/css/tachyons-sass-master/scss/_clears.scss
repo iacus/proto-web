@@ -45,3 +45,10 @@
   .cb-l { clear: both; }
   .cn-l { clear: none; }
 }
+
+@media #{$breakpoint-super-large} {
+  .cl-sl { clear: left; }
+  .cr-sl { clear: right; }
+  .cb-sl { clear: both; }
+  .cn-sl { clear: none; }
+}

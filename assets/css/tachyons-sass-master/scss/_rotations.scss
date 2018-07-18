@@ -48,3 +48,13 @@
   .rotate-270-l { transform: rotate(270deg); }
   .rotate-315-l { transform: rotate(315deg); }
 }
+
+@media #{$breakpoint-super-large}{
+  .rotate-45-sl { transform: rotate(45deg); }
+  .rotate-90-sl { transform: rotate(90deg); }
+  .rotate-135-sl { transform: rotate(135deg); }
+  .rotate-180-sl { transform: rotate(180deg); }
+  .rotate-225-sl { transform: rotate(225deg); }
+  .rotate-270-sl { transform: rotate(270deg); }
+  .rotate-315-sl { transform: rotate(315deg); }
+}

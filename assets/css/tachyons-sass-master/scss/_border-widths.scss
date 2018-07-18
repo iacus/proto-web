@@ -79,3 +79,16 @@
   .bb-0-l { border-bottom-width: $border-width-none }
   .bl-0-l { border-left-width: $border-width-none }
 }
+
+@media #{$breakpoint-super-large} {
+  .bw0-sl { border-width: $border-width-none; }
+  .bw1-sl { border-width: $border-width-1; }
+  .bw2-sl { border-width: $border-width-2; }
+  .bw3-sl { border-width: $border-width-3; }
+  .bw4-sl { border-width: $border-width-4; }
+  .bw5-sl { border-width: $border-width-5; }
+  .bt-0-sl { border-top-width: $border-width-none }
+  .br-0-sl { border-right-width: $border-width-none }
+  .bb-0-sl { border-bottom-width: $border-width-none }
+  .bl-0-sl { border-left-width: $border-width-none }
+}

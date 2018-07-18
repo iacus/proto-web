@@ -151,3 +151,32 @@
     left: 0;
   }
 }
+
+@media #{$breakpoint-super-large} {
+  .top-0-sl     { top:   0; }
+  .left-0-sl    { left:  0; }
+  .right-0-sl   { right: 0; }
+  .bottom-0-sl  { bottom: 0; }
+  .top-1-sl     { top:   1rem; }
+  .left-1-sl    { left:  1rem; }
+  .right-1-sl   { right: 1rem; }
+  .bottom-1-sl  { bottom: 1rem; }
+  .top-2-sl     { top:   2rem; }
+  .left-2-sl    { left:  2rem; }
+  .right-2-sl   { right: 2rem; }
+  .bottom-2-sl  { bottom: 2rem; }
+  .top--1-sl    { top:    -1rem; }
+  .right--1-sl  { right:  -1rem; }
+  .bottom--1-sl { bottom: -1rem; }
+  .left--1-sl   { left:   -1rem; }
+  .top--2-sl    { top:    -2rem; }
+  .right--2-sl  { right:  -2rem; }
+  .bottom--2-sl { bottom: -2rem; }
+  .left--2-sl   { left:   -2rem; }
+  .absolute--fill-sl {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

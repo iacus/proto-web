@@ -54,3 +54,9 @@
   .fr-l { float: right; _display: inline; }
   .fn-l { float: none; }
 }
+
+@media #{$breakpoint-super-large} {
+  .fl-sl { float: left; _display: inline; }
+  .fr-sl { float: right; _display: inline; }
+  .fn-sl { float: none; }
+}

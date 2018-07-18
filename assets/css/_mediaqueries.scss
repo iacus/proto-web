@@ -15,17 +15,22 @@
 
 @mixin break($point) {
   @if $point == not-small {
-    @media screen and (min-width: 48em) {
+    @media screen and (min-width: 30em) {
       @content;
     }
   }
   @else if $point == medium {
-    @media screen and (min-width: 48em) and (max-width: 64em) {
+    @media screen and (min-width: 30em) and (max-width: 60em) {
       @content;
     }
   }
   @else if $point == large {
-    @media screen and (min-width: 64em)  {
+    @media screen and (min-width: 60em) and (max-width: 90em) {
+      @content;
+    }
+  }
+  @else if $point == super-large {
+    @media screen and (min-width: 90em)  {
       @content;
     }
   }

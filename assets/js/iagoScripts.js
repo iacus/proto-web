@@ -68,6 +68,7 @@ $(".js-ItemScrollToBlock").on({
   }
 });
 
+//Finally this function is not being used. You can't interact with click with the blocks
 $(".js-BlockScrollToItem").on({
   click: function() {
     const thisBlock = $(this);
@@ -90,14 +91,38 @@ $(".js-BlockScrollToItem").on({
 });
 
 
-/*
-$( window ).bind( "scroll", function() {
-    if ( $( this ).scrollTop() > 150) {
-      console.log("ojete");
-       $("yourMenuClass").addClass('addNewClass');
-   } else {
-     console.log("mierda");
-        $("yourMenuClass").removeClass('addNewClass');
+$(".js-ShowSubmenu").on({
+  click: function(e) {
+    e.preventDefault();
+
+    if ($(this).next('.submenu').is('.collapsed')) {
+      $(this).next('.submenu').removeClass('collapsed');
+    } else {
+      $(this).next('.submenu').addClass('collapsed');
     }
-} );
-*/
+
+  }
+});
+
+
+function initScroll(menuSelector) {
+    var scrollPosition = $(document).scrollTop();
+
+    menuSelector.each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        const refElementFirstClass = "." + $(refElement).attr('class').split(' ')[0];
+
+        if (refElement.position().top <= scrollPosition + 300 && refElement.position().top + refElement.height() > scrollPosition + 300) {
+          console.log("activa");
+
+            currLink.clearQueue().stop(true,true).delay(200).css('opacity', '0.3').removeClass('not-focus').addClass('focus');
+            $(refElement).clearQueue().stop(true,true).delay(200).css('opacity', '0.3').removeClass('not-focus').addClass('focus');
+        }
+        else {
+
+            currLink.clearQueue().stop(true,true).css('opacity', '0.3').removeClass('focus').addClass('not-focus');
+            $(refElement).clearQueue().stop(true,true).css('opacity', '0.3').removeClass('focus').addClass('not-focus');
+        }
+    });
+}

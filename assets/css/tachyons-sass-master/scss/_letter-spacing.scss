@@ -38,3 +38,9 @@
   .tracked-tight-l { letter-spacing: $letter-spacing-tight; }
   .tracked-mega-l  { letter-spacing:  $letter-spacing-2; }
 }
+
+@media #{$breakpoint-super-large} {
+  .tracked-sl       { letter-spacing:  $letter-spacing-1; }
+  .tracked-tight-sl { letter-spacing: $letter-spacing-tight; }
+  .tracked-mega-sl  { letter-spacing:  $letter-spacing-2; }
+}

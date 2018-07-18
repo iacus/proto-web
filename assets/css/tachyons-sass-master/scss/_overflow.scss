@@ -80,3 +80,20 @@
   .overflow-y-scroll-l { overflow-y: scroll; }
   .overflow-y-auto-l { overflow-y: auto; }
 }
+
+@media #{$breakpoint-super-large} {
+  .overflow-visible-sl { overflow: visible; }
+  .overflow-hidden-sl { overflow: hidden; }
+  .overflow-scroll-sl { overflow: scroll; }
+  .overflow-auto-sl { overflow: auto; }
+
+  .overflow-x-visible-sl { overflow-x: visible; }
+  .overflow-x-hidden-sl { overflow-x: hidden; }
+  .overflow-x-scroll-sl { overflow-x: scroll; }
+  .overflow-x-auto-sl { overflow-x: auto; }
+
+  .overflow-y-visible-sl { overflow-y: visible; }
+  .overflow-y-hidden-sl { overflow-y: hidden; }
+  .overflow-y-scroll-sl { overflow-y: scroll; }
+  .overflow-y-auto-sl { overflow-y: auto; }
+}

@@ -34,3 +34,8 @@
   .i-l       { font-style: italic; }
   .fs-normal-l     { font-style: normal; }
 }
+
+@media #{$breakpoint-super-large} {
+  .i-sl       { font-style: italic; }
+  .fs-normal-sl     { font-style: normal; }
+}

@@ -40,14 +40,18 @@ function animateTheBlack(bgPosition,thisLink) {
 
       if (theBlack.parents('.procedure').length) {
         console.log("procedure page");
-        focusElementAndFix('.procedure__block__item');
-        focusElementAndFix('.procedure__item');
+
+        //If the scroll isn't on top we light the first items
+        if ($(document).scrollTop() <= 0) {
+          focusElementAndFix('.procedure__block__item');
+          focusElementAndFix('.procedure__item');
+        }
+
       }
 
     }
   });
 }
-
 
 // Projects load on home
 var animateTheProjects = anime({
@@ -67,7 +71,6 @@ var animateTheProjects = anime({
   },
   autoplay: false
 });
-
 
 var loadGallery = anime({
   targets: '.project__gallery',
@@ -109,7 +112,7 @@ var animateMenuResponsive = anime({
     value: 1,
     duration: 20
   },
-  translateX: [-2000, 0],
+  translateX: [-3000, 0],
   easing: 'easeInOutSine',
   duration: 400,
   autoplay: false
@@ -127,8 +130,7 @@ function hideMenuResponsive() {
 
 }
 
-//smooth scroll with anime
-
+//Smooth Scroll with anime
 const ScrollLinks = {
   scrollAnimation: null,
   init(selector) {
