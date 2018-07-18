@@ -128,7 +128,7 @@ a.project--link {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #222;
+  background-color: #333;
 
   .bg-blend & {
     background-blend-mode: multiply;
@@ -151,6 +151,13 @@ a.project--link {
 //anime elements
 .js-hidden {
   opacity: 0;
+}
+
+.focus{
+  opacity: 1 !important;
+}
+.not-focus{
+  opacity: 0.3;
 }
 
 //sticky

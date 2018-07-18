@@ -14,26 +14,25 @@ mixin project-list-ns(project)
 		a.projects__link_ns.white.noload.theBlackToWhite.js-FocusElement.js-theBlackImage(class=project.title, href=project.url, data-cover= project.cover)= project.title
 
 
-//Professionals bocks mixin for procedures page
+//Professionals bocks mixin for proffesionals page
 mixin bios-blocks(professional)
 	
-	div.bio__block__item.mb4.js-theBlackImage.js-FocusElement(title=professional.name, data-cover= professional.image)
+	div.bio__block__item.mb4.js-theBlackImageAndFix.js-FocusElementAndFix(title=professional.name, data-cover= professional.image)
 		p.bio__block__text-wrapper.dark-gray
 			span.bio__block_name= professional.name + '. '
 			span.bio__block_name= professional.bio
 
 
-//Professionals list mixin for professionals page
+//Professionals list mixin for procedure page
 mixin procedure-list(procedure)
 	
 	li.truncate
-		a.procedure__item.white.js-FocusElement.jsScrollTo(href="#block" + procedure.id,class=procedure.name)!= procedure.name
+		a.procedure__item.white.js-FocusElement.js-ItemScrollToBlock(href="#block" + procedure.id,class="block" + procedure.id)!= procedure.name
  
 
 //List of procedures for procedures page
 mixin procedure-blocks(procedure)
 	
-	div
-		div.procedure__block__item.mb4(id="#block" + procedure.id, title=procedure.name)
-			p.procedure__block__text-wrapper.white
-				span.procedure__block_name!= procedure.text
+	div.procedure__block__item.mb4.js-FocusElement.js-BlockScrollToItem(id="block" + procedure.id, title=procedure.name)
+		p.procedure__block__text-wrapper.white
+			span.procedure__block_name!= procedure.text

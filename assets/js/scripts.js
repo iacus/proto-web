@@ -1,6 +1,6 @@
 //scripts.js
 //Global variables
-var urlImages = "content/"; 
+var urlImages = "content/";
 var theBlack = $('.the-black');
 var theBlackJs = document.querySelector('.the-black');
 var defaultTheBlack = theBlack.css('background-image');
@@ -111,6 +111,31 @@ $(".js-theBlackImage").on({
   }
 });
 
+$(".js-theBlackImageAndFix").on({
+  mouseenter: function() {
+    const coverImage = $(this).attr('data-cover');
+    const coverImageRoute = 'url("' + urlImages + coverImage + '")';
+
+
+    if (!$(this).is('.fix')) {
+        // If we enter on an unfix element
+        // We clean The Black first
+        emptyTheBlack();
+        //Then we add the class fix to this element
+        $(this).addClass('fix');
+        // And remove the class fix to the other elements
+        $(this).siblings().not($(this)).removeClass('fix');
+        // And load the cover image in The Black of this element
+        theBlack.find('.image-containter').stop(true, true).delay(600).fadeIn().css('background-image', coverImageRoute);
+    }
+
+
+  },
+  mouseleave: function() {
+    //theBlack.find('.image-containter').stop(true, true).delay(2000).clearQueue().fadeOut().css('background-image', defaultTheBlack);
+  }
+});
+
 
 function theBlackMap() {
   const coverImage = "map.png";
@@ -135,7 +160,19 @@ function theBlackProfessional() {
   items.first().css('opacity', '1');
   items.not(items.first()).delay(300).animate({opacity: 0.3}, "slow");
   theBlack.find('.image-containter').delay(200).fadeIn("fast").css('background-image', coverImageRoute);
+}
 
+function theBlackProfessional() {
+  const items = $('.bio__block__item');
+  const firstItem = items.first();
+  const coverImage = firstItem.attr('data-cover');
+  const coverImageRoute = 'url("' + urlImages + coverImage + '")';
+  console.log(coverImage);
+  console.log($(this));
+
+  items.first().css('opacity', '1');
+  items.not(items.first()).delay(300).animate({opacity: 0.3}, "slow");
+  theBlack.find('.image-containter').delay(200).fadeIn("fast").css('background-image', coverImageRoute);
 }
 
 

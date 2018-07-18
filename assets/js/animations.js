@@ -38,6 +38,12 @@ function animateTheBlack(bgPosition,thisLink) {
         theBlackProfessional();
       }
 
+      if (theBlack.parents('.procedure').length) {
+        console.log("procedure page");
+        focusElementAndFix('.procedure__block__item');
+        focusElementAndFix('.procedure__item');
+      }
+
     }
   });
 }
@@ -122,7 +128,7 @@ function hideMenuResponsive() {
 }
 
 //smooth scroll with anime
-/*
+
 const ScrollLinks = {
   scrollAnimation: null,
   init(selector) {
@@ -159,9 +165,12 @@ const ScrollLinks = {
       console.log(selectorOrNumber);
       console.log(element);
 
+      const stickySideBarPosition = $('.sticky').css('top').split('px')[0];
+      console.log(stickySideBarPosition);
+
       scrollTop =
         (window.scrollY || document.documentElement.scrollTop) +
-        element.getBoundingClientRect().top;
+        element.getBoundingClientRect().top - stickySideBarPosition + 2;
     }
 
     this.scrollAnimation = anime({
@@ -173,5 +182,4 @@ const ScrollLinks = {
   }
 };
 
-ScrollLinks.init(".js-scroll-to");
-*/
+ScrollLinks.init(".js-ItemScrollToBlock");

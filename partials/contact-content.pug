@@ -2,10 +2,14 @@
 //- professionals-list.pug
 main.dn.flex-m.flex-l
   .the-content.fl.w-52.the-black-aligned
-      div.contact__blocks.mw6
-        p.contact__block_text.db(title="text")!= text
-        span.contact__block_address.db(title="address")!= address
+      div.contact__blocks.mw5
+        p.contact__block_text.db.mb4(title="text")!= text
+        
         span.contact__block_email.db(title="email")
           a.dim(href="mailto:" + email )= email
-        span.contact__block_phone.db(title="phone")
+        span.contact__block_phone.db.mb4(title="phone")
           a.dim(href="tel:" + phone )= phone
+
+        span.contact__block_address.db(title="address")!= address
+        span.contact__block_web.db(title= web)
+          a.dim(href="http://" + web )= web

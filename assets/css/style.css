@@ -204,7 +204,7 @@ a.project--link {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #222; }
+  background-color: #333; }
   .bg-blend .the-black .image-containter {
     background-blend-mode: multiply; }
 
@@ -221,6 +221,12 @@ a.project--link {
 
 .js-hidden {
   opacity: 0; }
+
+.focus {
+  opacity: 1 !important; }
+
+.not-focus {
+  opacity: 0.3; }
 
 .sticky {
   position: -webkit-sticky;
