@@ -109,8 +109,11 @@ var g = svg.selectAll(".arc")
 
   // Make each arc clickable
   .on("click", function(d, i) {
+    const textElem = "." + $(this).attr('class');
     $('#info-text').text($(this).data('info'));
     $('.info__block').show();
+    $(this).find('text').addClass('focus');
+    //$(textElem).find('text').not($(this)).removeClass('focus')
   })
   .on("mouseenter", function() {
     const textElem = "." + $(this).attr('class');
@@ -134,16 +137,27 @@ var g2 = svg2.selectAll(".arc")
   // When click get the data info into the Info Block and Show it
   .on("click", function(d, i) {
     $('#info-text').text($(this).data('info'));
+    const textElem = "." + $(this).attr('class');
     $('.info__block').show();
+    $(this).find('text').addClass('focus');
+    $(textElem).find('text').not($(this).find('text')).addClass('not-focus').removeClass('focus')
   })
   .on("mouseenter", function() {
     const textElem = "." + $(this).attr('class');
     console.log(textElem);
+    $(this).find('text').clearQueue().animate({opacity: 1}, "fast");
     $(textElem).not($(this)).find('text').clearQueue().stop(true, true).animate({opacity:0.3}, 'fast')
   })
   .on("mouseleave", function(i) {
     const textElem = "." + $(this).attr('class');
-    $(textElem).find('text').clearQueue().stop(true, true).delay(200).animate({opacity:1}, 'fast')
+    const elemFirstClass = "." + $(this).attr('class').split(' ')[0];
+
+    //Developing
+    if ($(elemFirstClass).is('.focus')) {
+      //$(textElem).find('text').clearQueue().stop(true, true).delay(100).animate({opacity:1}, 'fast')
+    } else {
+      //$(elemFirstClass).clearQueue().stop(true, true).delay(100).animate({opacity: 1}, "fast")
+    }
   });
 
 	// Append the path to each g
