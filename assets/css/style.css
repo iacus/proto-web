@@ -225,6 +225,9 @@ a.project--link {
 .js-hidden {
   opacity: 0; }
 
+.js-FocusElement {
+  cursor: pointer; }
+
 .collapsed {
   display: none; }
 
@@ -239,34 +242,53 @@ a.project--link {
   position: sticky;
   top: 7em; }
 
-svg text {
-  font-size: 1.1em;
-  color: #fff;
+#proto-chart {
+  stroke: white; }
+
+svg {
+  stroke: white; }
+  svg text {
+    font-size: 1.1em;
+    color: #fff;
+    stroke: none; }
+    @media screen and (min-width: 30em) {
+      svg text {
+        font-size: 1.1em !important; } }
+    @media screen and (min-width: 30em) and (max-width: 60em) {
+      svg text {
+        font-size: .7em !important; } }
+    @media screen and (min-width: 60em) and (max-width: 90em) {
+      svg text {
+        font-size: .7em !important; } }
+    @media screen and (min-width: 90em) {
+      svg text {
+        font-size: .55em !important; } }
+  svg .info__block {
+    display: none; }
+  svg #close__info__block:hover {
+    cursor: pointer;
+    text-decoration: underline; }
+
+.outerPie {
   stroke: none; }
-  @media screen and (min-width: 30em) {
-    svg text {
-      font-size: 1.1em !important; } }
-  @media screen and (min-width: 30em) and (max-width: 60em) {
-    svg text {
-      font-size: .7em !important; } }
-  @media screen and (min-width: 60em) and (max-width: 90em) {
-    svg text {
-      font-size: .7em !important; } }
-  @media screen and (min-width: 90em) {
-    svg text {
-      font-size: .55em !important; } }
+  .outerPie .arc path {
+    stroke: 1; }
 
-svg .info__block {
-  display: none; }
+.innerPie {
+  stroke: 2; }
+  .innerPie .arc {
+    stroke: 2; }
+    .innerPie .arc path {
+      stroke: 1; }
 
-svg #close__info__block:hover {
-  cursor: pointer;
-  text-decoration: underline; }
+.innerPie > g {
+  stroke: 2 !important; }
+
+.outerPie > g > .arc {
+  stroke: 2; }
 
 .arc {
-  cursor: pointer;
-  stroke: white; }
-  .arc:hover {
-    fill: white; }
-    .arc:hover text {
-      fill: black; }
+  cursor: pointer; }
+
+circle.info__block {
+  stroke: 2; }

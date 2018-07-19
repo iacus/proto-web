@@ -34,8 +34,8 @@ var exteriorSeedData = [{
 }];
 
 // Define size & radius of donut pie chart
-var width = 450,
-    height = 450,
+var width = 400,
+    height = 400,
     radius = Math.min(width, height) / 3,
     radius2 = Math.min(width, height) / 2;
 
@@ -46,12 +46,12 @@ var arcText = d3.scaleOrdinal()
 // Determine size of arcs
 //Interior
 var arc = d3.arc()
-  .innerRadius(radius - 90)
-  .outerRadius(radius);
+  .innerRadius(radius - 60)
+  .outerRadius(radius + 22);
 
 //Exterior
 var arc2 = d3.arc()
-  .innerRadius(radius2 - 75)
+  .innerRadius(radius2 - 45)
   .outerRadius(radius2 );
 
 // Create the donut pie chart layout
@@ -75,23 +75,31 @@ var svg2 = d3.select(".outerPie")
   .attr('viewBox','0 0 '+Math.min(width,height)+' '+Math.min(width,height))
   .attr('preserveAspectRatio','xMinYMin')
   .append("g")
-  .attr("transform", "translate(" + Math.min(width,height) / 2 + "," + Math.min(width,height) / 2 + ")");
+  .attr("transform", "translate(" + Math.min(width,height) / 2 + "," + Math.min(width,height) / 2 + ")rotate(-60)");
 
 // Define inner circle
 svg.append("circle")
   .attr("cx", 0)
   .attr("cy", 0)
-  .attr("r", 100)
+  .attr("r", radius - 60)
   .attr("class", "inner-circle")
-  .attr("fill", "#fff") ;
+  .attr("fill", "#000") ;
 
 // Define info circle
 svg2.append("circle")
   .attr("cx", 0)
   .attr("cy", 0)
-  .attr("r", radius)
+  .attr("r", radius + 22)
   .attr("class", "info__block")
-  .attr("fill", "#fff") ;
+  .attr("fill", "#000") ;
+
+//Exterior stroke circle
+svg.append("circle")
+  .attr("cx", 0)
+  .attr("cy", 0)
+  .attr("r", radius2)
+  .attr("class", "exterior__circle")
+  .attr("fill", "transparent") ;
 
 // Calculate SVG paths
 var g = svg.selectAll(".arc")
@@ -103,6 +111,18 @@ var g = svg.selectAll(".arc")
   .on("click", function(d, i) {
     $('#info-text').text($(this).data('info'));
     $('.info__block').show();
+  })
+  .on("mouseenter", function() {
+    const textElem = "." + $(this).attr('class');
+    console.log(textElem);
+    $(this).find('text').clearQueue().animate({opacity: 1}, "fast");
+    $(textElem).not($(this)).find('text').clearQueue().stop(true, true).animate({opacity:0.3}, 'fast')
+
+
+  })
+  .on("mouseleave", function(i) {
+    const textElem = "." + $(this).attr('class');
+    $(textElem).find('text').clearQueue().stop(true, true).delay(200).animate({opacity:1}, 'fast')
   });
 
 var g2 = svg2.selectAll(".arc")
@@ -115,6 +135,15 @@ var g2 = svg2.selectAll(".arc")
   .on("click", function(d, i) {
     $('#info-text').text($(this).data('info'));
     $('.info__block').show();
+  })
+  .on("mouseenter", function() {
+    const textElem = "." + $(this).attr('class');
+    console.log(textElem);
+    $(textElem).not($(this)).find('text').clearQueue().stop(true, true).animate({opacity:0.3}, 'fast')
+  })
+  .on("mouseleave", function(i) {
+    const textElem = "." + $(this).attr('class');
+    $(textElem).find('text').clearQueue().stop(true, true).delay(200).animate({opacity:1}, 'fast')
   });
 
 	// Append the path to each g
@@ -126,8 +155,17 @@ var g2 = svg2.selectAll(".arc")
 
 	// Append text labels to each arc
 	g.append("text")
-  	.attr("transform", function(d) {
-    	return "translate(" + arc.centroid(d) + ")";
+  	.attr("transform", function(d,i) {
+      if (i == 0) {
+        return "translate(" + arc.centroid(d) + ")rotate(60)";
+      } else if (i== 1) {
+        return "translate(" + arc.centroid(d) + ")rotate(1)";
+      } else if (i== 2) {
+        return "translate(" + arc.centroid(d) + ")rotate(-60)";
+      } else {
+        return "translate(" + arc.centroid(d) + ")";
+      }
+
   	})
   	.attr("dy", ".35em")
     .attr("fill","#FFF")
@@ -135,8 +173,16 @@ var g2 = svg2.selectAll(".arc")
 		.text(function(d,i) { return interiorSeedData[i].label; })
 
   g2.append("text")
-    	.attr("transform", function(d) {
-      	return "translate(" + arc2.centroid(d) + ")";
+    	.attr("transform", function(d,i) {
+        if (i == 0) {
+          return "translate(" + arc2.centroid(d) + ")rotate(60)";
+        } else if (i== 1) {
+          return "translate(" + arc2.centroid(d) + ")rotate(1)";
+        } else if (i== 2) {
+          return "translate(" + arc2.centroid(d) + ")rotate(120)";
+        } else {
+          return "translate(" + arc2.centroid(d) + ")";
+        }
     	})
     	.attr("dy", ".35em")
       .attr("fill","#FFF")
@@ -150,8 +196,8 @@ g2.selectAll(".arc text").call(wrap, arcText.range([0, width]));
 svg.append("text")
   .style("text-anchor", "middle")
   .attr("class", "inner-circle")
-  .attr("fill", "#000")
-  .text("Proto");
+  .attr("fill", "#FFF")
+  .text("Pro_to");
 
 svg.selectAll(".arc")
   .attr("data-info",function(d,i) { return interiorSeedData[i].data; })
@@ -163,7 +209,8 @@ svg2.append("text")
   .style("text-anchor", "middle")
   .attr("id", "info-text")
   .attr("class", "info__block")
-  .attr("fill", "#000")
+  .attr("fill", "#FFF")
+  .attr("transform","rotate(60)")
   .text("Text Info about this option");
 
 svg2.append("text")
@@ -171,7 +218,8 @@ svg2.append("text")
   .attr("dy", 40)
   .attr("id", "close__info__block")
   .attr("class", "info__block")
-  .attr("fill", "#000")
+  .attr("fill", "#FFF")
+  .attr("transform","rotate(60)")
   .text("Close")
   .on("click", function(d, i) {
     $('.info__block').hide();

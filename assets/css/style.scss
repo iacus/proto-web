@@ -156,6 +156,10 @@ a.project--link {
   opacity: 0;
 }
 
+.js-FocusElement{
+  cursor: pointer;
+}
+
 .collapsed{
   display: none;
 }
@@ -175,7 +179,13 @@ a.project--link {
 }
 
 //Proto Graphic
+
+#proto-chart{
+  stroke: white;
+}
+
 svg{
+  stroke: white;
 
   text{
   font-size: 1.1em;
@@ -197,29 +207,52 @@ svg{
 
 }
 
-.info__block{
-  display: none;
+  .info__block{
+    display: none;
+
+  }
+  #close__info__block:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
 
 }
-#close__info__block:hover{
-  cursor: pointer;
-  text-decoration: underline;
+
+.outerPie{
+  stroke: none;
+
+  .arc{
+    //stroke: none;
+    path{
+      stroke: 1;
+    }
+  }
 }
 
+.innerPie{
+  stroke: 2;
+
+  .arc{
+    stroke:2;
+    path{
+      stroke: 1;
+    }
+  }
+}
+.innerPie>g{
+  stroke: 2 !important;
+}
+.outerPie>g>.arc{
+ stroke: 2;
 }
 .arc {
   cursor: pointer;
-  stroke: white;
-
-
 
   &:hover {
 
-    fill: white;
-
-    text  {
-      fill: black;
-    }
   }
 
+}
+circle.info__block{
+  stroke: 2;
 }

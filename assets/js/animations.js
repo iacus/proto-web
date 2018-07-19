@@ -42,7 +42,8 @@ function animateTheBlack(bgPosition,thisLink) {
         console.log("procedure page");
 
         //If the scroll isn't on top we light the first items
-        if ($(document).scrollTop() <= 0) {
+        if ($(document).scrollTop() <= 150) {
+
           focusElementAndFix('.procedure__block__item');
           focusElementAndFix('.procedure__item');
         }

@@ -3,12 +3,16 @@ $(".js-FocusElement").on({
     const elem = $(this);
     const elemFirstClass = "." + $(this).attr('class').split(' ')[0];
 
+    console.log("focus");
+
     $(this).clearQueue().animate({opacity: 1}, "fast");
     $(elemFirstClass).not($(this)).clearQueue().animate({opacity: 0.3}, "fast")
 
   },
   mouseleave: function() {
     const elemFirstClass = "." + $(this).attr('class').split(' ')[0];
+
+    console.log("out focus");
 
     if ($(elemFirstClass).is('.focus')) {
       $(elemFirstClass).clearQueue().stop(true, true).delay(100).animate({opacity: 0.3}, "fast");
@@ -28,8 +32,8 @@ $(".js-FocusElementAndFix").on({
     const elem = $(this);
     const elemFirstClass = "." + $(this).attr('class').split(' ')[0];
 
-    $(this).clearQueue().animate({opacity: 1}, "fast");
-    $(elemFirstClass).not($(this)).clearQueue().animate({opacity: 0.3}, "fast")
+    $(this).clearQueue().animate({opacity: 1}, "fast").addClass('focus');
+    $(elemFirstClass).not($(this)).clearQueue().animate({opacity: 0.3}, "fast").removeClass('focus').addClass('not-focus')
 
   },
   mouseleave: function() {
@@ -41,11 +45,16 @@ $(".js-FocusElementAndFix").on({
 });
 
 
+
 function focusElementAndFix(classItemsToFocus) {
   const items = $(classItemsToFocus);
 
-  items.first().addClass('focus');
-  items.not(items.first()).delay(300).animate({opacity: 0.3}, "slow").addClass('not-focus');
+  console.log("focus");
+  items.not(items.first()).delay(100).animate({opacity: 0.3}, "slow", function () {
+    items.first().addClass('focus');
+    items.not(items.first()).addClass('not-focus');
+  });
+
 }
 
 
@@ -58,12 +67,14 @@ $(".js-ItemScrollToBlock").on({
 
 
     //Fix this item on sticky navigation
-    $(this).clearQueue().animate({opacity: 1}, "fast").removeClass('not-focus').addClass('focus');
-    $(itemsFirstClass).not($(this)).clearQueue().animate({opacity: 0.3}, "fast").removeClass('focus').addClass('not-focus');
+    //Da problemas con el scroll, desactivado por ahora
+    //$(this).clearQueue().animate({opacity: 1}, "fast").removeClass('not-focus').addClass('focus');
+    //$(itemsFirstClass).not($(this)).clearQueue().animate({opacity: 0.3}, "fast").removeClass('focus').addClass('not-focus');
 
     //Fix relative by ID block item
-    $(blockId).clearQueue().animate({opacity: 1}, "fast").removeClass('not-focus').addClass('focus');
-    $(blocksFirstClass).not($(blockId)).clearQueue().animate({opacity: 0.3}, "fast").removeClass('focus').addClass('not-focus');
+    //Da problemas con el scroll, desactivado por ahora
+    //$(blockId).delay(100).removeClass('not-focus').addClass('focus');
+    //$(blocksFirstClass).not($(blockId)).clearQueue().stop(true, true).delay(100).removeClass('focus').addClass('not-focus');
 
   }
 });
@@ -125,4 +136,31 @@ function initScroll(menuSelector) {
             $(refElement).clearQueue().stop(true,true).css('opacity', '0.3').removeClass('focus').addClass('not-focus');
         }
     });
+}
+
+
+
+//Testing function
+function focusElement(elem) {
+  const elemFirstClass = "." + elem.attr('class').split(' ')[0];
+
+  console.log("focus");
+
+  elem.clearQueue().animate({opacity: 1}, "fast");
+  $(elemFirstClass).not(elem).clearQueue().animate({opacity: 0.3}, "fast")
+}
+
+//Testing function
+function deFocusElement(elem) {
+  const elemFirstClass = "." + elem.attr('class').split(' ')[0];
+
+  console.log("out focus");
+
+  if ($(elemFirstClass).is('.focus')) {
+    $(elemFirstClass).clearQueue().stop(true, true).delay(100).animate({opacity: 0.3}, "fast");
+
+  } else {
+    $(elemFirstClass).clearQueue().stop(true, true).delay(100).animate({opacity: 1}, "fast")
+
+  }
 }

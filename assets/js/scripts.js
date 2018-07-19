@@ -169,25 +169,9 @@ function theBlackProfessional() {
   console.log(coverImage);
   console.log($(this));
 
-  items.first().css('opacity', '1');
-  items.not(items.first()).delay(300).animate({opacity: 0.3}, "slow");
+  focusElementAndFix('.bio__block__item');
   theBlack.find('.image-containter').delay(200).fadeIn("fast").css('background-image', coverImageRoute);
 }
-
-function theBlackProfessional() {
-  const items = $('.bio__block__item');
-  const firstItem = items.first();
-  const coverImage = firstItem.attr('data-cover');
-  const coverImageRoute = 'url("' + urlImages + coverImage + '")';
-  console.log(coverImage);
-  console.log($(this));
-
-  items.first().css('opacity', '1');
-  items.not(items.first()).delay(300).animate({opacity: 0.3}, "slow");
-  theBlack.find('.image-containter').delay(200).fadeIn("fast").css('background-image', coverImageRoute);
-}
-
-
 
 //Info panel
 $(".info--panel").on({
