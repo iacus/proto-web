@@ -39,3 +39,6 @@ mixin procedure-blocks(procedure)
 		p.procedure__block__text-wrapper.white.pb4
 			span.procedure__block_name.db.db-ns.db-m.dn-l.dn-sl!= procedure.name
 			span.procedure__block_name!= procedure.text
+			if procedure.graphic
+				.procedure__block_graphic.center.pb4.w-100.w-90-l.w-70-sl!= procedure.graphic
+			

@@ -239,59 +239,34 @@ a.project--link {
   position: sticky;
   top: 7em; }
 
-.flash {
-  position: absolute;
-  margin-top: -100vh;
-  margin-left: -100vh;
-  width: 500vh;
-  height: 300vh;
-  /*background: -webkit-gradient(ellipse at center, radial, 0% 0%, 0% 100%, from(white), to(black));
-  background: -webkit-radial-gradient(ellipse at center, white, black);
-  background: -moz-radial-gradient(ellipse at center, white, black);
-  background: -ms-radial-gradient(ellipse at center, white, black);
-  background: -o-radial-gradient(ellipse at center, white, black);
-  background: radial-gradient(ellipse at center, white, black);
-  */
-  background: url("../../content/gradient.png");
-  background-size: 200%;
-  background-position: -200px;
-  background-repeat: no-repeat;
-  top: 30%;
-  left: 0;
-  opacity: 0.2;
-  z-index: 10; }
+svg text {
+  font-size: 1.1em;
+  color: #fff;
+  stroke: none; }
+  @media screen and (min-width: 30em) {
+    svg text {
+      font-size: 1.1em !important; } }
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    svg text {
+      font-size: .7em !important; } }
+  @media screen and (min-width: 60em) and (max-width: 90em) {
+    svg text {
+      font-size: .7em !important; } }
+  @media screen and (min-width: 90em) {
+    svg text {
+      font-size: .55em !important; } }
 
-.flash-white {
-  opacity: 0;
-  position: fixed;
-  margin-top: -100vw;
-  margin-left: -100vw;
-  width: 200vw;
-  height: 200vw;
-  background: #fff; }
+svg .info__block {
+  display: none; }
 
-@-webkit-keyframes flash {
-  0% {
-    opacity: 1; }
-  30% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
+svg #close__info__block:hover {
+  cursor: pointer;
+  text-decoration: underline; }
 
-@keyframes flash {
-  0% {
-    opacity: 1; }
-  30% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-.flashing .flash-white {
-  opacity: 0;
-  z-index: 100; }
-
-.flash-black {
-  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0) 0%, white 300%);
-  background: -o-radial-gradient(center, ellipse, rgba(255, 255, 255, 0) 0%, white 300%);
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, white 300%);
-  opacity: 1; }
+.arc {
+  cursor: pointer;
+  stroke: white; }
+  .arc:hover {
+    fill: white; }
+    .arc:hover text {
+      fill: black; }

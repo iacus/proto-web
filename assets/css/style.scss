@@ -174,62 +174,52 @@ a.project--link {
   top: 7em;
 }
 
-//flash over black
-.flash {
-  position: absolute;
-  margin-top: -100vh;
-  margin-left: -100vh;
-  width: 500vh;
-  height: 300vh;
-  //background: radial-gradient(ellipse at center, white 0%, rgba(255, 255, 255, 0) 90%);
-  /*background: -webkit-gradient(ellipse at center, radial, 0% 0%, 0% 100%, from(white), to(black));
-  background: -webkit-radial-gradient(ellipse at center, white, black);
-  background: -moz-radial-gradient(ellipse at center, white, black);
-  background: -ms-radial-gradient(ellipse at center, white, black);
-  background: -o-radial-gradient(ellipse at center, white, black);
-  background: radial-gradient(ellipse at center, white, black);
-  */
-  background: url("../../content/gradient.png");
-  background-size: 200%;
-  background-position: -200px;
-  background-repeat: no-repeat;
-  //background-blend-mode: multiply;
-  top: 30%;
-  left: 0;
-  opacity: 0.2;
-  z-index: 10;
-  //filter: blur(500px);
-}
+//Proto Graphic
+svg{
 
-.flash-white {
-  opacity: 0;
-  position: fixed;
-  margin-top: -100vw;
-  margin-left: -100vw;
-  width: 200vw;
-  height: 200vw;
-  background: #fff;
-}
-@keyframes flash {
-  0% {
-    opacity: 1;
+  text{
+  font-size: 1.1em;
+  color: #fff;
+  stroke: none;
+
+  @include break(not-small) {
+    font-size: 1.1em !important;
+  }
+  @include break(medium) {
+    font-size: .7em !important;
+  }
+  @include break(large) {
+    font-size: .7em !important;
+  }
+  @include break(super-large) {
+    font-size: .55em !important;
   }
 
-  30% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }
 
-.flashing .flash-white {
-  opacity: 0;
-  z-index: 100;
+.info__block{
+  display: none;
+
+}
+#close__info__block:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-.flash-black {
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, white 300%);
-  opacity: 1;
+}
+.arc {
+  cursor: pointer;
+  stroke: white;
+
+
+
+  &:hover {
+
+    fill: white;
+
+    text  {
+      fill: black;
+    }
+  }
+
 }
