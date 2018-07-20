@@ -46,9 +46,6 @@ body {
   display: flex;
   flex-direction: column;
 
-  padding-top: $top-space;
-
-
   .projects-page &{
     padding-top: 0;
     overflow-y: hidden;
@@ -98,13 +95,15 @@ body {
   padding-top: $top-space;
 }
 
+.wrapper main {
+  padding-top: $top-space;
+}
+
 //Links
 
 a {
   text-decoration: none;
   color: black;
-
-  :visited {}
 }
 
 .separator {

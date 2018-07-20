@@ -151,8 +151,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
-  padding-top: 7em; }
+  flex-direction: column; }
   .projects-page .wrapper main {
     padding-top: 0;
     overflow-y: hidden;
@@ -181,6 +180,9 @@ body {
     color: white; }
 
 .top-space {
+  padding-top: 7em; }
+
+.wrapper main {
   padding-top: 7em; }
 
 a {
