@@ -17,3 +17,20 @@ footer.fixed.z-3.w-100.bg-white.bottom-0.pv3.dn.dn-m.db-l.db-sl
         a.link-footer.js-FocusElement.link.dim.dark-gray.dib.mr3.mr4-ns.theBlackToBlack(href='procedure.html', title='Procedure') Procedure
         a.link-footer.js-FocusElement.link.dim.dark-gray.dib.mr3.mr4-ns.theBlackToBlack(href='professionals.html', title='Professionals') Professionals
         a.link-footer.js-FocusElement.link.dim.dark-gray.dib.mr3.mr0-ns.theBlackToBlack(href='index.html', title='Projects') Projects
+
+
+footer.fixed.z-3.w-100.bg-white.bottom-0.pv3.dn.db-m.dn-l.dn-sl
+  nav.z-2.ph4.bottom-nav.flexbox
+    .fl.w-48
+      .tl
+          if infolink
+            a.dark-gray.link.dim.info--panel(href='#', title='Home')= infolink
+          if backlink
+            span.separator
+            a.dark-gray.link.dim.theBlackToBlack(href='index.html', title='Back')= backlink
+          else
+            p &nbsp;
+    .fl.w-50
+      .tl.secondary-nav
+        span.link.dark-gray.dib.mr3.mr0-ns(title= 'description' )= description
+        

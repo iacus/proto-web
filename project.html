@@ -22,6 +22,7 @@
     </div>
   </body>
   <div class="wrapper">
+    <!--Responsive checker-->
     <!--.fixed.z-999
     .dn.dn-m.dn-l.db-sl.pa4.bg-red
       p super-large
@@ -33,7 +34,7 @@
       p small   
     
     -->
-    <!--Regular navbar-->
+    <!--Regular navbar for l and sl-->
     <header class="top-nav fixed-ns z-3 w-100 bg-white pv3 dn dn-m db-l db-sl">
       <nav class="z-2 ph4">
         <div class="fl w-48 pv1">
@@ -49,9 +50,9 @@
         </div>
       </nav>
     </header>
-    <!--Responsive navbar - A partir de m-->
+    <!--Responsive navbar for ns-->
     <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-    <header class="responsive__nav top-nav z-3 fr w-100 bg-red db-ns dn-m dn-l dn-sl relative pv3">
+    <header class="responsive__nav top-nav z-3 fr w-100 db-ns dn-m dn-l dn-sl relative pv3">
       <nav class="z-2 ph3">
         <div class="fl w-50">
           <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
@@ -61,9 +62,9 @@
         </div>
       </nav>
     </header>
-    <!--Responsive navbar - A partir de m-->
+    <!--Responsive navbar for m-->
     <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-    <header class="responsive__nav top-nav z-3 fr w-52 bg-red dn db-m dn-l dn-sl relative pv3">
+    <header class="responsive__nav top-nav z-3 fr w-52 dn db-m dn-l dn-sl relative pv3">
       <nav class="z-2 pr3">
         <div class="fl w-50">
           <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
@@ -76,10 +77,15 @@
     <!--Menu responsive       -->
     <div class="menuResponsive w-100 h-100 top-0 z-999 fixed relative the-black-bg overflow-y-scroll js-hidden">
       <nav class="ph3 pv3">
-        <div class="fl w-50">
-          <div class="tl"><a class="link-responsive-top link dim white dt mb3 theBlackToBlack js-FocusElement" href="index.html" title="Home">Proto</a></div>
+        <div class="fl w-50 w-48-m dn db-m">
+          <div class="tl">
+            <p>&nbsp;</p>
+          </div>
         </div>
-        <div class="fl w-50">
+        <div class="fl w-50 w-12-m db db-m">
+          <div class="tr"><a class="link-responsive-top link dim white dt mb3 theBlackToBlack js-FocusElement" href="index.html" title="Home">Proto</a></div>
+        </div>
+        <div class="fl w-50 w-40-m">
           <div class="tr"><a class="link-responsive-top link dim white dib js-buttonMenuResponsive js-FocusElement" href="#" title="close menu">Close</a></div>
         </div>
         <div class="fl w-100">
@@ -157,6 +163,17 @@
         </div>
         <div class="fl w-40">
           <div class="tr secondary-nav"><a class="link-footer js-FocusElement link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="procedure.html" title="Procedure">Procedure</a><a class="link-footer js-FocusElement link dim dark-gray dib mr3 mr4-ns theBlackToBlack" href="professionals.html" title="Professionals">Professionals</a><a class="link-footer js-FocusElement link dim dark-gray dib mr3 mr0-ns theBlackToBlack" href="index.html" title="Projects">Projects</a></div>
+        </div>
+      </nav>
+    </footer>
+    <footer class="fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m dn-l dn-sl">
+      <nav class="z-2 ph4 bottom-nav flexbox">
+        <div class="fl w-48">
+          <div class="tl"><a class="dark-gray link dim info--panel" href="#" title="Home">+ Info</a><span class="separator"></span><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Back">Back</a>
+          </div>
+        </div>
+        <div class="fl w-50">
+          <div class="tl secondary-nav"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
         </div>
       </nav>
     </footer>

@@ -1,3 +1,4 @@
+//Responsive checker
 //.fixed.z-999
   .dn.dn-m.dn-l.db-sl.pa4.bg-red
     p super-large
@@ -8,7 +9,7 @@
   .db.dn-m.dn-l.dn-sl.pa4.bg-green
     p small   
 
-//Regular navbar
+//Regular navbar for l and sl
 header.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.dn.dn-m.db-l.db-sl
   nav.z-2.ph4
     .fl.w-48.pv1
@@ -20,11 +21,10 @@ header.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.dn.dn-m.db-l.db-sl
     .fl.w-40
       .tr
         span.link.dark-gray.dib.mr3.mr0-ns(title= 'description' )= description
-        
 
-//Responsive navbar - A partir de m
+//Responsive navbar for ns
 //Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño
-header.responsive__nav.top-nav.z-3.fr.w-100.bg-red.db-ns.dn-m.dn-l.dn-sl.relative.pv3
+header.responsive__nav.top-nav.z-3.fr.w-100.db-ns.dn-m.dn-l.dn-sl.relative.pv3
   nav.z-2.ph3
     .fl.w-50
       .tl
@@ -33,9 +33,9 @@ header.responsive__nav.top-nav.z-3.fr.w-100.bg-red.db-ns.dn-m.dn-l.dn-sl.relativ
       .tr
         a.link.dark-gray.dim.mr0-ns.js-buttonMenuResponsive(href='#', title= 'menu responsive' ) Menu
         
-//Responsive navbar - A partir de m
+//Responsive navbar for m
 //Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño
-header.responsive__nav.top-nav.z-3.fr.w-52.bg-red.dn.db-m.dn-l.dn-sl.relative.pv3
+header.responsive__nav.top-nav.z-3.fr.w-52.dn.db-m.dn-l.dn-sl.relative.pv3
   nav.z-2.pr3
     .fl.w-50
       .tl
@@ -48,10 +48,14 @@ header.responsive__nav.top-nav.z-3.fr.w-52.bg-red.dn.db-m.dn-l.dn-sl.relative.pv
 //Menu responsive       
 div.menuResponsive.w-100.h-100.top-0.z-999.fixed.relative.the-black-bg.overflow-y-scroll.js-hidden
     nav.ph3.pv3
-      .fl.w-50
+      
+      .fl.w-50.w-48-m.dn.db-m
         .tl
-          a.link-responsive-top.link.dim.white.dt.mb3.theBlackToBlack.js-FocusElement(href='index.html', title='Home')= title
-      .fl.w-50
+            p &nbsp;
+      .fl.w-50.w-12-m.db.db-m
+            .tr
+              a.link-responsive-top.link.dim.white.dt.mb3.theBlackToBlack.js-FocusElement(href='index.html', title='Home')= title
+      .fl.w-50.w-40-m
         .tr
           a.link-responsive-top.link.dim.white.dib.js-buttonMenuResponsive.js-FocusElement(href='#', title= 'close menu') Close
       .fl.w-100
