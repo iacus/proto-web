@@ -20,17 +20,17 @@ $top-space: 7em;
 
 body {
   font-family: "NHU";
-  font-size: 1.1em !important;
+  font-size: 1.2em !important;
   line-height: 1.2;
 
   @include break(not-small) {
-    font-size: 1.1em !important;
-  }
-  @include break(medium) {
     font-size: 1.2em !important;
   }
+  @include break(medium) {
+    font-size: 1.3em !important;
+  }
   @include break(large) {
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
   }
   @include break(super-large) {
     font-size: 1.8em !important;
@@ -40,18 +40,60 @@ body {
 
 //Layout
 .wrapper main {
-  flex: 1;
-  //background-color: yellow;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
 
-  .projects-page &{
-    padding-top: 0;
-    overflow-y: hidden;
-    justify-content: center;
-    width: 100%;
+
+  @include break(not-small) {
+    flex: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
   }
+  @include break(medium) {
+    flex: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: $top-space;
+
+    .projects-page &{
+      padding-top: 0;
+      overflow-y: hidden;
+      justify-content: center;
+      width: 100%;
+    }
+
+
+  }
+  @include break(large) {
+    flex: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: $top-space;
+
+    .projects-page &{
+      padding-top: 0;
+      overflow-y: hidden;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+  @include break(super-large) {
+    flex: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: $top-space;
+
+    .projects-page &{
+      padding-top: 0;
+      overflow-y: hidden;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
 
 }
 
@@ -92,10 +134,6 @@ body {
 
 //Top space general
 .top-space{
-  padding-top: $top-space;
-}
-
-.wrapper main {
   padding-top: $top-space;
 }
 

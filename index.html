@@ -19,12 +19,22 @@
     <!--The black big sizes-->
     <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg dn db-m db-l db-sl">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
-      <!--div.flashdiv.flash-black
-      -->
       <div class="h-100 the-black-bg"></div>
     </div>
-    <div class="wrapper">
-      <header class="top-nav fixed-ns z-3 w-100 bg-white pv3 dn db-m db-l db-sl">
+    <div class="wrapper"> 
+      <!--.fixed.z-999
+      .dn.dn-m.dn-l.db-sl.pa4.bg-red
+        p super-large
+      .dn.dn-m.db-l.dn-sl.pa4.bg-pink
+        p large
+      .dn.db-m.dn-l.dn-sl.pa4.bg-yellow
+        p medium
+      .db.dn-m.dn-l.dn-sl.pa4.bg-green
+        p small   
+      
+      -->
+      <!--Regular navbar-->
+      <header class="top-nav fixed-ns z-3 w-100 bg-white pv3 dn dn-m db-l db-sl">
         <nav class="z-2 ph4">
           <div class="fl w-48 pv1">
             <div class="tl">
@@ -39,20 +49,33 @@
           </div>
         </nav>
       </header>
+      <!--Responsive navbar - A partir de m-->
       <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-      <header class="responsive__nav top-nav z-3 w-100 bg-white pv3 db-ns dn-m dn-l dn-sl relative h-50">
-        <nav class="z-2 ph4">
+      <header class="responsive__nav top-nav z-3 fr w-100 bg-red db-ns dn-m dn-l dn-sl relative pv3">
+        <nav class="z-2 ph3">
           <div class="fl w-50">
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
           <div class="fl w-50">
-            <div class="tr"><a class="link dark-gray dim mr0-ns dn-ns js-buttonMenuResponsive theBlackToBlack" href="#" title="menu responsive">Menu</a></div>
+            <div class="tr"><a class="link dark-gray dim mr0-ns js-buttonMenuResponsive" href="#" title="menu responsive">Menu</a></div>
           </div>
         </nav>
       </header>
-      <!--Menu responsive      -->
+      <!--Responsive navbar - A partir de m-->
+      <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
+      <header class="responsive__nav top-nav z-3 fr w-52 bg-red dn db-m dn-l dn-sl relative pv3">
+        <nav class="z-2 pr3">
+          <div class="fl w-50">
+            <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
+          </div>
+          <div class="fl w-50">
+            <div class="tr"><a class="link dark-gray dim mr0-ns js-buttonMenuResponsive" href="#" title="menu responsive">Menu</a></div>
+          </div>
+        </nav>
+      </header>
+      <!--Menu responsive       -->
       <div class="menuResponsive w-100 h-100 top-0 z-999 fixed relative the-black-bg overflow-y-scroll js-hidden">
-        <nav class="ph4 pv3">
+        <nav class="ph3 pv3">
           <div class="fl w-50">
             <div class="tl"><a class="link-responsive-top link dim white dt mb3 theBlackToBlack js-FocusElement" href="index.html" title="Home">Proto</a></div>
           </div>
@@ -62,7 +85,7 @@
           <div class="fl w-100">
             <div class="mt3 mb3">
               <ul>
-                <li class="truncate lh-title f5 b--white-30 bt pv1"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu js-FocusElement" title="Projects">Projects</a>
+                <li class="truncate lh-title b--white-30 bt pv1"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu js-FocusElement" title="Projects">Projects</a>
                   <ul class="submenu collapsed mt4 mb4">
                     <!--Inicialize all projects to 0 opacity for the animation-->
                     <li class="projects__item_ns truncate lh-title f5 b--white-10 bt pv1 js-FocusElement"><a class="projects__link_ns white noload theBlackToWhite Vibia" href="project.html" data-cover="vibia.png">Vibia</a></li>
@@ -102,9 +125,9 @@
                     <li class="projects__item_ns truncate lh-title f5 b--white-10 bt pv1 js-FocusElement"><a class="projects__link_ns white noload theBlackToWhite Marset" href="project.html" data-cover="accent.png">Marset</a></li>
                   </ul>
                 </li>
-                <li class="truncate lh-title f5 b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="procedure.html" title="Procedure">Procedure</a></li>
-                <li class="truncate lh-title f5 b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="professionals.html" title="Professionals">Professionals</a></li>
-                <li class="truncate lh-title f5 b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="index.html" title="Projects">Protocol</a></li>
+                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="procedure.html" title="Procedure">Procedure</a></li>
+                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="professionals.html" title="Professionals">Professionals</a></li>
+                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="index.html" title="Projects">Protocol</a></li>
               </ul>
             </div>
           </div>
@@ -151,19 +174,15 @@
             <li class="truncate o-0"><a class="project--link dark-gray noload theBlackToWhite js-FocusElement js-theBlackImage Marset" href="project.html" data-cover="accent.png">Marset</a></li>
           </ul>
         </div>
+        <div class="the-content-mobile w-100 db-ns dn-m dn-l">
+          <div class="tl"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+          <div class="the-black fl w-100 h-50 bottom-0 fixed relative overflow-hidden the-black-bg db-ns dn-m dn-l">
+            <div class="image-containter h-100 hide-cover" style="display:none"></div>
+            <div class="h-100 the-black-bg"></div>
+          </div>
+        </div>
       </main>
-      <!--main.db-ns.dn-m.dn-l.h-100
-      .the-content-mobile.w-100.db-ns.dn-m.dn-l
-        .tl
-          span.link.dark-gray.dib.mr3.mr0-ns(title= 'description')= description     
-                 
-        div.the-black.fl.w-100.h-50.bottom-0.fixed.relative.overflow-hidden.the-black-bg.db-ns.dn-m.dn-l
-          div.image-containter.h-100.hide-cover(style="display:none")
-          //div.flash
-            div.flash-black
-          div.h-100.the-black-bg
-      -->
-      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m db-l db-sl">
+      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3 dn dn-m db-l db-sl">
         <nav class="z-2 ph4 bottom-nav flexbox">
           <div class="fl w-48">
             <div class="tl">
