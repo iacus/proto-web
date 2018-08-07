@@ -118,13 +118,14 @@ $(".js-ShowSubmenu").on({
 
 function initScroll(menuSelector) {
     var scrollPosition = $(document).scrollTop();
+    const scrollCorrect = 270;
 
     menuSelector.each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         const refElementFirstClass = "." + $(refElement).attr('class').split(' ')[0];
 
-        if (refElement.position().top <= scrollPosition + 300 && refElement.position().top + refElement.height() > scrollPosition + 300) {
+        if (refElement.position().top <= scrollPosition + scrollCorrect && refElement.position().top + refElement.height() > scrollPosition + scrollCorrect) {
           console.log("activa");
 
             currLink.clearQueue().stop(true,true).delay(200).css('opacity', '0.3').removeClass('not-focus').addClass('focus');
@@ -137,7 +138,6 @@ function initScroll(menuSelector) {
         }
     });
 }
-
 
 
 //Testing function

@@ -17,7 +17,7 @@
   <body class="visible-the-black contact">
     <!--a.referencia-titulo= title-->
     <!--The black big sizes-->
-    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg dn db-m db-l db-sl">
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg db db-m db-l db-sl">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
       <div class="h-100 the-black-bg"></div>
     </div>
@@ -50,22 +50,27 @@
           </div>
         </nav>
       </header>
-      <!--Responsive navbar for ns-->
+      <!--Responsive navbar for m-->
       <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-      <header class="responsive__nav top-nav z-3 fr w-100 db-ns dn-m dn-l dn-sl relative pv3">
+      <header class="responsive__nav responsive__nav__m top-nav fixed z-3 w-100 bg-white dn db-m dn-l dn-sl relative pv3">
         <nav class="z-2 ph3">
-          <div class="fl w-50">
+          <div class="fl w-48 pv1">
+            <div class="tl">
+              <h2 class="project--title link dark-gray dib mr3 mr0-ns" title="description"></h2>
+            </div>
+          </div>
+          <div class="fl w-12">
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
-          <div class="fl w-50">
+          <div class="fl w-40">
             <div class="tr"><a class="link dark-gray dim mr0-ns js-buttonMenuResponsive" href="#" title="menu responsive">Menu</a></div>
           </div>
         </nav>
       </header>
-      <!--Responsive navbar for m-->
+      <!--Responsive navbar for ns-->
       <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-      <header class="responsive__nav top-nav z-3 fr w-52 dn db-m dn-l dn-sl relative pv3">
-        <nav class="z-2 pr3">
+      <header class="responsive__nav responsive__nav__ns top-nav fixed z-3 w-100 bg-white db-ns dn-m dn-l dn-sl relative pv3">
+        <nav class="z-2 ph3">
           <div class="fl w-50">
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
@@ -133,15 +138,15 @@
                 </li>
                 <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="procedure.html" title="Procedure">Procedure</a></li>
                 <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="professionals.html" title="Professionals">Professionals</a></li>
-                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="index.html" title="Projects">Protocol</a></li>
+                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="contact.html" title="Contact">Protocol</a></li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
       <!--Contact content-->
-      <main class="dn flex-m flex-l">
-        <div class="the-content fl w-52 the-black-aligned">
+      <main>
+        <div class="the-content w-100 w-52-m w-52-l w-52-sl the-black-aligned">
           <div class="contact__blocks mw5">
             <!--p.contact__block_text.db.mb4(title="text")!= text--><span class="contact__block_email db" title="email"><a class="dim" href="mailto:regina@proto.black">regina@proto.black</a></span><span class="contact__block_phone db mb4" title="phone"><a class="dim" href="tel:0034 629 563 341">0034 629 563 341</a></span><span class="contact__block_address db" title="address">Llull 47/49, 1-4 <br/> 08005 Barcelona</span><span class="contact__block_web db" title="proto.black"><a class="dim" href="http://proto.black">proto.black</a></span>
           </div>
@@ -162,15 +167,16 @@
           </div>
         </nav>
       </footer>
-      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m dn-l dn-sl">
-        <nav class="z-2 ph4 bottom-nav flexbox">
+      <!--Footer for m sizes-->
+      <footer class="responsive__second-nav fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m dn-l dn-s">
+        <nav class="z-2 ph3 bottom-nav flexbox">
           <div class="fl w-48">
             <div class="tl">
               <p>&nbsp;</p>
             </div>
           </div>
           <div class="fl w-50">
-            <div class="tl secondary-nav"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+            <div class="tl secondary-nav responsive__second-nav__description"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
           </div>
         </nav>
       </footer>
@@ -182,6 +188,6 @@
   <script src="assets/js/scripts.js" async="async"></script>
   <script src="assets/js/animations.js" async="async"></script>
   <script src="assets/js/iagoScripts.js" async="async"></script>
-  <script src="assets/js/protoGraphic.js" async="async"></script>
+  <script src="assets/js/protoGraphic.new.js" async="async"></script>
   <script src="assets/js/jquery.royalslider.min.js"></script>
 </html>

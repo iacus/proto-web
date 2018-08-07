@@ -67,3 +67,37 @@
     height: 300px !important;
   }
 }
+
+
+.contentSlider {
+  width: 100%;
+}
+.contentSlider,
+.contentSlider .rsOverflow,
+.contentSlider .rsSlide,
+.contentSlider .rsVideoFrameHolder,
+.contentSlider .rsThumbs {
+  background: #eee;
+  color: #000;
+}
+
+.contentSlider .rsSlide,
+.contentSlider .rsOverflow {
+  background: #eee;
+}
+.contentSlider h3 {
+
+
+  margin: 12px 0 8px;
+
+}
+.contentSlider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.content-slider-bg {
+  width: 86%;
+  padding: 24px 7%;
+  background: #eee;
+}

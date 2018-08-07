@@ -22,9 +22,23 @@ header.top-nav.fixed-ns.z-3.w-100.bg-white.pv3.dn.dn-m.db-l.db-sl
       .tr
         span.link.dark-gray.dib.mr3.mr0-ns(title= 'description' )= description
 
+//Responsive navbar for m
+//Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño
+header.responsive__nav.responsive__nav__m.top-nav.fixed.z-3.w-100.bg-white.dn.db-m.dn-l.dn-sl.relative.pv3
+  nav.z-2.ph3
+    .fl.w-48.pv1
+      .tl
+          h2.project--title.link.dark-gray.dib.mr3.mr0-ns(title= 'description' )= project
+    .fl.w-12
+      .tl
+        a.dark-gray.link.dim.theBlackToBlack(href='index.html', title='Home')= title
+    .fl.w-40
+      .tr
+        a.link.dark-gray.dim.mr0-ns.js-buttonMenuResponsive(href='#', title= 'menu responsive' ) Menu
+
 //Responsive navbar for ns
 //Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño
-header.responsive__nav.top-nav.z-3.fr.w-100.db-ns.dn-m.dn-l.dn-sl.relative.pv3
+header.responsive__nav.responsive__nav__ns.top-nav.fixed.z-3.w-100.bg-white.db-ns.dn-m.dn-l.dn-sl.relative.pv3
   nav.z-2.ph3
     .fl.w-50
       .tl
@@ -32,18 +46,6 @@ header.responsive__nav.top-nav.z-3.fr.w-100.db-ns.dn-m.dn-l.dn-sl.relative.pv3
     .fl.w-50
       .tr
         a.link.dark-gray.dim.mr0-ns.js-buttonMenuResponsive(href='#', title= 'menu responsive' ) Menu
-        
-//Responsive navbar for m
-//Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño
-header.responsive__nav.top-nav.z-3.fr.w-52.dn.db-m.dn-l.dn-sl.relative.pv3
-  nav.z-2.pr3
-    .fl.w-50
-      .tl
-        a.dark-gray.link.dim.theBlackToBlack(href='index.html', title='Home')= title
-    .fl.w-50
-      .tr
-        a.link.dark-gray.dim.mr0-ns.js-buttonMenuResponsive(href='#', title= 'menu responsive' ) Menu
-
               
 //Menu responsive       
 div.menuResponsive.w-100.h-100.top-0.z-999.fixed.relative.the-black-bg.overflow-y-scroll.js-hidden
@@ -71,4 +73,4 @@ div.menuResponsive.w-100.h-100.top-0.z-999.fixed.relative.the-black-bg.overflow-
               li.truncate.lh-title.b--white-30.bt.pv1.js-FocusElement
                 a.link-responsive.link.white.dt.theBlackToBlack.js-ShowSubmenu(href='professionals.html', title='Professionals') Professionals
               li.truncate.lh-title.b--white-30.bt.pv1.js-FocusElement
-                a.link-responsive.link.white.dt.theBlackToBlack.js-ShowSubmenu(href='index.html', title='Projects') Protocol
+                a.link-responsive.link.white.dt.theBlackToBlack.js-ShowSubmenu(href='contact.html', title='Contact') Protocol

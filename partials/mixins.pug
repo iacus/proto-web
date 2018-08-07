@@ -23,6 +23,8 @@ mixin bios-blocks(professional)
 				span.bio__block_name= professional.name + '. '
 				span.bio__block_name= professional.rol + '. '
 			p.bio__block_name= professional.bio
+			p.bio__block-image.db.dn-m.dn-l.dn-sl
+				img(src= "content/" + professional.image)
 
 
 //Professionals list mixin for procedure page
@@ -40,5 +42,5 @@ mixin procedure-blocks(procedure)
 			span.procedure__block_name.db.db-ns.db-m.dn-l.dn-sl!= procedure.name
 			span.procedure__block_name!= procedure.text
 			if procedure.graphic
-				.procedure__block_graphic.center.pt1.pt2-sl.pb4.pb5-sl.w-100.w-70-m.w-70-l.w-70-sl!= procedure.graphic
+				.procedure__block_graphic.center.pt1.pt2-sl.pb4.pb5-sl.w-100.w-80-m.w-70-l.w-70-sl!= procedure.graphic
 			

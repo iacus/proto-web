@@ -16,7 +16,7 @@
   </head>
   <body class="visible-the-black the-black-0 top-nav-black procedure">
     <!--The black big sizes-->
-    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg dn db-m db-l db-sl">
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg db db-m db-l db-sl">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
       <div class="h-100 the-black-bg"></div>
     </div>
@@ -49,22 +49,27 @@
           </div>
         </nav>
       </header>
-      <!--Responsive navbar for ns-->
+      <!--Responsive navbar for m-->
       <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-      <header class="responsive__nav top-nav z-3 fr w-100 db-ns dn-m dn-l dn-sl relative pv3">
+      <header class="responsive__nav responsive__nav__m top-nav fixed z-3 w-100 bg-white dn db-m dn-l dn-sl relative pv3">
         <nav class="z-2 ph3">
-          <div class="fl w-50">
+          <div class="fl w-48 pv1">
+            <div class="tl">
+              <h2 class="project--title link dark-gray dib mr3 mr0-ns" title="description"></h2>
+            </div>
+          </div>
+          <div class="fl w-12">
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
-          <div class="fl w-50">
+          <div class="fl w-40">
             <div class="tr"><a class="link dark-gray dim mr0-ns js-buttonMenuResponsive" href="#" title="menu responsive">Menu</a></div>
           </div>
         </nav>
       </header>
-      <!--Responsive navbar for m-->
+      <!--Responsive navbar for ns-->
       <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-      <header class="responsive__nav top-nav z-3 fr w-52 dn db-m dn-l dn-sl relative pv3">
-        <nav class="z-2 pr3">
+      <header class="responsive__nav responsive__nav__ns top-nav fixed z-3 w-100 bg-white db-ns dn-m dn-l dn-sl relative pv3">
+        <nav class="z-2 ph3">
           <div class="fl w-50">
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
@@ -132,14 +137,14 @@
                 </li>
                 <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="procedure.html" title="Procedure">Procedure</a></li>
                 <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="professionals.html" title="Professionals">Professionals</a></li>
-                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="index.html" title="Projects">Protocol</a></li>
+                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="contact.html" title="Contact">Protocol</a></li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
       <main class="bg-black">
-        <div class="the-content w-100 left mb7 pb7 ph3-ns">
+        <div class="the-content w-100 left pb7 ph3-ns">
           <div class="cf ph2-ns">
             <div class="fl w-40-m w-15-l w-20-sl ph2 dn dn-m db-l db-sl sticky">
               <ul class="procedure__list">
@@ -153,7 +158,7 @@
                 <li class="truncate bg-transparent"><a class="procedure__item white js-FocusElement js-ItemScrollToBlock js-ScrollAndFocus block8" href="#block8">Communication</a></li>
               </ul>
             </div>
-            <div class="w-100-ns w-100-m w-60-l w-60-sl pb7 mb7 ph3 center">
+            <div class="w-100-ns w-100-m w-60-l w-60-sl pb7 mb7 center">
               <div class="procedure__blocks">
                 <div class="procedure__block__item" id="block1" title="Intro">
                   <p class="procedure__block__text-wrapper white pb4 pb4-sl"><span class="procedure__block_name db db-ns db-m dn-l dn-sl">Intro</span><span class="procedure__block_name">At  Proto  we  are  specialists  in  the  habitat-tech:  lighting,  furniture,  flooring,  home  automation,  etc.  Through  our  close  relationship  with  the  architects,  designers  and  project  designers  of  the  brands  for  which  we  work,  the  value  of  their  proposals  increases  through  the  implementation  of  strategic  and  creative  concepts.<br><br>  We  interact  in  the  places  that  make  up  our  life,  composed  of  constructive  and  technological  elements  where  users  and  creators  coincide.</br></br>The  brands,  their  products  and  their  fans  -  the  tribe  -  maintain  a  very  close  and  inseparable  relationship,  which  is  why  the  strategies  to  be  developed  in  the  three  universes  must  be  coordinated,  thought  out  and  executed  in  unison.<br><br>We  propose  different  forms  of  collaboration  through  which  to  imagine,  conceptualise  and  develop  your  brand  and  products.</span>
@@ -161,7 +166,7 @@
                 </div>
                 <div class="procedure__block__item" id="block2" title="Method Proto&lt;/br&gt;">
                   <p class="procedure__block__text-wrapper white pb4 pb4-sl"><span class="procedure__block_name db db-ns db-m dn-l dn-sl">Method Proto</br></span><span class="procedure__block_name">The  Pro_to®  method  consists  of  the  development  of  the  combinations  that  arise  from  relating  the  following  sections  to  each  other:</span>
-                    <div class="procedure__block_graphic center pt1 pt2-sl pb4 pb5-sl w-100 w-70-m w-70-l w-70-sl"><svg id='proto-chart'></svg></div>
+                    <div class="procedure__block_graphic center pt1 pt2-sl pb4 pb5-sl w-100 w-80-m w-70-l w-70-sl"><svg id='proto-chart'></svg></div>
                   </p>
                 </div>
                 <div class="procedure__block__item" id="block3" title="Strategy">
@@ -177,7 +182,7 @@
                   </p>
                 </div>
                 <div class="procedure__block__item" id="block6" title="Product concepts">
-                  <p class="procedure__block__text-wrapper white pb4 pb4-sl"><span class="procedure__block_name db db-ns db-m dn-l dn-sl">Product concepts</span><span class="procedure__block_name">he  product  is  the  ambassador  of  the  brand  in  the  user's  home.  At  Proto  we  conceptualise  and  imagine  a  framework  of  possible  developments  within  your  portfolio  of  solutions.  Through  emotion,  we  activate  the  twelve  senses  of  your  tribe. </span>
+                  <p class="procedure__block__text-wrapper white pb4 pb4-sl"><span class="procedure__block_name db db-ns db-m dn-l dn-sl">Product concepts</span><span class="procedure__block_name">The  product  is  the  ambassador  of  the  brand  in  the  user's  home.  At  Proto  we  conceptualise  and  imagine  a  framework  of  possible  developments  within  your  portfolio  of  solutions.  Through  emotion,  we  activate  the  twelve  senses  of  your  tribe. </span>
                   </p>
                 </div>
                 <div class="procedure__block__item" id="block7" title="Storytelling">
@@ -208,15 +213,16 @@
           </div>
         </nav>
       </footer>
-      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m dn-l dn-sl">
-        <nav class="z-2 ph4 bottom-nav flexbox">
+      <!--Footer for m sizes-->
+      <footer class="responsive__second-nav fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m dn-l dn-s">
+        <nav class="z-2 ph3 bottom-nav flexbox">
           <div class="fl w-48">
             <div class="tl">
               <p>&nbsp;</p>
             </div>
           </div>
           <div class="fl w-50">
-            <div class="tl secondary-nav"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+            <div class="tl secondary-nav responsive__second-nav__description"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
           </div>
         </nav>
       </footer>
@@ -228,6 +234,6 @@
   <script src="assets/js/scripts.js" async="async"></script>
   <script src="assets/js/animations.js" async="async"></script>
   <script src="assets/js/iagoScripts.js" async="async"></script>
-  <script src="assets/js/protoGraphic.js" async="async"></script>
+  <script src="assets/js/protoGraphic.new.js" async="async"></script>
   <script src="assets/js/jquery.royalslider.min.js"></script>
 </html>

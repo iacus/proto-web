@@ -17,7 +17,7 @@
   <body class="visible-the-black bg-blend professionals">
     <!--a.referencia-titulo= title-->
     <!--The black big sizes-->
-    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg dn db-m db-l db-sl">
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg db db-m db-l db-sl">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
       <div class="h-100 the-black-bg"></div>
     </div>
@@ -50,22 +50,27 @@
           </div>
         </nav>
       </header>
-      <!--Responsive navbar for ns-->
+      <!--Responsive navbar for m-->
       <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-      <header class="responsive__nav top-nav z-3 fr w-100 db-ns dn-m dn-l dn-sl relative pv3">
+      <header class="responsive__nav responsive__nav__m top-nav fixed z-3 w-100 bg-white dn db-m dn-l dn-sl relative pv3">
         <nav class="z-2 ph3">
-          <div class="fl w-50">
+          <div class="fl w-48 pv1">
+            <div class="tl">
+              <h2 class="project--title link dark-gray dib mr3 mr0-ns" title="description"></h2>
+            </div>
+          </div>
+          <div class="fl w-12">
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
-          <div class="fl w-50">
+          <div class="fl w-40">
             <div class="tr"><a class="link dark-gray dim mr0-ns js-buttonMenuResponsive" href="#" title="menu responsive">Menu</a></div>
           </div>
         </nav>
       </header>
-      <!--Responsive navbar for m-->
+      <!--Responsive navbar for ns-->
       <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-      <header class="responsive__nav top-nav z-3 fr w-52 dn db-m dn-l dn-sl relative pv3">
-        <nav class="z-2 pr3">
+      <header class="responsive__nav responsive__nav__ns top-nav fixed z-3 w-100 bg-white db-ns dn-m dn-l dn-sl relative pv3">
+        <nav class="z-2 ph3">
           <div class="fl w-50">
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
@@ -133,37 +138,41 @@
                 </li>
                 <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="procedure.html" title="Procedure">Procedure</a></li>
                 <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="professionals.html" title="Professionals">Professionals</a></li>
-                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="index.html" title="Projects">Protocol</a></li>
+                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="contact.html" title="Contact">Protocol</a></li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
-      <main class="flex-m flex-l">
-        <div class="the-content fl w-100 w-52-m w-52-l w-52-sl mb7 the-black-aligned">
+      <main>
+        <div class="the-content w-100 w-52-m w-52-l w-52-sl the-black-aligned mb7">
           <div class="bios__blocks mr4">
             <div class="bio__block__item js-theBlackImageAndFix js-FocusElementAndFix" title="Riki Hugàs" data-cover="riki.jpg">
               <p class="bio__block__text-wrapper mb4 dark-gray">
                 <p><span class="bio__block_name">Riki Hugàs. </span><span class="bio__block_name">Creative  Thinker. </span></p>
                 <p class="bio__block_name">He  enjoys  his  work.  His  imagination  has  no  limits.  After  a  lifetime  in  the  world  of  design  and  marketing,  hundreds  of  objects  have  passed  through  his  hands  that  he  produced  and  circulated  internationally.  He  loves  working  with  creative  and  enterprising  people.</p>
+                <p class="bio__block-image db dn-m dn-l dn-sl"><img src="content/riki.jpg"/></p>
               </p>
             </div>
             <div class="bio__block__item js-theBlackImageAndFix js-FocusElementAndFix" title="Regina Hugas" data-cover="regi.jpg">
               <p class="bio__block__text-wrapper mb4 dark-gray">
                 <p><span class="bio__block_name">Regina Hugas. </span><span class="bio__block_name">Account  Manager. </span></p>
                 <p class="bio__block_name">100%  energy.  The  market  is  her  universe.  For  her,  there  are  no  hidden  niches.  She  develops,  orders,  ranks  and  calculates  what  is  imagined  by  the  creatives.  She  is  a  great  planner,  with  experience  in  the  international  industrial  sector.  A  mainstay  of  the  group,  constantly  coordinating  and  encouraging  us.</p>
+                <p class="bio__block-image db dn-m dn-l dn-sl"><img src="content/regi.jpg"/></p>
               </p>
             </div>
             <div class="bio__block__item js-theBlackImageAndFix js-FocusElementAndFix" title="Xavi Grau" data-cover="xavi.jpg">
               <p class="bio__block__text-wrapper mb4 dark-gray">
                 <p><span class="bio__block_name">Xavi Grau. </span><span class="bio__block_name">Conceptology. </span></p>
                 <p class="bio__block_name">If  the  concept  does  not  exist,  he  will  invent  it.  Inspired  by  an  intense  and  extensive  life  journey,  he  thinks  out  of  the  box  in  every  field.  He  interrelates  disparate  professional  worlds  and  provides  them  with  newcontent  that  enriches  the  story  required  by  the  brand,  product  or  service. </p>
+                <p class="bio__block-image db dn-m dn-l dn-sl"><img src="content/xavi.jpg"/></p>
               </p>
             </div>
             <div class="bio__block__item js-theBlackImageAndFix js-FocusElementAndFix" title="Xiqui Mateu" data-cover="xiqui.jpg">
               <p class="bio__block__text-wrapper mb4 dark-gray">
                 <p><span class="bio__block_name">Xiqui Mateu. </span><span class="bio__block_name">MFA  Designer  -  Strategist. </span></p>
                 <p class="bio__block_name">Passionate  about  shape,  colour  and  the  twelve  senses  defined  by  R.  Steiner.  His  approach  to  projects  emphasises  their  most  collaborative  and  co-creative  part.  His  international  experience  ranges  from  the  healthsector  to  product  development  and  the  automotive  industry.</p>
+                <p class="bio__block-image db dn-m dn-l dn-sl"><img src="content/xiqui.jpg"/></p>
               </p>
             </div>
           </div>
@@ -184,15 +193,16 @@
           </div>
         </nav>
       </footer>
-      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m dn-l dn-sl">
-        <nav class="z-2 ph4 bottom-nav flexbox">
+      <!--Footer for m sizes-->
+      <footer class="responsive__second-nav fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m dn-l dn-s">
+        <nav class="z-2 ph3 bottom-nav flexbox">
           <div class="fl w-48">
             <div class="tl">
               <p>&nbsp;</p>
             </div>
           </div>
           <div class="fl w-50">
-            <div class="tl secondary-nav"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+            <div class="tl secondary-nav responsive__second-nav__description"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
           </div>
         </nav>
       </footer>
@@ -204,6 +214,6 @@
   <script src="assets/js/scripts.js" async="async"></script>
   <script src="assets/js/animations.js" async="async"></script>
   <script src="assets/js/iagoScripts.js" async="async"></script>
-  <script src="assets/js/protoGraphic.js" async="async"></script>
+  <script src="assets/js/protoGraphic.new.js" async="async"></script>
   <script src="assets/js/jquery.royalslider.min.js"></script>
 </html>

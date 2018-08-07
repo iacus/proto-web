@@ -2,11 +2,18 @@
 @import 'reset';
 @import 'mediaqueries';
 @import 'proto-royalslider';
-//@import 'include-media';
 
 $black: #000;
 $the-black-color: #111;
-$top-space: 7em;
+$grey : #444;
+$dark-grey : #111;
+$white: #FFF;
+
+$top-space-ns: 5rem;
+$top-space: 10rem;
+$top-space-sl: 13rem;
+$left-space-ns: 1rem;
+
 
 
 @font-face {font-family: "NHU";
@@ -41,20 +48,34 @@ body {
 //Layout
 .wrapper main {
 
+  padding-top: $top-space-ns;
+  padding-left: $left-space-ns;
+  padding-right: $left-space-ns;
+
+  &.main-ns{
+    padding-top:0;
+    padding-left: 0;
+  }
+
+  .projects-page &{
+    padding-top: 0;
+    padding-left: 0;
+  }
 
   @include break(not-small) {
-    flex: 1;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    padding-top: $top-space;
+    padding-right: $left-space-ns;
+
+    .projects-page &{
+      padding-top: 0;
+      padding-left: 0;
+    }
 
   }
   @include break(medium) {
-    flex: 1;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
     padding-top: $top-space;
+    padding-left: 0;
+    padding-right: 0;
 
     .projects-page &{
       padding-top: 0;
@@ -66,11 +87,9 @@ body {
 
   }
   @include break(large) {
-    flex: 1;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
     padding-top: $top-space;
+    padding-left: 0;
+    padding-right: 0;
 
     .projects-page &{
       padding-top: 0;
@@ -80,11 +99,9 @@ body {
     }
   }
   @include break(super-large) {
-    flex: 1;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-top: $top-space;
+    padding-top: $top-space-sl;
+    padding-left: 0;
+    padding-right: 0;
 
     .projects-page &{
       padding-top: 0;
@@ -96,8 +113,6 @@ body {
 
 
 }
-
-
 
 //the black
 .the-black-bg {
@@ -131,6 +146,36 @@ body {
   }
 }
 
+.responsive__second-nav{
+  display: none;
+
+  @include break(not-small) {
+    display: none;
+  }
+  @include break(medium) {
+    display: block;
+  }
+  @include break(large) {
+    display: none !important;
+  }
+  @include break(super-large) {
+    display: none;
+  }
+
+  .procedure &{
+    display: none;
+  }
+
+  .projects-page &{
+    display: block;
+
+    & .responsive__second-nav__description{
+      display: none;
+    }
+  }
+
+}
+
 
 //Top space general
 .top-space{
@@ -147,7 +192,7 @@ a {
 .separator {
     display: inline-block;
     background-color: black;
-    width: 2px;
+    width: 0.1em;
     height: 0.8em;
     vertical-align: baseline;
     margin-left: .6em;
@@ -168,7 +213,25 @@ a.project--link {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #444;
+  background-color: $grey;
+
+  @include break(not-small) {
+
+  }
+  @include break(medium) {
+
+    //
+    .professionals &{
+    background-size: 120%;
+    }
+
+  }
+  @include break(large) {
+
+  }
+  @include break(super-large) {
+
+  }
 
   .bg-blend & {
     background-blend-mode: multiply;
@@ -225,22 +288,9 @@ svg{
   stroke: white;
 
   text{
-  font-size: 1.1em;
+  font-size: 1rem;
   color: #fff;
   stroke: none;
-
-  @include break(not-small) {
-    font-size: 1.1em !important;
-  }
-  @include break(medium) {
-    font-size: .7em !important;
-  }
-  @include break(large) {
-    font-size: .7em !important;
-  }
-  @include break(super-large) {
-    font-size: .55em !important;
-  }
 
 }
 
@@ -292,4 +342,24 @@ svg{
 }
 circle.info__block{
   stroke: 2;
+}
+
+.arc-active{
+  fill: $dark-grey;
+
+  text{
+    opacity: 1 !important;
+    fill: $white;
+  }
+}
+
+.exterior-arc{
+
+}
+
+.inactive-arc{
+
+  text{
+    opacity: .3 !important;
+  }
 }

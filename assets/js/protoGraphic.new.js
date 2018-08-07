@@ -1,39 +1,39 @@
 // Seed data to populate the donut pie chart
 var interiorSeedData = [{
+  "label": "To think",
+  "value": 25,
+  "data": "think"
+}, {
+  "label": "To do",
+  "value": 25,
+  "data": "do"
+}, {
+  "label": "To tell",
+  "value": 25,
+  "data": "tell"
+}];
+
+var exteriorSeedData = [{
   "label": "Products",
   "value": 25,
   "link": "#infoProducts",
-  "tell": "Tell Products. We identify the..."
-  "think": "Think Products. We identify the..."
-  "do": "Do Products. We identify the..."
+  "datatell": "Tell Products. We identify the needs <br/> second line alasd aslf afklsd ajfs",
+  "datathink": "Think Products. We identify the...",
+  "datado": "Do Products. We identify the..."
 }, {
   "label": "Tribes",
   "value": 25,
   "link": "#infoTribes",
-  "tell": "Tell Tribes. We identify the..."
-  "think": "Think Tribes. We identify the..."
-  "do": "Do Tribes. We identify the..."
+  "datatell": "Tell Tribes. We identify the...",
+  "datathink": "Think Tribes. We identify the...",
+  "datado": "Do Tribes. We identify the..."
 }, {
   "label": "Brands",
   "value": 25,
   "link": "#infoBrands",
-  "tell": "Tell Brands. We identify the..."
-  "think": "Think Brands. We identify the..."
-  "do": "Do Brands. We identify the..."
-}];
-
-var exteriorSeedData = [{
-  "label": "To think",
-  "value": 25,
-  "link": "#infoThink",
-}, {
-  "label": "To do",
-  "value": 25,
-  "link": "#infoDo",
-}, {
-  "label": "To tell",
-  "value": 25,
-  "link": "#infoTell",
+  "datatell": "Tell Brands. We identify the...",
+  "datathink": "Think Brands. We identify the...",
+  "datado": "Do Brands. We identify the..."
 }];
 
 // Define size & radius of donut pie chart
@@ -105,62 +105,136 @@ svg.append("circle")
   .attr("fill", "transparent") ;
 
 // Calculate SVG paths
+//Interior data
 var g = svg.selectAll(".arc")
-  .data(pie(interiorSeedData))
+  .data(pie(interiorSeedData)) //Get interior data array
   .enter().append("g")
-  .attr("class", "arc")
+  .attr("class", "arc inner-arc")
 
   // Make each arc clickable
   .on("click", function(d, i) {
-    const textElem = "." + $(this).attr('class');
-    $('#info-text').text($(this).data('info'));
-    $('.info__block').show();
-    $(this).find('text').addClass('focus');
-    //$(textElem).find('text').not($(this)).removeClass('focus')
+
+    //Is this arc active?
+    if ($(this).is('.arc-active')) {
+
+      //Remove this active arc
+      $(this).removeClass('arc-active');
+      //Deactivating exterior arcs
+      $(".exterior-arc").addClass('inactive-arc');
+      //Activating inner arcs
+      $(".inner-arc").removeClass('inactive-arc')
+
+    } else {
+
+      //Remove all arcs actives
+      $(".inner-arc")
+        .removeClass('inactive-arc')
+        .removeClass('arc-active')
+        .not($(this))
+        .addClass('inactive-arc');
+
+      //Active this arc
+      $(this).addClass('arc-active');
+      //Activating exterior arcs, inactives by default
+      $(".exterior-arc.inactive-arc").removeClass('inactive-arc');
+
+    }
+
   })
   .on("mouseenter", function() {
-    const textElem = "." + $(this).attr('class');
-    console.log(textElem);
-    $(this).find('text').clearQueue().animate({opacity: 1}, "fast");
-    $(textElem).not($(this)).find('text').clearQueue().stop(true, true).animate({opacity:0.3}, 'fast')
+    const textElem = "." + $(this).attr('class').split(' ')[1];
 
+    $(this)
+      .find('text')
+      .clearQueue()
+      .animate({opacity: 1}, "fast");
 
+    $(textElem)
+      .not($(this))
+      .find('text')
+      .clearQueue()
+      .stop(true, true)
+      .animate({opacity:0.3}, 'fast')
   })
   .on("mouseleave", function(i) {
-    const textElem = "." + $(this).attr('class');
-    $(textElem).find('text').clearQueue().stop(true, true).delay(200).animate({opacity:1}, 'fast')
+    const textElem = "." + $(this).attr('class').split(' ')[1];
+
+    $(textElem)
+      .find('text')
+      .clearQueue()
+      .stop(true, true)
+      .delay(200)
+      .animate({opacity:1}, 'fast')
   });
 
+//Exterior Data
 var g2 = svg2.selectAll(".arc")
   .data(pie(exteriorSeedData))
   .enter().append("g")
-  .attr("class", "arc")
+  .attr("class", "arc exterior-arc inactive-arc")
 
   // Make each arc clickable
-  // When click get the data info into the Info Block and Show it
+  // When click get the data info into the info block and show it
   .on("click", function(d, i) {
-    $('#info-text').text($(this).data('info'));
-    const textElem = "." + $(this).attr('class');
-    $('.info__block').show();
-    $(this).find('text').addClass('focus');
-    $(textElem).find('text').not($(this).find('text')).addClass('not-focus').removeClass('focus')
+
+    //Are exterior arcs actives?
+    if (!$('.exterior-arc').is('.inactive-arc')) {
+
+      //If this arc is active >> Deactivate and hide info
+      if ($(this).is('.arc-active')) {
+
+        //Deactivate exterior arcs and hide center info
+        $(".exterior-arc").removeClass('arc-active');
+        $('.info__block').hide();
+
+      //If not active >> Activate this and show this info
+      } else {
+
+        //Get selection from inner arc data and get the data
+        //from this exterior arc and put it on the info line
+        //It splits on line breaks
+        const innerOption = $(".inner-arc.arc-active").data('select');
+        const lines = $(this).data(innerOption).split('<br/>');
+        $('#info-text-line1').text(lines[0]);
+        if (lines.length > 1) {
+          $('#info-text-line2').text(lines[1]);
+        } else {
+          //If there aren't breaks, line2 is empty
+          $('#info-text-line2').text(" ");
+        }
+
+        //Show info block and remove all arcs actives and active this arc
+        $('.info__block').show();
+        $(".exterior-arc").removeClass('arc-active');
+        $(this).addClass('arc-active');
+
+      }
+    }
+
   })
   .on("mouseenter", function() {
-    const textElem = "." + $(this).attr('class');
-    console.log(textElem);
-    $(this).find('text').clearQueue().animate({opacity: 1}, "fast");
-    $(textElem).not($(this)).find('text').clearQueue().stop(true, true).animate({opacity:0.3}, 'fast')
+
+    //If this arc is not inactive
+    if (!$(this).is('.inactive-arc')) {
+      const textElem = "." + $(this).attr('class').split(' ')[1];
+      $(this).find('text').clearQueue().animate({opacity: 1}, "fast");
+      $(textElem)
+        .not($(this))
+        .find('text')
+        .clearQueue()
+        .stop(true, true)
+        .animate({opacity:0.3}, 'fast')
+    }
+
   })
   .on("mouseleave", function(i) {
-    const textElem = "." + $(this).attr('class');
-    const elemFirstClass = "." + $(this).attr('class').split(' ')[0];
-
-    //Developing
-    if ($(elemFirstClass).is('.focus')) {
-      //$(textElem).find('text').clearQueue().stop(true, true).delay(100).animate({opacity:1}, 'fast')
-    } else {
-      //$(elemFirstClass).clearQueue().stop(true, true).delay(100).animate({opacity: 1}, "fast")
-    }
+    const textElem = "." + $(this).attr('class').split(' ')[1];
+    $(textElem)
+      .find('text')
+      .clearQueue()
+      .stop(true, true)
+      .delay(200)
+      .animate({opacity:1}, 'fast')
   });
 
 	// Append the path to each g
@@ -217,14 +291,25 @@ svg.append("text")
   .text("Pro_to");
 
 svg.selectAll(".arc")
-  .attr("data-info",function(d,i) { return interiorSeedData[i].data; })
+  .attr("data-select",function(d,i) { return interiorSeedData[i].data; })
 
 svg2.selectAll(".arc")
-  .attr("data-info",function(d,i) { return exteriorSeedData[i].data; })
+  .attr("data-tell",function(d,i) { return exteriorSeedData[i].datatell; })
+  .attr("data-think",function(d,i) { return exteriorSeedData[i].datathink; })
+  .attr("data-do",function(d,i) { return exteriorSeedData[i].datado; })
 
 svg2.append("text")
   .style("text-anchor", "middle")
-  .attr("id", "info-text")
+  .attr("id", "info-text-line1")
+  .attr("class", "info__block")
+  .attr("fill", "#FFF")
+  .attr("transform","rotate(60)")
+  .text("Text Info about this option");
+
+svg2.append("text")
+  .style("text-anchor", "middle")
+  .attr("dy", 20)
+  .attr("id", "info-text-line2")
   .attr("class", "info__block")
   .attr("fill", "#FFF")
   .attr("transform","rotate(60)")
@@ -235,12 +320,16 @@ svg2.append("text")
   .attr("dy", 40)
   .attr("id", "close__info__block")
   .attr("class", "info__block")
-  .attr("fill", "#FFF")
+  .attr("fill", "#555")
   .attr("transform","rotate(60)")
   .text("Close")
   .on("click", function(d, i) {
+    //Hide info block
     $('.info__block').hide();
+    //Hide close button
     $(this).hide();
+    //Remove all arcs actives
+    $(".exterior-arc").removeClass('arc-active');
   });
 
 // Wrap function to handle labels with longer text

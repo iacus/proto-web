@@ -116,6 +116,34 @@ table {
   .royalSlider#gallery-1 {
     height: 300px !important; } }
 
+.contentSlider {
+  width: 100%; }
+
+.contentSlider,
+.contentSlider .rsOverflow,
+.contentSlider .rsSlide,
+.contentSlider .rsVideoFrameHolder,
+.contentSlider .rsThumbs {
+  background: #eee;
+  color: #000; }
+
+.contentSlider .rsSlide,
+.contentSlider .rsOverflow {
+  background: #eee; }
+
+.contentSlider h3 {
+  margin: 12px 0 8px; }
+
+.contentSlider img {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.content-slider-bg {
+  width: 86%;
+  padding: 24px 7%;
+  background: #eee; }
+
 @font-face {
   font-family: "NHU";
   src: url("../fonts/145bf6f8eebf1ad036f74d821af7d94b.eot");
@@ -140,85 +168,59 @@ body {
     body {
       font-size: 1.8em !important; } }
 
-@media screen and (min-width: 30em) {
-  .wrapper main {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    min-height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; } }
-
-@media screen and (min-width: 30em) and (max-width: 60em) {
-  .wrapper main {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    min-height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-top: 7em; }
-    .projects-page .wrapper main {
-      padding-top: 0;
-      overflow-y: hidden;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      width: 100%; } }
-
-@media screen and (min-width: 60em) and (max-width: 90em) {
-  .wrapper main {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    min-height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-top: 7em; }
-    .projects-page .wrapper main {
-      padding-top: 0;
-      overflow-y: hidden;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      width: 100%; } }
-
-@media screen and (min-width: 90em) {
-  .wrapper main {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    min-height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-top: 7em; }
-    .projects-page .wrapper main {
-      padding-top: 0;
-      overflow-y: hidden;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      width: 100%; } }
+.wrapper main {
+  padding-top: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  .wrapper main.main-ns {
+    padding-top: 0;
+    padding-left: 0; }
+  .projects-page .wrapper main {
+    padding-top: 0;
+    padding-left: 0; }
+  @media screen and (min-width: 30em) {
+    .wrapper main {
+      padding-top: 10rem;
+      padding-right: 1rem; }
+      .projects-page .wrapper main {
+        padding-top: 0;
+        padding-left: 0; } }
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .wrapper main {
+      padding-top: 10rem;
+      padding-left: 0;
+      padding-right: 0; }
+      .projects-page .wrapper main {
+        padding-top: 0;
+        overflow-y: hidden;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%; } }
+  @media screen and (min-width: 60em) and (max-width: 90em) {
+    .wrapper main {
+      padding-top: 10rem;
+      padding-left: 0;
+      padding-right: 0; }
+      .projects-page .wrapper main {
+        padding-top: 0;
+        overflow-y: hidden;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%; } }
+  @media screen and (min-width: 90em) {
+    .wrapper main {
+      padding-top: 13rem;
+      padding-left: 0;
+      padding-right: 0; }
+      .projects-page .wrapper main {
+        padding-top: 0;
+        overflow-y: hidden;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%; } }
 
 .the-black-bg {
   background-color: #111; }
@@ -239,8 +241,29 @@ body {
   .top-nav-black footer * {
     color: white; }
 
+.responsive__second-nav {
+  display: none; }
+  @media screen and (min-width: 30em) {
+    .responsive__second-nav {
+      display: none; } }
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .responsive__second-nav {
+      display: block; } }
+  @media screen and (min-width: 60em) and (max-width: 90em) {
+    .responsive__second-nav {
+      display: none !important; } }
+  @media screen and (min-width: 90em) {
+    .responsive__second-nav {
+      display: none; } }
+  .procedure .responsive__second-nav {
+    display: none; }
+  .projects-page .responsive__second-nav {
+    display: block; }
+    .projects-page .responsive__second-nav .responsive__second-nav__description {
+      display: none; }
+
 .top-space {
-  padding-top: 7em; }
+  padding-top: 10rem; }
 
 a {
   text-decoration: none;
@@ -249,7 +272,7 @@ a {
 .separator {
   display: inline-block;
   background-color: black;
-  width: 2px;
+  width: 0.1em;
   height: 0.8em;
   vertical-align: baseline;
   margin-left: .6em;
@@ -267,6 +290,9 @@ a.project--link {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #444; }
+  @media screen and (min-width: 30em) and (max-width: 60em) {
+    .professionals .the-black .image-containter {
+      background-size: 120%; } }
   .bg-blend .the-black .image-containter {
     background-blend-mode: multiply; }
 
@@ -307,21 +333,9 @@ a.project--link {
 svg {
   stroke: white; }
   svg text {
-    font-size: 1.1em;
+    font-size: 1rem;
     color: #fff;
     stroke: none; }
-    @media screen and (min-width: 30em) {
-      svg text {
-        font-size: 1.1em !important; } }
-    @media screen and (min-width: 30em) and (max-width: 60em) {
-      svg text {
-        font-size: .7em !important; } }
-    @media screen and (min-width: 60em) and (max-width: 90em) {
-      svg text {
-        font-size: .7em !important; } }
-    @media screen and (min-width: 90em) {
-      svg text {
-        font-size: .55em !important; } }
   svg .info__block {
     display: none; }
   svg #close__info__block:hover {
@@ -351,3 +365,12 @@ svg {
 
 circle.info__block {
   stroke: 2; }
+
+.arc-active {
+  fill: #111; }
+  .arc-active text {
+    opacity: 1 !important;
+    fill: #FFF; }
+
+.inactive-arc text {
+  opacity: .3 !important; }

@@ -4,18 +4,19 @@ var urlImages = "content/";
 var theBlack = $('.the-black');
 var theBlackJs = document.querySelector('.the-black');
 var defaultTheBlack = theBlack.css('background-image');
+var navbarNs = $('.responsive__nav__ns');
+
+
 
 //Preloader
-
-
-
-
 $(document).ready(function() {
 
   if (theBlack.parents('.visible-the-black').length) {
 
     setTimeout(function() {
       if (theBlack.parents('.the-black-0').length) {
+        animateTheBlack('0%');
+      } else if (navbarNs.is(':visible') ) {
         animateTheBlack('0%');
       } else {
         animateTheBlack('46%');
@@ -27,12 +28,34 @@ $(document).ready(function() {
 });
 
 
+
+
+window.onresize = function(event) {
+
+  //If the black is visible and is not hidden on 0 position
+  if (theBlack.parents('.visible-the-black').length && !theBlack.parents('.the-black-0').length) {
+
+    //If the ns navbar is visible, The Black is hidden
+    if (navbarNs.is(':visible')){
+      theBlack.hide();
+
+    } else {
+      //If 
+      theBlack.show();
+      theBlack.css('width', '46%');
+    }
+
+  }
+};
+
 $(document).on({
   scroll: function () {
     var menuSelector = $('.js-ScrollAndFocus');
     initScroll(menuSelector);
   }
 });
+
+
 
 
 //Animate The-black transition
@@ -188,64 +211,6 @@ $(".info--panel").on({
 
     }
   });
-
-//flash
-
-$(document).ready(function() {
-
-  var winWidth = $(window).width();
-  var winHeight = $(window).height();
-  var divider = 1 / $(document).height();
-
-  if (winWidth < 600) {
-    var size = winHeight < winWidth
-      ? winWidth
-      : winHeight;
-    $('.flash').css({
-      width: size * 2,
-      height: size * 2,
-      marginTop: -size,
-      marginLeft: -size
-    });
-  }
-
-  // $(document).scroll(function(){
-  // 	scrollTop = $(document).scrollTop();
-  // 	scale = 1 - (scrollTop * divider);
-  // 	$('.flash').css({'transform':'scale(' + scale + ')'});
-  // });
-
-  $(document).mousemove(function(e) {
-    $('.flash').css({
-      top: e.pageY - $(document).scrollTop(),
-      left: e.pageX - 800
-    });
-  });
-
-  document.addEventListener('touchmove', function(e) {
-    $('.flash, .flash-white').css({top: e.pageY, left: e.pageX});
-    e.preventDefault();
-  }, false);
-
-  document.addEventListener('touchstart', function(e) {
-    if (!$(e.target).hasClass('link')) {
-      $('.flash, .flash-white').css({top: e.pageY, left: e.pageX});
-      e.preventDefault();
-    }
-  }, false);
-
-  document.addEventListener('touchend', function(e) {
-    if (!$(e.target).hasClass('link')) {
-      colourIndex = colourIndex === 5
-        ? colourIndex = 0
-        : colourIndex + 1;
-      $('.flash').addClass(colours[colourIndex]).removeClass('flashing flash-black');
-      $('.flash').show();
-      e.preventDefault();
-    }
-  }, false);
-
-});
 
 //RoyalSlider
 

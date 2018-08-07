@@ -17,7 +17,7 @@
   <body class="visible-the-black home">
     <!--a.referencia-titulo= title-->
     <!--The black big sizes-->
-    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg dn db-m db-l db-sl">
+    <div class="the-black fl w-100 h-100 z-999 fixed relative overflow-hidden the-black-bg db db-m db-l db-sl">
       <div class="image-containter h-100 hide-cover" style="display:none"></div>
       <div class="h-100 the-black-bg"></div>
     </div>
@@ -50,22 +50,27 @@
           </div>
         </nav>
       </header>
-      <!--Responsive navbar for ns-->
+      <!--Responsive navbar for m-->
       <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-      <header class="responsive__nav top-nav z-3 fr w-100 db-ns dn-m dn-l dn-sl relative pv3">
+      <header class="responsive__nav responsive__nav__m top-nav fixed z-3 w-100 bg-white dn db-m dn-l dn-sl relative pv3">
         <nav class="z-2 ph3">
-          <div class="fl w-50">
+          <div class="fl w-48 pv1">
+            <div class="tl">
+              <h2 class="project--title link dark-gray dib mr3 mr0-ns" title="description"></h2>
+            </div>
+          </div>
+          <div class="fl w-12">
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
-          <div class="fl w-50">
+          <div class="fl w-40">
             <div class="tr"><a class="link dark-gray dim mr0-ns js-buttonMenuResponsive" href="#" title="menu responsive">Menu</a></div>
           </div>
         </nav>
       </header>
-      <!--Responsive navbar for m-->
+      <!--Responsive navbar for ns-->
       <!--Al meter la barra responsive el contenedor de proyectos (royalslider) se hace MUY pequeño-->
-      <header class="responsive__nav top-nav z-3 fr w-52 dn db-m dn-l dn-sl relative pv3">
-        <nav class="z-2 pr3">
+      <header class="responsive__nav responsive__nav__ns top-nav fixed z-3 w-100 bg-white db-ns dn-m dn-l dn-sl relative pv3">
+        <nav class="z-2 ph3">
           <div class="fl w-50">
             <div class="tl"><a class="dark-gray link dim theBlackToBlack" href="index.html" title="Home">Proto</a></div>
           </div>
@@ -133,14 +138,14 @@
                 </li>
                 <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="procedure.html" title="Procedure">Procedure</a></li>
                 <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="professionals.html" title="Professionals">Professionals</a></li>
-                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="index.html" title="Projects">Protocol</a></li>
+                <li class="truncate lh-title b--white-30 bt pv1 js-FocusElement"><a class="link-responsive link white dt theBlackToBlack js-ShowSubmenu" href="contact.html" title="Contact">Protocol</a></li>
               </ul>
             </div>
           </div>
         </nav>
       </div>
-      <main>
-        <div class="the-content w-52 the-black-aligned mb6 dn db-m db-l db-sl">
+      <main class="dn db-m db-l db-sl">
+        <div class="the-content w-52 the-black-aligned mb6">
           <ul class="projects flex flex-column">
             <!--Inicialize all projects to 0 opacity for the animation-->
             <li class="truncate o-0"><a class="project--link dark-gray noload theBlackToWhite js-FocusElement js-theBlackImage Vibia" href="project.html" data-cover="vibia.png">Vibia</a></li>
@@ -180,9 +185,11 @@
             <li class="truncate o-0"><a class="project--link dark-gray noload theBlackToWhite js-FocusElement js-theBlackImage Marset" href="project.html" data-cover="accent.png">Marset</a></li>
           </ul>
         </div>
-        <div class="the-content-mobile w-100 db-ns dn-m dn-l">
+      </main>
+      <main class="main-ns db-ns dn-m dn-l">
+        <div class="the-content-ns w-100">
           <div class="h-50 relative"><span class="link dark-gray dib absolute bottom-0 ma3" title="description">Brands, Tribes &amp; Products</span></div>
-          <div class="the-black fl w-100 h-50 bottom-0 fixed relative overflow-hidden bg-black db-ns dn-m dn-l">
+          <div class="fl w-100 h-50 bottom-0 fixed relative overflow-hidden bg-black db-ns dn-m dn-l">
             <div class="image-containter h-100 hide-cover" style="display:none"></div>
             <div class="h-100 bg-black"></div>
           </div>
@@ -203,15 +210,16 @@
           </div>
         </nav>
       </footer>
-      <footer class="fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m dn-l dn-sl">
-        <nav class="z-2 ph4 bottom-nav flexbox">
+      <!--Footer for m sizes-->
+      <footer class="responsive__second-nav fixed z-3 w-100 bg-white bottom-0 pv3 dn db-m dn-l dn-s">
+        <nav class="z-2 ph3 bottom-nav flexbox">
           <div class="fl w-48">
             <div class="tl">
               <p>&nbsp;</p>
             </div>
           </div>
           <div class="fl w-50">
-            <div class="tl secondary-nav"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
+            <div class="tl secondary-nav responsive__second-nav__description"><span class="link dark-gray dib mr3 mr0-ns" title="description">Brands, Tribes &amp; Products</span></div>
           </div>
         </nav>
       </footer>
@@ -223,6 +231,6 @@
   <script src="assets/js/scripts.js" async="async"></script>
   <script src="assets/js/animations.js" async="async"></script>
   <script src="assets/js/iagoScripts.js" async="async"></script>
-  <script src="assets/js/protoGraphic.js" async="async"></script>
+  <script src="assets/js/protoGraphic.new.js" async="async"></script>
   <script src="assets/js/jquery.royalslider.min.js"></script>
 </html>

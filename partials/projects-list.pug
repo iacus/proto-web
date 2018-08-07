@@ -1,13 +1,14 @@
-main
-  .the-content.w-52.the-black-aligned.mb6.dn.db-m.db-l.db-sl
+main.dn.db-m.db-l.db-sl
+  .the-content.w-52.the-black-aligned.mb6
     ul.projects.flex.flex-column
       for project in projectList
         +project-list(project)
 
-  .the-content-mobile.w-100.db-ns.dn-m.dn-l
+main.main-ns.db-ns.dn-m.dn-l
+  .the-content-ns.w-100
     .h-50.relative
       span.link.dark-gray.dib.absolute.bottom-0.ma3(title= 'description')= description     
              
-    .the-black.fl.w-100.h-50.bottom-0.fixed.relative.overflow-hidden.bg-black.db-ns.dn-m.dn-l
+    .fl.w-100.h-50.bottom-0.fixed.relative.overflow-hidden.bg-black.db-ns.dn-m.dn-l
       div.image-containter.h-100.hide-cover(style="display:none")
       div.h-100.bg-black
