@@ -60,16 +60,27 @@ body {
   .projects-page &{
     padding-top: 0;
     padding-left: 0;
+    padding-right: 0;
+
+    overflow-y: hidden;
+    width: 100%;
+
+    .project__gallery{
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+
+      align-items: center;
+    }
   }
 
   @include break(not-small) {
     padding-top: $top-space;
     padding-right: $left-space-ns;
-
-    .projects-page &{
-      padding-top: 0;
-      padding-left: 0;
-    }
 
   }
   @include break(medium) {
@@ -77,38 +88,19 @@ body {
     padding-left: 0;
     padding-right: 0;
 
-    .projects-page &{
-      padding-top: 0;
-      overflow-y: hidden;
-      justify-content: center;
-      width: 100%;
-    }
-
-
   }
   @include break(large) {
     padding-top: $top-space;
     padding-left: 0;
     padding-right: 0;
 
-    .projects-page &{
-      padding-top: 0;
-      overflow-y: hidden;
-      justify-content: center;
-      width: 100%;
-    }
+
   }
   @include break(super-large) {
     padding-top: $top-space-sl;
     padding-left: 0;
     padding-right: 0;
 
-    .projects-page &{
-      padding-top: 0;
-      overflow-y: hidden;
-      justify-content: center;
-      width: 100%;
-    }
   }
 
 

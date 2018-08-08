@@ -140,6 +140,23 @@ function initScroll(menuSelector) {
 }
 
 
+function initScrollProfessionals(menuSelector) {
+    var scrollPosition = $(document).scrollTop();
+    const scrollCorrect = 270;
+
+    menuSelector.each(function () {
+        var currLink = $(this);
+
+        if (currLink.position().top <= scrollPosition + scrollCorrect && currLink.position().top + currLink.height() > scrollPosition + scrollCorrect) {
+
+            currLink.clearQueue().stop(true,true).delay(200).css('opacity', '0.3').removeClass('not-focus').addClass('focus');
+        }
+        else {
+            currLink.clearQueue().stop(true,true).css('opacity', '0.3').removeClass('focus').addClass('not-focus');
+        }
+    });
+}
+
 //Testing function
 function focusElement(elem) {
   const elemFirstClass = "." + elem.attr('class').split(' ')[0];

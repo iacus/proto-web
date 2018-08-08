@@ -4,28 +4,18 @@
 
 .visibleNearby {
   width: 100%;
-  background: #141414;
-  color: #FFF;
-  padding-top: 25px;
+  background-color: transparent;
 }
 .visibleNearby .rsGCaption {
-  font-size: 16px;
-  line-height: 18px;
-  padding: 12px 0 16px;
-  background: #141414;
-  width: 100%;
-  position: static;
-  float: left;
-  left: auto;
-  bottom: auto;
-  text-align: center;
-}
-.visibleNearby .rsGCaption span {
-  display: block;
-  clear: both;
-  color: #bbb;
-  font-size: 14px;
-  line-height: 22px;
+  position: absolute;
+ top: 0;
+ bottom: 0;
+ left:0;
+ right:0;
+ margin: auto;
+ width:50%;
+ height: 20%;
+ display: none;
 }
 
 
@@ -54,17 +44,17 @@
 /* Non-linear resizing on smaller screens */
 @media screen and (min-width: 0px) and (max-width: 900px) {
   #gallery-1 {
-    padding: 12px 0 12px;
+    //padding: 12px 0 12px;
   }
   #gallery-1 .rsOverflow,
   .royalSlider#gallery-1 {
-    height: 400px !important;
+    //height: 400px !important;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 500px) {
   #gallery-1 .rsOverflow,
   .royalSlider#gallery-1 {
-    height: 300px !important;
+    //height: 300px !important;
   }
 }
 
@@ -77,27 +67,24 @@
 .contentSlider .rsSlide,
 .contentSlider .rsVideoFrameHolder,
 .contentSlider .rsThumbs {
-  background: #eee;
-  color: #000;
+
 }
 
 .contentSlider .rsSlide,
 .contentSlider .rsOverflow {
-  background: #eee;
+
+}
+.contentSlider .rsSlide{
+  display: table;
 }
 .contentSlider h3 {
-
-
-  margin: 12px 0 8px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 2rem;
 
 }
 .contentSlider img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-.content-slider-bg {
-  width: 86%;
-  padding: 24px 7%;
-  background: #eee;
 }

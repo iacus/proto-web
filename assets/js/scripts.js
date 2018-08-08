@@ -30,6 +30,7 @@ $(document).ready(function() {
 
 
 
+
 window.onresize = function(event) {
 
   //If the black is visible and is not hidden on 0 position
@@ -40,7 +41,7 @@ window.onresize = function(event) {
       theBlack.hide();
 
     } else {
-      //If 
+      //If
       theBlack.show();
       theBlack.css('width', '46%');
     }
@@ -52,6 +53,11 @@ $(document).on({
   scroll: function () {
     var menuSelector = $('.js-ScrollAndFocus');
     initScroll(menuSelector);
+
+    if (navbarNs.is(':visible')){
+      var menuSelectorProfessionals = $('.js-ScrollAndFocusPro');
+      initScrollProfessionals(menuSelectorProfessionals);
+    }
   }
 });
 
@@ -212,6 +218,7 @@ $(".info--panel").on({
     }
   });
 
+
 //RoyalSlider
 
 // Important note! If you're adding CSS3 transition to slides, fadeInLoadedSlide should be disabled to avoid fade-conflicts.
@@ -221,11 +228,12 @@ jQuery(document).ready(function($) {
     arrowsNav: false,
     controlNavigation: 'none',
     autoScaleSlider: true,
-    autoScaleSliderWidth: true,
-    autoScaleSliderHeight: true,
+    autoScaleSliderWidth: 1000,
+    autoScaleSliderHeight: 1000,
     loop: true,
-    fadeinLoadedSlide: false,
-    globalCaption: false,
+    imageAlignCenter: true,
+    fadeinLoadedSlide: true,
+    globalCaption: true,
     keyboardNavEnabled: true,
     globalCaptionInside: false,
     autoHeight: false,
@@ -241,9 +249,20 @@ jQuery(document).ready(function($) {
     }
   }).data('royalSlider');
 
-  // link to fifth slide from slider description.
-  $('.slide4link').click(function(e) {
-    si.goTo(4);
-    return false;
-  });
 });
+
+
+/*
+$(".royalSlider .rsOverflow").on({
+  mouseenter: function() {
+    $('.rsGCaption').toggle();
+    $('.rsActiveSlide').css('opacity', '.4');
+    console.log("dentro");
+  },
+  mouseleave: function() {
+    console.log("fuera");
+    $('.rsGCaption').toggle();
+    $('.rsActiveSlide').css('opacity', '1');
+  }
+});
+*/
